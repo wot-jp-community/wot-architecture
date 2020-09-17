@@ -1732,7 +1732,7 @@
       </li>
     </ol>
     </li>
-    <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 一般的なパターン</a>
+    <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 共通パターン</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
       <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> モノとモノ</a></li>
@@ -2216,13 +2216,17 @@
 </section>
 <section id="sec-common-usecase-patterns">
 
-<h3 id="x4-2-common-patterns"><bdi class="secno">4.2</bdi> 一般的なパターン<a class="self-link" aria-label="§" href="#sec-common-usecase-patterns"></a></h3>
+<h3 id="x4-2-common-patterns"><bdi class="secno">4.2</bdi> 共通パターン<a class="self-link" aria-label="§" href="#sec-common-usecase-patterns"></a></h3>
 
-<p>この項では、デバイス/モノが、コントローラー、他のデバイス、エージェント、サーバーとどのように対話を行うかを示す一般的なユースケースのパターンを紹介します。この項では、トランスポート・プロトコルの発動要素として<em>クライアントの役割</em>(client role)という用語を用い、トランスポート・プロトコルの受動要素としてサーバーの役割(server role)という用語を用います。これは、システム構成要素に特定の役割を定めることを意味するものではありません。デバイスは、<em>クライアント</em>と<em>サーバー</em>の役割を同時に持つことができます。</p>
+<p>この項では、デバイス/Thingが、コントローラー、他のデバイス、エージェント、およびサーバーとどのように相互作用するかを示す共通的なユースケースのパターンを紹介する。この項では、トランスポート・プロトコルの発動要素として<em>クライアントの役割</em> (client role) という用語を用い、トランスポート・プロトコルの受動要素として<em>サーバーの役割</em> (server role) という用語を用いる。これは、システム構成要素に特定の役割を定めることを意味するものではない。一つのデバイスは、<em>クライアント</em>と<em>サーバー</em>の役割を同時に持つことができる。</p>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中では「client role」が<em>要素によって強調されている一方で，「server role」は強調されていないが，「server role」も同様に<em>要素により強調するべきと考えられる．</p>
+</div>
 
-<p>この二重の役割の例の1つは、クラウド・サービスに自身を登録し、センサーの測定値を定期的にクラウドに送信するセンサーです。応答メッセージでは、クラウドは、センサーのメッセージ送信速度を調整したり、特定のセンサー属性を選択したりすることができ、これらは将来のメッセージで送信される想定のものです。センサーは自身をクラウドで登録して接続を開始するため、これは「クライアント」の役割になります。しかし、応答メッセージで送信されるリクエストにも反応するため、「サーバー」の役割も果たします。</p>
+<p>この二重の役割の例の1つはセンサーであり、クラウド・サービスに自身を登録するとともに、センサーの測定値を定期的にクラウドに送信する。応答メッセージでは、クラウドは、センサーのメッセージ送信速度を調整したり、特定のセンサー属性を選択したりすることができ、これらは今後送信されることになるメッセージを対象としたものである。センサーは自身をクラウドで登録して接続を開始するため、これは「クライアント」の役割である。しかし、応答メッセージで送信されるリクエストにも反応するため、「サーバー」の役割も果たす。</p>
 
-<p>以下の項では、複雑さが増しつつある役割、タスク、ユースケースのパターンについて説明します。これらは網羅的なものではなく、この仕様の後半の項で定義しているWoTアーキテクチャと構成要素を動機付けるために提示しています。</p>
+<p>以下の項では、複雑さが増しつつある役割、タスク、ユースケースのパターンについて説明する。これらは網羅的なものではなく、この仕様の後半の項で定義しているWoTアーキテクチャと構成要素を動機付けるために提示されるものである。</p>
 
 <section id="device-controllers">
 
