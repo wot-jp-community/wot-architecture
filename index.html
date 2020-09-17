@@ -2228,9 +2228,9 @@
 
 <h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
 
-<p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモート・コントローラーで制御するローカル・デバイスです。リモート・コントローラーは、ローカル・ホーム・ネットワークを介して電子機器に直接アクセスできます。このケースでは、リモート・コントローラーはブラウザやネイティブなアプリケーションで実装できます。</p>
+<p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモート・コントローラーで制御されるローカル・デバイスである。リモート・コントローラーは、ローカル・ホーム・ネットワークを介して電子機器に直接アクセスできる。このケースでは、リモート・コントローラーはブラウザやネイティブなアプリケーションで実装できる。</p>
 
-<p>このパターンでは、電子機器などの少なくとも1つのデバイスには、他のデバイスからのリクエストを受け入れて応答できるサーバーの役割があり、場合によっては機械的なアクションを開始します。リモート・コントローラーのような他のデバイスには、センサー値の読み取りやデバイスの電源投入などの、リクエストに応じてメッセージを送信できるクライアントの役割があります。さらに、デバイスの現在の状態やイベントの通知を送信するために、デバイスは、サーバーの役割を持つ別のデバイスに対してメッセージを送信できるクライアントの役割を持つことができます。</p>
+<p>このパターンでは、電子機器などの少なくとも1つのデバイスには、他のデバイスからのリクエストを受け入れて応答できるサーバーの役割があり、時として機械的なアクションを開始する。リモート・コントローラーのような他のデバイスには、センサー値の読み取りやデバイスの電源投入などの、リクエストに応じてメッセージを送信できるクライアントの役割がある。さらに、デバイスの現在の状態やイベントの通知を送信するために、デバイスは、サーバーの役割を持つ別のデバイスに対してメッセージを送信できるクライアントの役割を持つことができる。</p>
 
 <figure id="smart-home-device">
 <img src="images/smart-home-device.png" srcset="images/smart-home-device.svg" class="wot-arch-diagram" alt="スマート・ホーム・デバイスのユースケース">
@@ -2646,7 +2646,7 @@
 <figcaption>図<bdi class="figno">16</bdi> <span class="fig-title">リンクされたモノ</span>
 </figcaption>
 </figure>
-
+future
 <p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の<a href="#dfn-wot-interface" class="internalDFN" data-link-type="dfn">WoTインターフェース</a>であるネットワーク向けインターフェースを介した対話を実現するためには、ソフトウェア・スタックを備えたネットワーク化されたシステム構成要素でモノを提供しなければなりません。この例の1つは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の抽象化の背後にある物理エンティティーと連動しているセンサーと作動装置を備えた組み込みデバイスで実行されているHTTPサーバーです。しかし、<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を提供する場所を強制しておらず、IoTデバイスに直接置いたり、ゲートウェイなどの<a href="#dfn-edge-device" class="internalDFN" data-link-type="dfn">エッジ・デバイス</a>や、クラウドに置くことができます。</p>
 
 <p>典型的な展開の課題は、通常IPv4ネットワーク・アドレス変換(NAT)やファイアウォール・デバイスが原因で、インターネットからローカル・ネットワークに到達できないというシナリオです。この状況を改善するために、<abbr title="World Wide Web Consortium">W3C</abbr> WoTは<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の間に<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>を認めています。</p>
