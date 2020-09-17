@@ -1735,8 +1735,8 @@
     <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 共通パターン</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
-      <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> モノとモノ</a></li>
-      <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモート・アクセス</a></li>
+      <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
+      <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
       <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ</a></li>
       <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジ・デバイス</a></li>
       <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン</a>
@@ -2244,11 +2244,11 @@
 </section>
 <section id="thing-to-thing">
 
-<h4 id="x4-2-2-thing-to-thing"><bdi class="secno">4.2.2</bdi> モノとモノ<a class="self-link" aria-label="§" href="#thing-to-thing"></a></h4>
+<h4 id="x4-2-2-thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing<a class="self-link" aria-label="§" href="#thing-to-thing"></a></h4>
 
-<p><a href="#smart-home-t2t" class="fig-ref" title="制御エージェント">図<bdi class="figno">5</bdi></a>は、直接的なモノとモノ(Thing-to-Thing)の対話の例を示しています。シナリオは次のとおりです。センサーが部屋の状況変化、例えば、温度が基準値を超えていることを検出し、電子機器に対して「オンにする」などの制御メッセージを発信します。センサー・ユニットは、他のデバイスに始動メッセージを発信できます。</p>
+<p><a href="#smart-home-t2t" class="fig-ref" title="制御エージェント">図<bdi class="figno">5</bdi></a>は、直接的なThingとThing (Thing-to-Thing)の相互作用の例を示している。シナリオは次のとおりである。センサーが部屋の状況変化、例えば、温度が基準値を超えていることを検出し、電子機器に対して「オンにする」などの制御メッセージを発信する。センサーユニットは、他のデバイスにトリガーメッセージを発信できる。</p>
 
-<p>このケースでは、サーバーの役割を持つ2つのデバイスが接続されている場合、少なくとも一方のデバイスには、他方に対して作動または通知するようにメッセージを発信するクライアントの役割もなければなりません。</p>
+<p>このケースでは、サーバーの役割を持つ2つのデバイスが接続されている場合、少なくとも一方のデバイスには、他方に対して作動させたり通知するためにメッセージを発信するクライアントの役割もなければならない。</p>
 
 <figure id="smart-home-t2t">
 <img src="images/smart-home-t2t.png" srcset="images/smart-home-t2t.svg" class="wot-arch-diagram" alt="スマート・ホーム・モノとモノのユースケース">
@@ -2258,15 +2258,15 @@
 </section>
 <section id="remote-access">
 
-<h4 id="x4-2-3-remote-access"><bdi class="secno">4.2.3</bdi> リモート・アクセス<a class="self-link" aria-label="§" href="#remote-access"></a></h4>
+<h4 id="x4-2-3-remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス<a class="self-link" aria-label="§" href="#remote-access"></a></h4>
 
-<p><a href="#smart-home-multi" class="fig-ref" title="複数のネットワーク・インターフェース">図<bdi class="figno">6</bdi></a>で示しているように、このユースケースには、モバイル・リモート・コントローラー(例えば、スマートフォン)が含まれます。リモート・コントローラーは、Wi-FiやBluetoothなどのプロトコルを用いた、セルラー・ネットワークやホーム・ネットワークなどの様々なネットワーク接続とプロトコルを切り替えることができます。コントローラーがホーム・ネットワークにある場合、それは信頼できるデバイスであり、セキュリティやアクセスの制御を追加する必要はありません。信頼できるネットワークの外にある場合は、アクセス制御やセキュリティ・メカニズムを追加適用して、信頼関係を確保しなければなりません。このシナリオでは、様々なネットワーク・アクセス・ポイントやセルラー基地局間の切り替えにより、ネットワークの接続性が変わりえることに注意してください。</p>
+<p><a href="#smart-home-multi" class="fig-ref" title="複数のネットワークインターフェース">図<bdi class="figno">6</bdi></a>で示しているように、このユースケースには、モバイルリモートコントローラー(例えば、スマートフォン)が含まれる。リモートコントローラーは、セルラーネットワークや、Wi-FiやBluetoothなどのプロトコルを用いたホームネットワークなどの様々なネットワーク接続とプロトコルを切り替えることができる。コントローラーがホームネットワークにある場合、それは信頼できるデバイスであり、セキュリティやアクセス制御を追加する必要はない。コントローラが信頼できるネットワークの外にある場合は、アクセス制御やセキュリティのメカニズムを追加適用して、信頼関係を確保しなければならない。このシナリオでは、様々なネットワークアクセスポイントやセルラー基地局間の切り替えにより、ネットワークの接続性が変わりえることに注意すること。</p>
 
-<p>このパターンでは、<a href="#smart-home-device" class="fig-ref" title="モバイル制御">図<bdi class="figno">4</bdi></a>の関連するシナリオと同様に、リモート・コントローラーと電子機器は、クライアントとサーバーの役割を持っています。</p>
+<p>このパターンでは、<a href="#smart-home-device" class="fig-ref" title="モバイル制御">図<bdi class="figno">4</bdi></a>の関連するシナリオと同様に、リモートコントローラーと電子機器は、クライアントとサーバーの役割を持っている。</p>
 
 <figure id="smart-home-multi">
-<img src="images/smart-home-multi.png" srcset="images/smart-home-multi.svg" class="wot-arch-diagram" alt="スマート・ホームの複数のユースケース">
-<figcaption>図<bdi class="figno">6</bdi> <span class="fig-title">複数のネットワーク・インターフェース</span></figcaption>
+<img src="images/smart-home-multi.png" srcset="images/smart-home-multi.svg" class="wot-arch-diagram" alt="スマートホームの複数のユースケース">
+<figcaption>図<bdi class="figno">6</bdi> <span class="fig-title">複数のネットワークインターフェース</span></figcaption>
 </figure>
 
 </section>
