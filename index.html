@@ -1737,7 +1737,7 @@
       <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
       <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
       <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
-      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ</a></li>
+      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ</a></li>
       <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジ・デバイス</a></li>
       <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン</a>
       <ol class="toc">
@@ -2272,12 +2272,22 @@
 </section>
 <section id="smart-home-gateways">
 
-<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+  
+<p><a href="#smart-home-gateway" class="fig-ref" title="スマートホームゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマートホームゲートウェイを用いたユースケースを示している。このゲートウェイは、ホームネットワークとインターネットの間に位置づけられる。これは、屋内の電子機器を管理し、前述のユースケースのようにスマートフォンからなど、インターネット経由でリモートコントローラーからの命令を受信できるようにする。これは、デバイスの仮想表現でもある。スマートホームゲートウェイは通常、プロキシとファイアウォールの機能を提供する。</p>
 
-<p><a href="#smart-home-gateway" class="fig-ref" title="スマート・ホーム・ゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマート・ホーム・ゲートウェイを用いたユースケースを示しています。このゲートウェイは、ホーム・ネットワークとインターネットの間に置かれます。それは、屋内の電子機器を管理し、前のユースケースのようにスマートフォンからなど、インターネット経由でリモート・コントローラーから命令を受信できます。これは、デバイスの仮想表現でもあります。スマート・ホーム・ゲートウェイは通常、プロキシとファイアウォールの機能を提供します。</p>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「It is also is a virtual representation of a device.」とあるが、一文中に「is」が二つあり，二つ目の「is」(=「is a virtual representation」の「is」)は不要。</p>
+</div>
+<p>このパターンでは、ホームゲートウェイは、クライアントとサーバーの両方の役割を持っている。リモートコントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモートコントローラーとの接続を可能とする。電子機器がリモートコントローラーにメッセージを送信する際は、ゲートウェイは、電子機器に対するサーバーの役割を果たし、リモートコントローラーに対するクライアントの役割を果たす。</p>
 
-<p>このパターンでは、ホーム・ゲートウェイは、クライアントとサーバーの両方の役割を持っています。リモート・コントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモート・コントローラーに接続できます。電子機器がリモート・コントローラーにメッセージを送信すると、ゲートウェイは、電子機器ではサーバーの役割を果たし、リモート・コントローラーではクライアントの役割を果たします。</p>
-
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「the gateway act as server roles ... and it act as client roles」とあるが、「gateway」が単数形であることから、「act」は、いずれも「acts」が正しいと考えられる。
+また、「act server roles」および「act client roles」が正しいと考えられる。</p>
+</div>
+  
 <figure id="smart-home-gateway">
 <img src="images/smart-home-gateway.png" srcset="images/smart-home-gateway.svg" class="wot-arch-diagram" alt="スマート・ホーム・ゲートウェイのユースケース">
 <figcaption>図<bdi class="figno">7</bdi> <span class="fig-title">スマート・ホーム・ゲートウェイ</span></figcaption>
@@ -2502,7 +2512,10 @@
 
 <ul>
   <li>WoTアーキテクチャは、一般的に用いられている複数のウェブ・プロトコルをサポートすべきです。</li>
-  <li>そのプロトコルには、次のようなものが含まれます。
+  <li>そのプロトコルには、次の<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「It is also is a virtual representation of a device.」とあるが、一文中に「is」が二つあり，二つ目の「is」(=「is a virtual representation」の「is」)は不要。</p>
+</div>ようなものが含まれます。
   <ol>
     <li>インターネットで一般的に用いられているプロトコル</li>
     <li>ローカル・エリア・ネットワークで一般的に用いられているプロトコル</li>
