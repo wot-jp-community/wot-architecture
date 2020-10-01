@@ -1757,7 +1757,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-functional-requirement"><bdi class="secno">5.1</bdi> 機能要件</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-requirements-principles"><bdi class="secno">5.1.1</bdi> 一般的な原則</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-requirements-thing-functionalities"><bdi class="secno">5.1.2</bdi> モノの機能</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-requirements-thing-functionalities"><bdi class="secno">5.1.2</bdi> Thingの機能</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-search-and-discovery"><bdi class="secno">5.1.3</bdi> 検索と発見</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-description-mechanism"><bdi class="secno">5.1.4</bdi> 記述方法</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-description-of-attributes"><bdi class="secno">5.1.5</bdi> 属性の記述</a></li>
@@ -2272,12 +2272,22 @@
 </section>
 <section id="smart-home-gateways">
 
-<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+  
+<p><a href="#smart-home-gateway" class="fig-ref" title="スマートホームゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマートホームゲートウェイを用いたユースケースを示している。このゲートウェイは、ホームネットワークとインターネットの間に位置づけられる。これは、屋内の電子機器を管理し、前述のユースケースのようにスマートフォンからなど、インターネット経由でリモートコントローラーからの命令を受信できるようにする。これは、デバイスの仮想表現でもある。スマートホームゲートウェイは通常、プロキシとファイアウォールの機能を提供する。</p>
 
-<p><a href="#smart-home-gateway" class="fig-ref" title="スマート・ホーム・ゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマート・ホーム・ゲートウェイを用いたユースケースを示しています。このゲートウェイは、ホーム・ネットワークとインターネットの間に置かれます。それは、屋内の電子機器を管理し、前のユースケースのようにスマートフォンからなど、インターネット経由でリモート・コントローラーから命令を受信できます。これは、デバイスの仮想表現でもあります。スマート・ホーム・ゲートウェイは通常、プロキシとファイアウォールの機能を提供します。</p>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「It is also is a virtual representation of a device.」とあるが、一文中に「is」が二つあり，二つ目の「is」(=「is a virtual representation」の「is」)は不要。</p>
+</div>
+<p>このパターンでは、ホームゲートウェイは、クライアントとサーバーの両方の役割を持っている。リモートコントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモートコントローラーとの接続を可能とする。電子機器がリモートコントローラーにメッセージを送信する際は、ゲートウェイは、電子機器に対するサーバーの役割を果たし、リモートコントローラーに対するクライアントの役割を果たす。</p>
 
-<p>このパターンでは、ホーム・ゲートウェイは、クライアントとサーバーの両方の役割を持っています。リモート・コントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモート・コントローラーに接続できます。電子機器がリモート・コントローラーにメッセージを送信すると、ゲートウェイは、電子機器ではサーバーの役割を果たし、リモート・コントローラーではクライアントの役割を果たします。</p>
-
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「the gateway act as server roles ... and it act as client roles」とあるが、「gateway」が単数形であることから、「act」は、いずれも「acts」が正しいと考えられる。
+また、「act server roles」および「act client roles」が正しいと考えられる。</p>
+</div>
+  
 <figure id="smart-home-gateway">
 <img src="images/smart-home-gateway.png" srcset="images/smart-home-gateway.svg" class="wot-arch-diagram" alt="スマート・ホーム・ゲートウェイのユースケース">
 <figcaption>図<bdi class="figno">7</bdi> <span class="fig-title">スマート・ホーム・ゲートウェイ</span></figcaption>
@@ -2378,9 +2388,14 @@
 
 <h3 id="x4-3-summary"><bdi class="secno">4.3</bdi> 要約<a class="self-link" aria-label="§" href="#sec-use-case-summary"></a></h3>
 
-<p>前項では、様々なアーキテクチャのパターンについて説明しました。これらのパターンでは、旧式デバイスを含むデバイス、コントローラー、ゲートウェイ、クラウド・サーバーなどの一部の機能のエンティティーは、建物の内外やデータ・センターなどの物理的な場所に置かれます。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要です。</p>
+<p>前項では、様々なアーキテクチャのパターンについて説明した。これらのパターンでは、旧式デバイス、コントローラー、ゲートウェイ、クラウドサーバーを含むデバイスなどの一部の機能のエンティティーは、建物の内外やデータセンターなどの物理的な場所に置かれる。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要である。</p>
 
-<p>トランスポート・プロトコル層では、各エンティティーが通信に適した役割を任意に選択します。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、デバイスはサーバーとして機能します。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信できます。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えるということを理解します。</p>
+<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えると理解する。</p>
+
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中で「On the other hand, if a device has limited or intermittent network connectivity, they may act as a client...」とあるが、「they may act as...」の「they」は、「device」に対する代名詞であることから「it」が正しいと考えられる。その他、いくつかの誤字について、W3C側に指摘ずみ。</p>
+</div>
 
 <figure id="usecase-overview">
 <img src="images/use-case-summary.png" srcset="images/use-case-summary.svg" class="wot-arch-diagram" alt="ユースケースの概要">
@@ -2399,44 +2414,44 @@
 
 <h3 id="x5-1-functional-requirements"><bdi class="secno">5.1</bdi> 機能要件<a class="self-link" aria-label="§" href="#sec-functional-requirement"></a></h3>
 
-<p>この項では、抽象的なモノのウェブ(WoT)アーキテクチャに必要なプロパティーを定義します。</p>
+<p>この項では、Web of Things (WoT)の抽象アーキテクチャに必要な特性を定義する。</p>
 
 <section id="sec-requirements-principles">
 
 <h4 id="x5-1-1-common-principles"><bdi class="secno">5.1.1</bdi> 一般的な原則<a class="self-link" aria-label="§" href="#sec-requirements-principles"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャは、ウェブ技術を用いて異なるエコシステムの相互作用を可能にすべきです。</li>
-  <li>WoTアーキテクチャは、RESTful APIを用いたウェブ・アーキテクチャに基づくべきです。</li>
-  <li>WoTアーキテクチャでは、ウェブで一般的に用いられている複数のペイロード形式を使用できるべきです。</li>
-  <li>WoTアーキテクチャでは、様々なデバイス・アーキテクチャが可能でなければならず、クライアントやサーバーにシステム構成要素の実装を強制してはなりません。</li>
+  <li>WoTアーキテクチャは、ウェブ技術を用いて異なるエコシステムの相互運用を可能にすべきである。</li>
+  <li>WoTアーキテクチャは、RESTful APIを用いたウェブアーキテクチャに基づくべきである。</li>
+  <li>WoTアーキテクチャでは、ウェブで一般的に用いられている複数のペイロード形式を使用できるべきである。</li>
+  <li>WoTアーキテクチャでは、様々なデバイスアーキテクチャが可能でなければならず、システム構成要素として特定のクライアントやサーバーの実装を強制してはならない。</li>
   <li>柔軟性
-  <p>WoT実装には、様々な物理デバイスの設定があります。WoTの抽象アーキテクチャは、すべてのバリエーションに対してマッピングができ、それらをカバーできるべきです。</p>
+  <p>WoT実装には、様々な物理デバイスの構成がある。WoTの抽象アーキテクチャは、そのすべてのバリエーションに対してマッピングができ、それらをカバーできるべきである。</p>
   </li>
   <li>互換性
-  <p>多くの業界には、すでに多くの既存のIoTソリューションと進行中のIoT標準化の活動があります。WoTは、これらの既存および開発中のIoTソリューションとWoTの概念に基づくウェブ技術との間の橋渡しを提供すべきです。WoTは、既存のIoTソリューションおよび現在の標準の上位互換であるべきです。</p>
+  <p>多くの業界には、すでに多くの既存のIoTソリューションと進行中のIoT標準化活動がある。WoTは、これらの既存および開発中のIoTソリューションとウェブ技術との間の橋渡しをWoTの概念に基づいて提供すべきである。WoTは、既存のIoTソリューションおよび現在の標準の上位互換であるべきである。</p>
   </li>
-  <li>拡張性
-  <p>WoTは、数千から数百万のデバイスを組み込むIoTソリューションに対応できなければなりません。これらのデバイスは、製造者が異なっていても同じ性能を提供する可能性があります。</p>
+  <li>スケーラビリティ
+  <p>WoTは、数千から数百万のデバイスを組み込むIoTソリューションに対応できなければならない。これらのデバイスは、製造者が異なっていても同じ機能を提供する可能性がある。</p>
   </li>
   <li>相互運用性
-  <p>WoTは、デバイスとクラウドの製造者にまたがる相互運用性を提供しなければなりません。WoT対応デバイスを追加設定なしに様々な製造者のクラウド・サービスに接続できなければなりません。</p>
+  <p>WoTは、デバイスとクラウドの製造者にまたがる相互運用性を提供しなければならない。WoT対応デバイスをデバイスと異なる製造者のクラウドサービスに追加設定なしで接続できなければならない。</p>
   </li>
 </ul>
 
 </section>
 <section id="sec-requirements-thing-functionalities">
 
-<h4 id="x5-1-2-thing-functionalities"><bdi class="secno">5.1.2</bdi> モノの機能<a class="self-link" aria-label="§" href="#sec-requirements-thing-functionalities"></a></h4>
+<h4 id="x5-1-2-thing-functionalities"><bdi class="secno">5.1.2</bdi> Thingの機能<a class="self-link" aria-label="§" href="#sec-requirements-thing-functionalities"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャでは、モノが次のような機能を持てるようにすべきです。
+  <li>WoTアーキテクチャでは、Thingが次のような機能を持てるようにすべきである。
   <ul>
-    <li>モノのステータス情報を読む。</li>
-    <li>作動を発生させるモノのステータス情報を更新する。</li>
-    <li>モノのステータス情報の変更通知を購読、受信、購読解除する。</li>
-    <li>特定の作動または計算を発生させる入出力パラメータを用いて機能を呼び出す。</li>
-    <li>単なる状態遷移の報告よりも一般的なイベントの通知を購読、受信、購読解除する。</li>
+    <li>Thingのステータス情報を読む。</li>
+    <li>動作を発生させるThingのステータス情報を更新する。</li>
+    <li>Thingのステータス情報の変更通知の登録、受信、登録解除を行う。</li>
+    <li>入出力パラメータにより、特定の動作または計算を発生させる機能を呼び出す。</li>
+    <li>単なる状態遷移の報告だけでなく、一般的なイベントの通知の登録、受信、登録解除を行う。</li>
   </ul>
   </li>
 </ul>
@@ -2447,9 +2462,9 @@
 <h4 id="x5-1-3-search-and-discovery"><bdi class="secno">5.1.3</bdi> 検索と発見<a class="self-link" aria-label="§" href="#sec-requirements-search-and-discovery"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャでは、クライアントは、モノ自体にアクセスする前に、モノの属性、機能、およびアクセス・ポイントを知ることができるべきです。</li>
-  <li>WoTアーキテクチャでは、クライアントはその属性と機能によってモノを検索できるべきです。</li>
-  <li>WoTアーキテクチャでは、機能の名前に関係なく、統一された語彙に基づいて必要な機能を提供するモノのセマンティックな検索ができるべきです。</li>
+  <li>WoTアーキテクチャでは、クライアントは、Thing自体にアクセスする前に、Thingの属性、機能、およびアクセスポイントを知ることができるべきでである。</li>
+  <li>WoTアーキテクチャでは、クライアントはその属性と機能によってThingを検索できるべきである。</li>
+  <li>WoTアーキテクチャでは、機能の名前に関係なく、統一された語彙に基づいて必要な機能を提供するThingのセマンティックな検索ができるべきである。</li>
 </ul>
 
 </section>
@@ -2497,7 +2512,10 @@
 
 <ul>
   <li>WoTアーキテクチャは、一般的に用いられている複数のウェブ・プロトコルをサポートすべきです。</li>
-  <li>そのプロトコルには、次のようなものが含まれます。
+  <li>そのプロトコルには、次の<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「It is also is a virtual representation of a device.」とあるが、一文中に「is」が二つあり，二つ目の「is」(=「is a virtual representation」の「is」)は不要。</p>
+</div>ようなものが含まれます。
   <ol>
     <li>インターネットで一般的に用いられているプロトコル</li>
     <li>ローカル・エリア・ネットワークで一般的に用いられているプロトコル</li>
