@@ -1732,13 +1732,13 @@
       </li>
     </ol>
     </li>
-    <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 一般的なパターン</a>
+    <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 共通パターン</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
-      <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> モノとモノ</a></li>
-      <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモート・アクセス</a></li>
+      <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
+      <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
       <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ</a></li>
-      <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジ・デバイス</a></li>
+      <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジデバイス</a></li>
       <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#cloud-ready-devices"><bdi class="secno">4.2.6.1</bdi> クラウド対応デバイス</a></li>
@@ -1757,7 +1757,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-functional-requirement"><bdi class="secno">5.1</bdi> 機能要件</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-requirements-principles"><bdi class="secno">5.1.1</bdi> 一般的な原則</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-requirements-thing-functionalities"><bdi class="secno">5.1.2</bdi> モノの機能</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-requirements-thing-functionalities"><bdi class="secno">5.1.2</bdi> Thingの機能</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-search-and-discovery"><bdi class="secno">5.1.3</bdi> 検索と発見</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-description-mechanism"><bdi class="secno">5.1.4</bdi> 記述方法</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-requirements-description-of-attributes"><bdi class="secno">5.1.5</bdi> 属性の記述</a></li>
@@ -2216,21 +2216,25 @@
 </section>
 <section id="sec-common-usecase-patterns">
 
-<h3 id="x4-2-common-patterns"><bdi class="secno">4.2</bdi> 一般的なパターン<a class="self-link" aria-label="§" href="#sec-common-usecase-patterns"></a></h3>
+<h3 id="x4-2-common-patterns"><bdi class="secno">4.2</bdi> 共通パターン<a class="self-link" aria-label="§" href="#sec-common-usecase-patterns"></a></h3>
 
-<p>この項では、デバイス/モノが、コントローラー、他のデバイス、エージェント、サーバーとどのように対話を行うかを示す一般的なユースケースのパターンを紹介します。この項では、トランスポート・プロトコルの発動要素として<em>クライアントの役割</em>(client role)という用語を用い、トランスポート・プロトコルの受動要素としてサーバーの役割(server role)という用語を用います。これは、システム構成要素に特定の役割を定めることを意味するものではありません。デバイスは、<em>クライアント</em>と<em>サーバー</em>の役割を同時に持つことができます。</p>
+<p>この項では、デバイス/Thingが、コントローラー、他のデバイス、エージェント、およびサーバーとどのように相互作用するかを示す共通的なユースケースのパターンを紹介する。この項では、トランスポートプロトコルの発動要素として<em>クライアントの役割</em> (client role) という用語を用い、トランスポートプロトコルの受動要素として<em>サーバーの役割</em> (server role) という用語を用いる。これは、システム構成要素に特定の役割を定めることを意味するものではない。一つのデバイスは、<em>クライアント</em>と<em>サーバー</em>の役割を同時に持つことができる。</p>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中では「client role」が<em>要素によって強調されている一方で，「server role」は強調されていないが，「server role」も同様に<em>要素により強調するべきと考えられる．</p>
+</div>
 
-<p>この二重の役割の例の1つは、クラウド・サービスに自身を登録し、センサーの測定値を定期的にクラウドに送信するセンサーです。応答メッセージでは、クラウドは、センサーのメッセージ送信速度を調整したり、特定のセンサー属性を選択したりすることができ、これらは将来のメッセージで送信される想定のものです。センサーは自身をクラウドで登録して接続を開始するため、これは「クライアント」の役割になります。しかし、応答メッセージで送信されるリクエストにも反応するため、「サーバー」の役割も果たします。</p>
+<p>この二重の役割の例の1つはセンサーであり、クラウドサービスに自身を登録するとともに、センサーの測定値を定期的にクラウドに送信する。応答メッセージでは、クラウドは、センサーのメッセージ送信速度を調整したり、特定のセンサー属性を選択したりすることができ、これらは今後送信されることになるメッセージを対象としたものである。センサーは自身をクラウドで登録して接続を開始するため、これは「クライアント」の役割である。しかし、応答メッセージで送信されるリクエストにも反応するため、「サーバー」の役割も果たす。</p>
 
-<p>以下の項では、複雑さが増しつつある役割、タスク、ユースケースのパターンについて説明します。これらは網羅的なものではなく、この仕様の後半の項で定義しているWoTアーキテクチャと構成要素を動機付けるために提示しています。</p>
+<p>以下の項では、複雑さが増しつつある役割、タスク、ユースケースのパターンについて説明する。これらは網羅的なものではなく、この仕様の後半の項で定義しているWoTアーキテクチャと構成要素を動機付けるために提示されるものである。</p>
 
 <section id="device-controllers">
 
 <h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
 
-<p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモート・コントローラーで制御するローカル・デバイスです。リモート・コントローラーは、ローカル・ホーム・ネットワークを介して電子機器に直接アクセスできます。このケースでは、リモート・コントローラーはブラウザやネイティブなアプリケーションで実装できます。</p>
+<p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモートコントローラーで制御されるローカルなデバイスである。リモートコントローラーは、ローカルなホームネットワークを介して電子機器に直接アクセスできる。このケースでは、リモートコントローラーはブラウザやネイティブなアプリケーションで実装できる。</p>
 
-<p>このパターンでは、電子機器などの少なくとも1つのデバイスには、他のデバイスからのリクエストを受け入れて応答できるサーバーの役割があり、場合によっては機械的なアクションを開始します。リモート・コントローラーのような他のデバイスには、センサー値の読み取りやデバイスの電源投入などの、リクエストに応じてメッセージを送信できるクライアントの役割があります。さらに、デバイスの現在の状態やイベントの通知を送信するために、デバイスは、サーバーの役割を持つ別のデバイスに対してメッセージを送信できるクライアントの役割を持つことができます。</p>
+<p>このパターンでは、電子機器などの少なくとも1つのデバイスには、他のデバイスからのリクエストを受け入れて応答できるサーバーの役割があり、時として機械的なアクションを開始する。リモートコントローラーのような他のデバイスには、センサー値の読み取りやデバイスの電源投入などの、リクエストに応じてメッセージを送信できるクライアントの役割がある。さらに、デバイスの現在の状態やイベントの通知を送信するために、デバイスは、サーバーの役割を持つ別のデバイスに対してメッセージを送信できるクライアントの役割を持つことができる。</p>
 
 <figure id="smart-home-device">
 <img src="images/smart-home-device.png" srcset="images/smart-home-device.svg" class="wot-arch-diagram" alt="スマート・ホーム・デバイスのユースケース">
@@ -2240,11 +2244,11 @@
 </section>
 <section id="thing-to-thing">
 
-<h4 id="x4-2-2-thing-to-thing"><bdi class="secno">4.2.2</bdi> モノとモノ<a class="self-link" aria-label="§" href="#thing-to-thing"></a></h4>
+<h4 id="x4-2-2-thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing<a class="self-link" aria-label="§" href="#thing-to-thing"></a></h4>
 
-<p><a href="#smart-home-t2t" class="fig-ref" title="制御エージェント">図<bdi class="figno">5</bdi></a>は、直接的なモノとモノ(Thing-to-Thing)の対話の例を示しています。シナリオは次のとおりです。センサーが部屋の状況変化、例えば、温度が基準値を超えていることを検出し、電子機器に対して「オンにする」などの制御メッセージを発信します。センサー・ユニットは、他のデバイスに始動メッセージを発信できます。</p>
+<p><a href="#smart-home-t2t" class="fig-ref" title="制御エージェント">図<bdi class="figno">5</bdi></a>は、直接的なThingとThing (Thing-to-Thing)の相互作用の例を示している。シナリオは次のとおりである。センサーが部屋の状況変化、例えば、温度が基準値を超えていることを検出し、電子機器に対して「オンにする」などの制御メッセージを発信する。センサーユニットは、他のデバイスにトリガーメッセージを発信できる。</p>
 
-<p>このケースでは、サーバーの役割を持つ2つのデバイスが接続されている場合、少なくとも一方のデバイスには、他方に対して作動または通知するようにメッセージを発信するクライアントの役割もなければなりません。</p>
+<p>このケースでは、サーバーの役割を持つ2つのデバイスが接続されている場合、少なくとも一方のデバイスには、他方に対して作動させたり通知するためにメッセージを発信するクライアントの役割もなければならない。</p>
 
 <figure id="smart-home-t2t">
 <img src="images/smart-home-t2t.png" srcset="images/smart-home-t2t.svg" class="wot-arch-diagram" alt="スマート・ホーム・モノとモノのユースケース">
@@ -2254,26 +2258,36 @@
 </section>
 <section id="remote-access">
 
-<h4 id="x4-2-3-remote-access"><bdi class="secno">4.2.3</bdi> リモート・アクセス<a class="self-link" aria-label="§" href="#remote-access"></a></h4>
+<h4 id="x4-2-3-remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス<a class="self-link" aria-label="§" href="#remote-access"></a></h4>
 
-<p><a href="#smart-home-multi" class="fig-ref" title="複数のネットワーク・インターフェース">図<bdi class="figno">6</bdi></a>で示しているように、このユースケースには、モバイル・リモート・コントローラー(例えば、スマートフォン)が含まれます。リモート・コントローラーは、Wi-FiやBluetoothなどのプロトコルを用いた、セルラー・ネットワークやホーム・ネットワークなどの様々なネットワーク接続とプロトコルを切り替えることができます。コントローラーがホーム・ネットワークにある場合、それは信頼できるデバイスであり、セキュリティやアクセスの制御を追加する必要はありません。信頼できるネットワークの外にある場合は、アクセス制御やセキュリティ・メカニズムを追加適用して、信頼関係を確保しなければなりません。このシナリオでは、様々なネットワーク・アクセス・ポイントやセルラー基地局間の切り替えにより、ネットワークの接続性が変わりえることに注意してください。</p>
+<p><a href="#smart-home-multi" class="fig-ref" title="複数のネットワークインターフェース">図<bdi class="figno">6</bdi></a>で示しているように、このユースケースには、モバイルリモートコントローラー(例えば、スマートフォン)が含まれる。リモートコントローラーは、セルラーネットワークや、Wi-FiやBluetoothなどのプロトコルを用いたホームネットワークなどの様々なネットワーク接続とプロトコルを切り替えることができる。コントローラーがホームネットワークにある場合、それは信頼できるデバイスであり、セキュリティやアクセス制御を追加する必要はない。コントローラが信頼できるネットワークの外にある場合は、アクセス制御やセキュリティのメカニズムを追加適用して、信頼関係を確保しなければならない。このシナリオでは、様々なネットワークアクセスポイントやセルラー基地局間の切り替えにより、ネットワークの接続性が変わりえることに注意すること。</p>
 
-<p>このパターンでは、<a href="#smart-home-device" class="fig-ref" title="モバイル制御">図<bdi class="figno">4</bdi></a>の関連するシナリオと同様に、リモート・コントローラーと電子機器は、クライアントとサーバーの役割を持っています。</p>
+<p>このパターンでは、<a href="#smart-home-device" class="fig-ref" title="モバイル制御">図<bdi class="figno">4</bdi></a>の関連するシナリオと同様に、リモートコントローラーと電子機器は、クライアントとサーバーの役割を持っている。</p>
 
 <figure id="smart-home-multi">
-<img src="images/smart-home-multi.png" srcset="images/smart-home-multi.svg" class="wot-arch-diagram" alt="スマート・ホームの複数のユースケース">
-<figcaption>図<bdi class="figno">6</bdi> <span class="fig-title">複数のネットワーク・インターフェース</span></figcaption>
+<img src="images/smart-home-multi.png" srcset="images/smart-home-multi.svg" class="wot-arch-diagram" alt="スマートホームの複数のユースケース">
+<figcaption>図<bdi class="figno">6</bdi> <span class="fig-title">複数のネットワークインターフェース</span></figcaption>
 </figure>
 
 </section>
 <section id="smart-home-gateways">
 
-<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+<h4 id="x4-2-4-smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ<a class="self-link" aria-label="§" href="#smart-home-gateways"></a></h4>
+  
+<p><a href="#smart-home-gateway" class="fig-ref" title="スマートホームゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマートホームゲートウェイを用いたユースケースを示している。このゲートウェイは、ホームネットワークとインターネットの間に位置づけられる。これは、屋内の電子機器を管理し、前述のユースケースのようにスマートフォンからなど、インターネット経由でリモートコントローラーからの命令を受信できるようにする。これは、デバイスの仮想表現でもある。スマートホームゲートウェイは通常、プロキシとファイアウォールの機能を提供する。</p>
 
-<p><a href="#smart-home-gateway" class="fig-ref" title="スマート・ホーム・ゲートウェイ">図<bdi class="figno">7</bdi></a>は、スマート・ホーム・ゲートウェイを用いたユースケースを示しています。このゲートウェイは、ホーム・ネットワークとインターネットの間に置かれます。それは、屋内の電子機器を管理し、前のユースケースのようにスマートフォンからなど、インターネット経由でリモート・コントローラーから命令を受信できます。これは、デバイスの仮想表現でもあります。スマート・ホーム・ゲートウェイは通常、プロキシとファイアウォールの機能を提供します。</p>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「It is also is a virtual representation of a device.」とあるが、一文中に「is」が二つあり，二つ目の「is」(=「is a virtual representation」の「is」)は不要。</p>
+</div>
+<p>このパターンでは、ホームゲートウェイは、クライアントとサーバーの両方の役割を持っている。リモートコントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモートコントローラーとの接続を可能とする。電子機器がリモートコントローラーにメッセージを送信する際は、ゲートウェイは、電子機器に対するサーバーの役割を果たし、リモートコントローラーに対するクライアントの役割を果たす。</p>
 
-<p>このパターンでは、ホーム・ゲートウェイは、クライアントとサーバーの両方の役割を持っています。リモート・コントローラーが電子機器を作動させた時に、クライアントの役割の電子機器とサーバーの役割のリモート・コントローラーに接続できます。電子機器がリモート・コントローラーにメッセージを送信すると、ゲートウェイは、電子機器ではサーバーの役割を果たし、リモート・コントローラーではクライアントの役割を果たします。</p>
-
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中、「the gateway act as server roles ... and it act as client roles」とあるが、「gateway」が単数形であることから、「act」は、いずれも「acts」が正しいと考えられる。
+また、「act server roles」および「act client roles」が正しいと考えられる。</p>
+</div>
+  
 <figure id="smart-home-gateway">
 <img src="images/smart-home-gateway.png" srcset="images/smart-home-gateway.svg" class="wot-arch-diagram" alt="スマート・ホーム・ゲートウェイのユースケース">
 <figcaption>図<bdi class="figno">7</bdi> <span class="fig-title">スマート・ホーム・ゲートウェイ</span></figcaption>
@@ -2282,9 +2296,9 @@
 </section>
 <section id="edge-devices">
 
-<h4 id="x4-2-5-edge-devices"><bdi class="secno">4.2.5</bdi> エッジ・デバイス<a class="self-link" aria-label="§" href="#edge-devices"></a></h4>
+<h4 id="x4-2-5-edge-devices"><bdi class="secno">4.2.5</bdi> エッジデバイス<a class="self-link" aria-label="§" href="#edge-devices"></a></h4>
 
-<p>エッジ・デバイスまたはエッジ・ゲートウェイは、スマート・ホーム・ゲートウェイに似ています。この用語は、エッジ・ゲートウェイによって実行される追加のタスクを示すために用います。<a href="#edge-device" class="fig-ref" title="エッジ・デバイス">図<bdi class="figno">8</bdi></a>のホーム・ゲートウェイは主に公開されているネットワークと信頼できるネットワークの間を橋渡しするだけですが、エッジ・デバイスにはローカルな計算性能があり、通常は、異なるプロトコル間の橋渡しを行います。エッジ・デバイスは通常、産業界のソリューションで用いられ、その場合には、接続されたデバイスとセンサーが提供するデータの前処理、フィルタリング、集約を行えます。</p>
+<p>エッジデバイスまたはエッジゲートウェイは、スマートホームゲートウェイに類似している。この用語は、エッジゲートウェイによって実行される追加のタスクを示すために用いる。<a href="#edge-device" class="fig-ref" title="エッジデバイス">図<bdi class="figno">8</bdi></a>のホームゲートウェイは主に公開されているネットワークと信頼できるネットワークの間を橋渡しするだけだが、エッジデバイスにはローカルな計算性能があり、通常は、異なるプロトコル間の橋渡しを行う。エッジデバイスは通常、産業界のソリューションで用いられ、その場合には、接続されたデバイスとセンサーが提供するデータの前処理、フィルタリング、集約を行うことができる。</p>
 
 <figure id="edge-device">
 <img src="images/edge-device.png" srcset="images/edge-device.svg" class="wot-arch-diagram" alt="エッジ・デバイスのユースケースuse case">
@@ -2294,23 +2308,23 @@
 </section>
 <section id="digital-twins">
 
-<h4 id="x4-2-6-digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン<a class="self-link" aria-label="§" href="#digital-twins"></a></h4>
+<h4 id="x4-2-6-digital-twins"><bdi class="secno">4.2.6</bdi> デジタルツイン<a class="self-link" aria-label="§" href="#digital-twins"></a></h4>
 
-<p>デジタル・ツインは仮想表現です。つまり、クラウド・サーバーやエッジ・デバイスに存在するデバイスまたはデバイス群のモデルです。これは、オンライン上に継続的に存在していない可能性のある実在するデバイスを表したり、実際のデバイスに展開する前に新しいアプリケーションやサービスをシミュレーションしたりするために使用できます。</p>
+<p>デジタルツインは仮想表現である。つまり、クラウドサーバーやエッジデバイスに存在するデバイスまたはデバイス群のモデルである。これは、継続的にオンライン上に存在するとは限らないデバイスを表すため、または、新しいアプリケーションやサービスを実際のデバイスに展開する前にシミュレーションを実行するために使用される。</p>
 
 <figure id="digital-twin">
-<img src="images/digital-twin.png" srcset="images/digital-twin.svg" class="wot-arch-diagram" alt="デジタル・ツインのユースケース">
+<img src="images/digital-twin.png" srcset="images/digital-twin.svg" class="wot-arch-diagram" alt="デジタルツインのユースケース">
 <figcaption>図<bdi class="figno">9</bdi> <span class="fig-title">デジタル・ツイン</span></figcaption>
 </figure>
 
-<p>デジタル・ツインは1つのデバイスをモデル化することも、複数のデバイスを、デバイスを組み合わせた1つの仮想表現に集約することもできます。</p>
+<p>デジタルツインは単一のデバイスをモデル化するこもでき、結合されたデバイスの仮想表現に複数のデバイスを集約することもできる。</p>
 
 <figure id="digital-twin-multiple-devices">
-<img src="images/digital-twin-multiple-devices.png" srcset="images/digital-twin-multiple-devices.svg" class="wot-arch-diagram" alt="デジタル・ツインの複数のデバイスのユースケース">
-<figcaption>図<bdi class="figno">10</bdi> <span class="fig-title">複数のデバイスのデジタル・ツイン</span></figcaption>
+<img src="images/digital-twin-multiple-devices.png" srcset="images/digital-twin-multiple-devices.svg" class="wot-arch-diagram" alt="デジタルツインの複数のデバイスのユースケース">
+<figcaption>図<bdi class="figno">10</bdi> <span class="fig-title">複数のデバイスのデジタルツイン</span></figcaption>
 </figure>
 
-<p>デジタル・ツインは、デバイスが既にクラウドに接続されているか、それともクラウドに接続されているゲートウェイに接続されているかに応じて、様々な方法で実現できます。</p>
+<p>デジタルツインは、デバイスが既にクラウドに接続されているか、それともクラウドに接続されているゲートウェイに接続されているかに応じて、様々な方法で実現できる。</p>
 
 <section id="cloud-ready-devices">
 
@@ -2374,9 +2388,14 @@
 
 <h3 id="x4-3-summary"><bdi class="secno">4.3</bdi> 要約<a class="self-link" aria-label="§" href="#sec-use-case-summary"></a></h3>
 
-<p>前項では、様々なアーキテクチャのパターンについて説明しました。これらのパターンでは、旧式デバイスを含むデバイス、コントローラー、ゲートウェイ、クラウド・サーバーなどの一部の機能のエンティティーは、建物の内外やデータ・センターなどの物理的な場所に置かれます。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要です。</p>
+<p>前項では、様々なアーキテクチャのパターンについて説明した。これらのパターンでは、旧式デバイス、コントローラー、ゲートウェイ、クラウドサーバーを含むデバイスなどの一部の機能のエンティティーは、建物の内外やデータセンターなどの物理的な場所に置かれる。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要である。</p>
 
-<p>トランスポート・プロトコル層では、各エンティティーが通信に適した役割を任意に選択します。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、デバイスはサーバーとして機能します。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信できます。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えるということを理解します。</p>
+<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えると理解する。</p>
+
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中で「On the other hand, if a device has limited or intermittent network connectivity, they may act as a client...」とあるが、「they may act as...」の「they」は、「device」に対する代名詞であることから「it」が正しいと考えられる。その他、いくつかの誤字について、W3C側に指摘ずみ。</p>
+</div>
 
 <figure id="usecase-overview">
 <img src="images/use-case-summary.png" srcset="images/use-case-summary.svg" class="wot-arch-diagram" alt="ユースケースの概要">
@@ -2395,44 +2414,44 @@
 
 <h3 id="x5-1-functional-requirements"><bdi class="secno">5.1</bdi> 機能要件<a class="self-link" aria-label="§" href="#sec-functional-requirement"></a></h3>
 
-<p>この項では、抽象的なモノのウェブ(WoT)アーキテクチャに必要なプロパティーを定義します。</p>
+<p>この項では、Web of Things (WoT)の抽象アーキテクチャに必要な特性を定義する。</p>
 
 <section id="sec-requirements-principles">
 
 <h4 id="x5-1-1-common-principles"><bdi class="secno">5.1.1</bdi> 一般的な原則<a class="self-link" aria-label="§" href="#sec-requirements-principles"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャは、ウェブ技術を用いて異なるエコシステムの相互作用を可能にすべきです。</li>
-  <li>WoTアーキテクチャは、RESTful APIを用いたウェブ・アーキテクチャに基づくべきです。</li>
-  <li>WoTアーキテクチャでは、ウェブで一般的に用いられている複数のペイロード形式を使用できるべきです。</li>
-  <li>WoTアーキテクチャでは、様々なデバイス・アーキテクチャが可能でなければならず、クライアントやサーバーにシステム構成要素の実装を強制してはなりません。</li>
+  <li>WoTアーキテクチャは、ウェブ技術を用いて異なるエコシステムの相互運用を可能にすべきである。</li>
+  <li>WoTアーキテクチャは、RESTful APIを用いたウェブアーキテクチャに基づくべきである。</li>
+  <li>WoTアーキテクチャでは、ウェブで一般的に用いられている複数のペイロード形式を使用できるべきである。</li>
+  <li>WoTアーキテクチャでは、様々なデバイスアーキテクチャが可能でなければならず、システム構成要素として特定のクライアントやサーバーの実装を強制してはならない。</li>
   <li>柔軟性
-  <p>WoT実装には、様々な物理デバイスの設定があります。WoTの抽象アーキテクチャは、すべてのバリエーションに対してマッピングができ、それらをカバーできるべきです。</p>
+  <p>WoT実装には、様々な物理デバイスの構成がある。WoTの抽象アーキテクチャは、そのすべてのバリエーションに対してマッピングができ、それらをカバーできるべきである。</p>
   </li>
   <li>互換性
-  <p>多くの業界には、すでに多くの既存のIoTソリューションと進行中のIoT標準化の活動があります。WoTは、これらの既存および開発中のIoTソリューションとWoTの概念に基づくウェブ技術との間の橋渡しを提供すべきです。WoTは、既存のIoTソリューションおよび現在の標準の上位互換であるべきです。</p>
+  <p>多くの業界には、すでに多くの既存のIoTソリューションと進行中のIoT標準化活動がある。WoTは、これらの既存および開発中のIoTソリューションとウェブ技術との間の橋渡しをWoTの概念に基づいて提供すべきである。WoTは、既存のIoTソリューションおよび現在の標準の上位互換であるべきである。</p>
   </li>
-  <li>拡張性
-  <p>WoTは、数千から数百万のデバイスを組み込むIoTソリューションに対応できなければなりません。これらのデバイスは、製造者が異なっていても同じ性能を提供する可能性があります。</p>
+  <li>スケーラビリティ
+  <p>WoTは、数千から数百万のデバイスを組み込むIoTソリューションに対応できなければならない。これらのデバイスは、製造者が異なっていても同じ機能を提供する可能性がある。</p>
   </li>
   <li>相互運用性
-  <p>WoTは、デバイスとクラウドの製造者にまたがる相互運用性を提供しなければなりません。WoT対応デバイスを追加設定なしに様々な製造者のクラウド・サービスに接続できなければなりません。</p>
+  <p>WoTは、デバイスとクラウドの製造者にまたがる相互運用性を提供しなければならない。WoT対応デバイスをデバイスと異なる製造者のクラウドサービスに追加設定なしで接続できなければならない。</p>
   </li>
 </ul>
 
 </section>
 <section id="sec-requirements-thing-functionalities">
 
-<h4 id="x5-1-2-thing-functionalities"><bdi class="secno">5.1.2</bdi> モノの機能<a class="self-link" aria-label="§" href="#sec-requirements-thing-functionalities"></a></h4>
+<h4 id="x5-1-2-thing-functionalities"><bdi class="secno">5.1.2</bdi> Thingの機能<a class="self-link" aria-label="§" href="#sec-requirements-thing-functionalities"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャでは、モノが次のような機能を持てるようにすべきです。
+  <li>WoTアーキテクチャでは、Thingが次のような機能を持てるようにすべきである。
   <ul>
-    <li>モノのステータス情報を読む。</li>
-    <li>作動を発生させるモノのステータス情報を更新する。</li>
-    <li>モノのステータス情報の変更通知を購読、受信、購読解除する。</li>
-    <li>特定の作動または計算を発生させる入出力パラメータを用いて機能を呼び出す。</li>
-    <li>単なる状態遷移の報告よりも一般的なイベントの通知を購読、受信、購読解除する。</li>
+    <li>Thingのステータス情報を読む。</li>
+    <li>動作を発生させるThingのステータス情報を更新する。</li>
+    <li>Thingのステータス情報の変更通知の登録、受信、登録解除を行う。</li>
+    <li>入出力パラメータにより、特定の動作または計算を発生させる機能を呼び出す。</li>
+    <li>単なる状態遷移の報告だけでなく、一般的なイベントの通知の登録、受信、登録解除を行う。</li>
   </ul>
   </li>
 </ul>
@@ -2443,9 +2462,9 @@
 <h4 id="x5-1-3-search-and-discovery"><bdi class="secno">5.1.3</bdi> 検索と発見<a class="self-link" aria-label="§" href="#sec-requirements-search-and-discovery"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャでは、クライアントは、モノ自体にアクセスする前に、モノの属性、機能、およびアクセス・ポイントを知ることができるべきです。</li>
-  <li>WoTアーキテクチャでは、クライアントはその属性と機能によってモノを検索できるべきです。</li>
-  <li>WoTアーキテクチャでは、機能の名前に関係なく、統一された語彙に基づいて必要な機能を提供するモノのセマンティックな検索ができるべきです。</li>
+  <li>WoTアーキテクチャでは、クライアントは、Thing自体にアクセスする前に、Thingの属性、機能、およびアクセスポイントを知ることができるべきでである。</li>
+  <li>WoTアーキテクチャでは、クライアントはその属性と機能によってThingを検索できるべきである。</li>
+  <li>WoTアーキテクチャでは、機能の名前に関係なく、統一された語彙に基づいて必要な機能を提供するThingのセマンティックな検索ができるべきである。</li>
 </ul>
 
 </section>
@@ -2454,10 +2473,10 @@
 <h4 id="x5-1-4-description-mechanism"><bdi class="secno">5.1.4</bdi> 記述方法<a class="self-link" aria-label="§" href="#sec-requirements-description-mechanism"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャは、モノとその機能の記述を可能にする一般的な記述方法をサポートすべきです。</li>
-  <li>このような記述は、人間が読めるだけでなく、機械も読めるべきです。</li>
-  <li>このような記述により、その構造と記述内容のセマンティックなアノテーションが可能となるべきです。</li>
-  <li>このような記述は、ウェブで一般的に用いられている複数の形式を用いて交換できるべきです。</li>
+  <li>WoTアーキテクチャは、Thingとその機能の記述を可能にする一般的な記述方法をサポートすべきである。</li>
+  <li>このような記述は、人が読めるだけでなく、機械処理が可能であるべきである。</li>
+  <li>このような記述により、その構造と記述内容のセマンティックアノテーションが可能となるべきである。</li>
+  <li>このような記述は、ウェブで一般的に用いられている複数の形式を用いてやり取りできるべきである。</li>
 </ul>
 
 </section>
@@ -2466,24 +2485,23 @@
 <h4 id="x5-1-5-description-of-attributes"><bdi class="secno">5.1.5</bdi> 属性の記述<a class="self-link" aria-label="§" href="#sec-requirements-description-of-attributes"></a></h4>
 
 <ul>
-  <li>WoTアーキテクチャでは、次のようなモノの属性を記述できるべきです。
+  <li>WoTアーキテクチャでは、次のようなThingの属性を記述できるべきである。
   <ul>
     <li>名前</li>
     <li>説明</li>
     <li>仕様のバージョン、形式、記述内容自体</li>
-    <li>他の関係するモノやメタデータ情報へのリンク</li>
+    <li>他の関係するThingやメタデータ情報へのリンク</li>
   </ul>
   </li>
-  <li>このような記述は国際化をサポートすべきです。</li>
+  <li>このような記述は国際化をサポートすべきである。</li>
 </ul>
 
 </section>
 <section id="sec-requirements-description-of-functionalities">
 
 <h4 id="x5-1-6-description-of-functionalities"><bdi class="secno">5.1.6</bdi> 機能の記述<a class="self-link" aria-label="§" href="#sec-requirements-description-of-functionalities"></a></h4>
-
 <ul>
-  <li>WoTアーキテクチャでは、<a href="#sec-requirements-thing-functionalities" class="sec-ref">§&nbsp;<bdi class="secno">5.1.2</bdi>モノの機能</a>で示しているモノの機能を記述できるべきです。</li>
+  <li>WoTアーキテクチャでは、<a href="#sec-requirements-thing-functionalities" class="sec-ref">§&nbsp;<bdi class="secno">5.1.2</bdi>Thingの機能</a>で示しているThingの機能を記述できるべきである。</li>
 </ul>
 
 </section>
