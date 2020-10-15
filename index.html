@@ -1630,7 +1630,7 @@
 <div class="head">
 <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
 
-<h1 id="title" class="title">モノのウェブ(WoT)アーキテクチャ</h1>
+<h1 id="title" class="title">Web of Things (WoT) アーキテクチャ</h1>
 
 <h2>W3C勧告 <time class="dt-published" datetime="2020-04-09">2020年4月9日</time></h2>
 
@@ -1674,9 +1674,9 @@
 
 <h2>要約</h2>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブ(WoT;Web of Things)は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としています。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指しています。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr>の Web of Things (WoT) は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としています。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指しています。</p>
 
-<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブの抽象アーキテクチャを記述しています。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこのドキュメントで示しています。他のドキュメントで詳細な仕様が示されているモジュール構成要素についても確認を行っています。このドキュメントでは、これらの構成要素がどのように関連付けられ、連携するかを記述しています。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示しています。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではありません。</p>
+<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things の抽象アーキテクチャを記述しています。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこのドキュメントで示しています。他のドキュメントで詳細な仕様が示されているモジュール構成要素についても確認を行っています。このドキュメントでは、これらの構成要素がどのように関連付けられ、連携するかを記述しています。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示しています。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではありません。</p>
 
 </section>
 <section id="sotd" class="introductory">
@@ -1685,7 +1685,7 @@
 
 <p><em>この項は、このドキュメントの公開時のステータスについて記述しています。他のドキュメントがこのドキュメントに取って代わることがありえます。現行の<abbr title="World Wide Web Consortium">W3C</abbr>の刊行物およびこの技術報告の最新の改訂版のリストは、https://www.w3.org/TR/の<a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr>技術報告インデックス</a>にあります。</em></p>
 
-<p>このドキュメントは、抽象的なアーキテクチャの設計について記述しています。しかし、関連する<em>WoTモノの記述</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>があります。これらは、<abbr title="World Wide Web Consortium">W3C</abbr>モノのウェブのアーキテクチャに準拠した実装です。</p>
+<p>このドキュメントは、抽象的なアーキテクチャの設計について記述しています。しかし、関連する<em>WoT Thing Description</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>があります。これらは、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things のアーキテクチャに準拠した実装です。</p>
 
 <p>このドキュメントは、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済みドキュメントであり、参考資料として用いたり、別のドキュメントで引用することができます。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することです。これによってウェブの機能性および相互運用性が増強されます。</p>
 
@@ -1770,11 +1770,11 @@
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-technical-requirements"><bdi class="secno">5.2</bdi> 技術要件</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"><bdi class="secno">5.2.1</bdi> モノのウェブおよびモノのウェブ・アーキテクチャの構成要素</a></li>
+      <li class="tocline"><a class="tocxref" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"><bdi class="secno">5.2.1</bdi> Web of Things および Web of Thingsアーキテクチャの構成要素</a></li>
       <li class="tocline"><a class="tocxref" href="#devices"><bdi class="secno">5.2.2</bdi> デバイス</a></li>
       <li class="tocline"><a class="tocxref" href="#applications"><bdi class="secno">5.2.3</bdi> アプリケーション</a></li>
       <li class="tocline"><a class="tocxref" href="#digital-twins-0"><bdi class="secno">5.2.4</bdi> デジタルツイン</a></li>
-      <li class="tocline"><a class="tocxref" href="#discovery"><bdi class="secno">5.2.5</bdi> 発見</a></li>
+      <li class="tocline"><a class="tocxref" href="#discovery"><bdi class="secno">5.2.5</bdi> ディスカバリ</a></li>
       <li class="tocline"><a class="tocxref" href="#security"><bdi class="secno">5.2.6</bdi> セキュリティ</a></li>
       <li class="tocline"><a class="tocxref" href="#accessibility"><bdi class="secno">5.2.7</bdi> アクセシビリティ</a></li>
     </ol>
@@ -1817,7 +1817,7 @@
   </li>
   <li class="tocline"><a class="tocxref" href="#sec-building-blocks"><bdi class="secno">7.</bdi> WoT構成要素</a>
   <ol class="toc">
-    <li class="tocline"><a class="tocxref" href="#sec-thing-description"><bdi class="secno">7.1</bdi> WoTモノの記述</a></li>
+    <li class="tocline"><a class="tocxref" href="#sec-thing-description"><bdi class="secno">7.1</bdi> WoT Thing Description</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-binding-templates"><bdi class="secno">7.2</bdi> WoTバインディング・テンプレート</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-scripting-api"><bdi class="secno">7.3</bdi> WoTスクリプトAPI</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-security-guidelines"><bdi class="secno">7.4</bdi> WoTセキュリティとプライバシーに関するガイドライン</a></li>
@@ -2568,8 +2568,12 @@
 
 <h4 id="x5-2-1-components-in-the-web-of-things-and-the-web-of-things-architecture">
 
-<bdi class="secno">5.2.1</bdi>Web of Thingsの構成要素とWeb of Thingsアーキテクチャ<a class="self-link" aria-label="§" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"></a></h4>
-
+<bdi class="secno">5.2.1</bdi> Web of Thingsの構成要素とWeb of Thingsアーキテクチャ<a class="self-link" aria-label="§" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"></a></h4>
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>本5.2.1項の英語原文タイトルは「Components in the Web of Things and the Web of Things Architecture」であり、日本語訳は「Web of Thingsの構成要素とWeb of Thingsアーキテクチャ」となるが、その記述内容は単に「一部のユースケースにおいてディレクトリが構成要素として用いられること」や「構成要素は一つの構成要素に接続される場合と、複数のネットワークに展開されることがある」ということであり、「構成要素とWeb of Thingsアーキテクチャ」という項タイトルには違和感があるため、文書構成を見直すべきと考えられる。
+</p>
+</div>
 <p>ユースケースは、デバイスやアプリケーションにアクセスしたり、制御したりするデバイスやアプリケーション、デバイス間にあるプロキシ(例えば、ゲートウェイやエッジ・デバイス)などの基本的な構成要素を識別するのに役立つ。一部のユースケースで有用な追加的な構成要素は、発見を支援するディレクトリである。</p>
 
 <p>これらの構成要素は、インターネットや、オフィス、工場、その他の施設のフィールドネットワークに接続される。関係するすべての構成要素が1つのネットワークに接続されている場合もあるが、一般的に、構成要素は複数のネットワークに展開される。</p>
@@ -2584,9 +2588,15 @@
 <p>一般的なメタデータには、デバイスの識別子(URI)、シリアル番号、製造日、場所などのデバイス情報、その他の人間が読める情報が含まれる。</p>
 
 <p>情報モデルは、デバイスの属性を定義し、デバイスの内部設定、制御機能、通知機能を表す。同じ機能を持つデバイスは、用いるトランスポートプロトコルに関係なく、同じ情報モデルを有する。</p>
-
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>英語原本中では「Information models defines device attributes」となっているが、主語が「Information models」と複数形であることを考慮すると、「define」が正しいと思われる。</p>
+</div>
 <p>WoTアーキテクチャに基づく多くのシステムは、システム領域を越えて利用されるため、関係者は、情報モデルで用いられる語彙とメタデータ(オントロジーなど)に共通の理解を持っているべきである。RESTトランスポートに加えて、PubSubトランスポートもサポートされている。</p>
-
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>上記日本語訳中で「システム領域を越えて」としている箇所は、英語原本中で「crossing system Domains」となっているが、「Domains」の頭文字が大文字である理由が不明であり、単に「domains」とすべきであると思われる。</p>
+</div>
 <p>セキュリティ情報には、認証、認可、安全な通信に関する記述が含まれる。デバイスは、TDをデバイスの内部か外部のいずれかに置き、TDをアクセス可能にして、他の構成要素がそのTDを見つけてアクセスできるようにする必要がある。</p>
 
 </section>
@@ -2610,11 +2620,11 @@
 </section>
 <section id="discovery">
 
-<h4 id="x5-2-5-discovery"><bdi class="secno">5.2.5</bdi> 発見<a class="self-link" aria-label="§" href="#discovery"></a></h4>
+<h4 id="x5-2-5-discovery"><bdi class="secno">5.2.5</bdi> ディスカバリ<a class="self-link" aria-label="§" href="#discovery"></a></h4>
 
-<p>デバイス、アプリケーション、およびツインからデバイスと仮想デバイスのTDにアクセスするためには、TDを共有する共通の方法が必要です。ディレクトリは、デバイスとツイン自身が自動で、またはユーザが手動で記述を登録できる機能を提供することで、この要件を満たすことができます。</p>
+<p>デバイス、アプリケーション、およびツインからデバイスと仮想デバイスのTDにアクセスするためには、TDを共有する共通の方法が必要である。ディレクトリは、デバイスとツイン自身が自動で、またはユーザが手動で記述を登録できる機能を提供することで、この要件を満たすことができる。</p>
 
-<p>デバイスと仮想デバイスの記述は、外部エンティティーにより検索できる必要があります。ディレクトリは、デバイスの記述や情報モデルの一般的な記述に含まれているキーワードなどの検索キーを用いて検索を処理できる必要があります。</p>
+<p>デバイスと仮想デバイスの記述は、外部エンティティーにより検索できる必要がある。ディレクトリは、デバイスの記述や情報モデルの一般的な記述に含まれているキーワードなどの検索キーを用いて検索を処理できる必要がある。</p>
 
 </section>
 <section id="security">
