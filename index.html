@@ -1630,7 +1630,7 @@
 <div class="head">
 <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
 
-<h1 id="title" class="title">モノのウェブ(WoT)アーキテクチャ</h1>
+<h1 id="title" class="title">Web of Things (WoT) アーキテクチャ</h1>
 
 <h2>W3C勧告 <time class="dt-published" datetime="2020-04-09">2020年4月9日</time></h2>
 
@@ -1674,9 +1674,9 @@
 
 <h2>要約</h2>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブ(WoT;Web of Things)は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としています。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指しています。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr>の Web of Things (WoT) は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としています。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指しています。</p>
 
-<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブの抽象アーキテクチャを記述しています。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこのドキュメントで示しています。他のドキュメントで詳細な仕様が示されているモジュール構成要素についても確認を行っています。このドキュメントでは、これらの構成要素がどのように関連付けられ、連携するかを記述しています。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示しています。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではありません。</p>
+<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things の抽象アーキテクチャを記述しています。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこのドキュメントで示しています。他のドキュメントで詳細な仕様が示されているモジュール構成要素についても確認を行っています。このドキュメントでは、これらの構成要素がどのように関連付けられ、連携するかを記述しています。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示しています。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではありません。</p>
 
 </section>
 <section id="sotd" class="introductory">
@@ -1685,7 +1685,7 @@
 
 <p><em>この項は、このドキュメントの公開時のステータスについて記述しています。他のドキュメントがこのドキュメントに取って代わることがありえます。現行の<abbr title="World Wide Web Consortium">W3C</abbr>の刊行物およびこの技術報告の最新の改訂版のリストは、https://www.w3.org/TR/の<a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr>技術報告インデックス</a>にあります。</em></p>
 
-<p>このドキュメントは、抽象的なアーキテクチャの設計について記述しています。しかし、関連する<em>WoTモノの記述</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>があります。これらは、<abbr title="World Wide Web Consortium">W3C</abbr>モノのウェブのアーキテクチャに準拠した実装です。</p>
+<p>このドキュメントは、抽象的なアーキテクチャの設計について記述しています。しかし、関連する<em>WoT Thing Description</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>があります。これらは、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things のアーキテクチャに準拠した実装です。</p>
 
 <p>このドキュメントは、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済みドキュメントであり、参考資料として用いたり、別のドキュメントで引用することができます。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することです。これによってウェブの機能性および相互運用性が増強されます。</p>
 
@@ -1770,7 +1770,7 @@
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-technical-requirements"><bdi class="secno">5.2</bdi> 技術要件</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"><bdi class="secno">5.2.1</bdi> モノのウェブおよびモノのウェブ・アーキテクチャの構成要素</a></li>
+      <li class="tocline"><a class="tocxref" href="#components-in-the-web-of-things-and-the-web-of-things-architecture"><bdi class="secno">5.2.1</bdi> Web of Things および Web of Thingsアーキテクチャの構成要素</a></li>
       <li class="tocline"><a class="tocxref" href="#devices"><bdi class="secno">5.2.2</bdi> デバイス</a></li>
       <li class="tocline"><a class="tocxref" href="#applications"><bdi class="secno">5.2.3</bdi> アプリケーション</a></li>
       <li class="tocline"><a class="tocxref" href="#digital-twins-0"><bdi class="secno">5.2.4</bdi> デジタルツイン</a></li>
@@ -1817,7 +1817,7 @@
   </li>
   <li class="tocline"><a class="tocxref" href="#sec-building-blocks"><bdi class="secno">7.</bdi> WoT構成要素</a>
   <ol class="toc">
-    <li class="tocline"><a class="tocxref" href="#sec-thing-description"><bdi class="secno">7.1</bdi> WoTモノの記述</a></li>
+    <li class="tocline"><a class="tocxref" href="#sec-thing-description"><bdi class="secno">7.1</bdi> WoT Thing Description</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-binding-templates"><bdi class="secno">7.2</bdi> WoTバインディング・テンプレート</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-scripting-api"><bdi class="secno">7.3</bdi> WoTスクリプトAPI</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-security-guidelines"><bdi class="secno">7.4</bdi> WoTセキュリティとプライバシーに関するガイドライン</a></li>
