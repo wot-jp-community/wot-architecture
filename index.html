@@ -1788,7 +1788,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-web-thing"><bdi class="secno">6.3</bdi> ウェブのモノ</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-interaction-model"><bdi class="secno">6.4</bdi> 対話モデル</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">6.4.1</bdi> プロパティー</a></li>
+      <li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">6.4.1</bdi> Property</a></li>
       <li class="tocline"><a class="tocxref" href="#actions"><bdi class="secno">6.4.2</bdi> アクション</a></li>
       <li class="tocline"><a class="tocxref" href="#events"><bdi class="secno">6.4.3</bdi> イベント</a></li>
     </ol>
@@ -2737,19 +2737,19 @@
 
 <p>当初、ウェブ資源とは通常、ウェブ・クライアントが容易に取得できるウェブ上のドキュメントを表していました。ウェブ・サービスの導入により、資源は、あらゆる種類の動作を実装できる、より汎用的な対話のエンティティーになりました。この非常に高度な抽象化により、多種多様な対話の可能性があるため、アプリケーションと資源との間を疎結合することが難しくなっています。その結果、執筆時点で、一般的なAPI記述は、アプリケーションの意図(application intent)から資源のアドレス、メソッド、リクエスト・ペイロード構造、応答ペイロード構造、および予期されるエラーへの静的マッピングで構成されています。これにより、ウェブ・クライアントとウェブ・サービスが密結合されます。</p>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">対話モデル</a>は、アプリケーションの意図(application intent)から具体的なプロトコル操作へのマッピングを形式化する仲介抽象化を導入し、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>をモデル化できる方法の可能性を狭めます。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">対話モデル</a>は、アプリケーションの意図(application intent)から具体的なプロトコル操作へのマッピングを形式化する仲介抽象化を導入し、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">インタラクション・アフォーダンス</a>をモデル化できる方法の可能性を狭めます。</p>
 
-<p><span class="rfc2119-assertion" id="arch-affordances">ナビゲーション・アフォーダンス(つまり、ウェブ・リンク)に加えて、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>は、この仕様で定義している<a href="#dfn-property" class="internalDFN" data-link-type="dfn">プロパティー</a>、<a href="#dfn-action" class="internalDFN" data-link-type="dfn">アクション</a>、<a href="#dfn-event" class="internalDFN" data-link-type="dfn">イベント</a>という他の3種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>を提供できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>このナロー・ウエスト(narrow waist)は、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を分離することを可能にしますが、これら4種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>は依然として、IoTデバイスとサービスで見つかるほぼすべての対話の可能性をモデル化できます。</p>
+<p><span class="rfc2119-assertion" id="arch-affordances">ナビゲーション・アフォーダンス(つまり、ウェブ・リンク)に加えて、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>は、この仕様で定義している<a href="#dfn-property" class="internalDFN" data-link-type="dfn">プロパティー</a>、<a href="#dfn-action" class="internalDFN" data-link-type="dfn">アクション</a>、<a href="#dfn-event" class="internalDFN" data-link-type="dfn">イベント</a>という他の3種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">インタラクション・アフォーダンス</a>を提供できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>このナロー・ウエスト(narrow waist)は、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>を分離することを可能にしますが、これら4種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">インタラクション・アフォーダンス</a>は依然として、IoTデバイスとサービスで見つかるほぼすべての対話の可能性をモデル化できます。</p>
 
 <section id="properties">
 
-<h4 id="x6-4-1-properties"><bdi class="secno">6.4.1</bdi> プロパティー<a class="self-link" aria-label="§" href="#properties"></a></h4>
+<h4 id="x6-4-1-properties"><bdi class="secno">6.4.1</bdi> Properties<a class="self-link" aria-label="§" href="#properties"></a></h4>
 
-<p>プロパティーは、モノの状態を公開する対話アフォーダンスです。<span class="rfc2119-assertion" id="arch-property-readable">プロパティーによって公開される状態は、検索可能(読み取り可能)でなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-property-writable">オプションで、プロパティーによって公開される状態は、更新可能(書き込み可能)です(<em class="rfc2119" title="MAY">MAY</em>)。</span><span class="rfc2119-assertion" id="arch-property-observable"><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>は、変更後に新しい状態をプッシュすることにより、プロパティーを監視可能にすることを選択できます(<em class="rfc2119" title="MAY">MAY</em>)(資源の監視[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7641" title="Observing Resources in the Constrained Application Protocol (CoAP)">RFC7641</a></cite>]を参照)。</span>書き込み専用の状態は、アクションを介して更新すべきです。</p>
+<p>Propertyは、Thingの状態を公開するインタラクション・アフォーダンスです。<span class="rfc2119-assertion" id="arch-property-readable">Propertyによって公開される状態は、検索可能(読み取り可能)でなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-property-writable">オプションで、Propertyによって公開される状態は、更新可能(書き込み可能)です(<em class="rfc2119" title="MAY">MAY</em>)。</span><span class="rfc2119-assertion" id="arch-property-observable"><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>は、変更後に新しい状態をプッシュすることにより、Propertyを監視可能にすることを選択できます(<em class="rfc2119" title="MAY">MAY</em>)(資源の監視[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7641" title="Observing Resources in the Constrained Application Protocol (CoAP)">RFC7641</a></cite>]を参照)。</span>書き込み専用の状態は、アクションを介して更新すべきです。</p>
 
-<p><span class="rfc2119-assertion" id="arch-property-dataschema">用いるプロトコル・バインディングでデータが完全に指定されていない場合(例えば、メディア・タイプにより)、プロパティーには公開の状態に関する<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データ・スキーマ</a>を1つ含めることができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p><span class="rfc2119-assertion" id="arch-property-dataschema">用いるプロトコル・バインディングでデータが完全に指定されていない場合(例えば、メディア・タイプにより)、Propertyには公開の状態に関する<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データ・スキーマ</a>を1つ含めることができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>プロパティーの例は、センサー値(読み取り専用)、ステートフルな作動装置(読み書き)、設定パラメータ(読み書き)、モノの状態(読み取り専用または読み書き)、または計算結果(読み取り専用)です。</p>
+<p>Propertyの例は、センサー値(読み取り専用)、ステートフルな作動装置(読み書き)、設定パラメータ(読み書き)、モノの状態(読み取り専用または読み書き)、または計算結果(読み取り専用)です。</p>
 
 </section>
 <section id="actions">
