@@ -1789,7 +1789,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-interaction-model"><bdi class="secno">6.4</bdi> 対話モデル</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">6.4.1</bdi> Property</a></li>
-      <li class="tocline"><a class="tocxref" href="#actions"><bdi class="secno">6.4.2</bdi> アクション</a></li>
+      <li class="tocline"><a class="tocxref" href="#actions"><bdi class="secno">6.4.2</bdi> Action</a></li>
       <li class="tocline"><a class="tocxref" href="#events"><bdi class="secno">6.4.3</bdi> イベント</a></li>
     </ol>
     </li>
@@ -2754,13 +2754,13 @@
 </section>
 <section id="actions">
 
-<h4 id="x6-4-2-actions"><bdi class="secno">6.4.2</bdi> アクション<a class="self-link" aria-label="§" href="#actions"></a></h4>
+<h4 id="x6-4-2-actions"><bdi class="secno">6.4.2</bdi> Action<a class="self-link" aria-label="§" href="#actions"></a></h4>
 
-<p>アクションは、モノの機能を呼び出すことができる対話アフォーダンスです。<span class="rfc2119-assertion" id="arch-action-functions">アクションは、直接公開されていない状態を操作したり(プロパティーを参照)、一度に複数のプロパティーを操作したり、内部ロジックに基づいてプロパティーを操作したりすることができます(<em class="rfc2119" title="MAY">MAY</em>)(例えば、トグル)。</span><span class="rfc2119-assertion" id="arch-action-process">アクションの呼び出しは、経時的に状態(作動装置を介した物理的な状態を含む)を操作するモノのプロセスを始動させることもできます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p>actionは、モノの機能を呼び出すことができる相互作用のアフォーダンスである。<span class="rfc2119-assertion" id="arch-action-functions">actionは、直接公開されていない状態を操作したり(Propertyを参照)、一度に複数のpropertyを操作したり、内部ロジックに基づいてpropertyを操作したりすることができる(<em class="rfc2119" title="MAY">MAY</em>)(例えば、トグル)。</span><span class="rfc2119-assertion" id="arch-action-process">actionの呼び出しは、経時的に状態(アクチュエータを介した物理的な状態を含む)を操作するモノのプロセスを始動させることもできる(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p><span class="rfc2119-assertion" id="arch-action-dataschema">用いるプロトコル・バインディングでデータが完全に指定されていない場合(例えば、メディア・タイプにより)、アクションにはオプションの入力パラメータと出力結果の<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データ・スキーマ</a>を含めることができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p><span class="rfc2119-assertion" id="arch-action-dataschema">用いるプロトコルバインディングでデータが完全に指定されていない場合(例えば、メディアタイプにより)、actionにはオプションの入力パラメータと出力結果の<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">data scheme</a>を含めることができる(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>アクションの例は、複数のプロパティーを同時に変更する、照明の明るさを暗くしたり(減光)、独自の制御ループ・アルゴリズムなどの非公開なプロセスを用いるなどして経時的にプロパティーを変更する、ドキュメントの印刷などの長時間にわたるプロセスを呼び出すことです。</p>
+<p>actionの例は、複数のpropertyを同時に変更すること、照明の明るさを暗くしたり(減光)、独自の制御ループアルゴリズムなどの非公開なプロセスを用いるなどして経時的にプロパティーを変更すること、ドキュメントの印刷などの長時間にわたるプロセスを呼び出すことである。</p>
 
 </section>
 <section id="events">
