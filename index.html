@@ -1072,7 +1072,7 @@
       ],
       "publisher": {
         "name": "IETF"
-      }
+      } 
     },
     {
       "id": "https://html.spec.whatwg.org/multipage/",
@@ -1786,7 +1786,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-architecture-overview"><bdi class="secno">6.1</bdi> 概要</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-affordances"><bdi class="secno">6.2</bdi> アフォーダンス</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-web-thing"><bdi class="secno">6.3</bdi> Web Thing</a></li>
-    <li class="tocline"><a class="tocxref" href="#sec-interaction-model"><bdi class="secno">6.4</bdi> 対話モデル</a>
+    <li class="tocline"><a class="tocxref" href="#sec-interaction-model"><bdi class="secno">6.4</bdi> 相互作用モデル</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">6.4.1</bdi> Property</a></li>
       <li class="tocline"><a class="tocxref" href="#actions"><bdi class="secno">6.4.2</bdi> アクション</a></li>
@@ -2733,13 +2733,13 @@
 </section>
 <section id="sec-interaction-model">
 
-<h3 id="x6-4-interaction-model"><bdi class="secno">6.4</bdi> 対話モデル<a class="self-link" aria-label="§" href="#sec-interaction-model"></a></h3>
+<h3 id="x6-4-interaction-model"><bdi class="secno">6.4</bdi> 相互作用モデル<a class="self-link" aria-label="§" href="#sec-interaction-model"></a></h3>
 
-<p>当初、ウェブ資源とは通常、ウェブ・クライアントが容易に取得できるウェブ上のドキュメントを表していました。ウェブ・サービスの導入により、資源は、あらゆる種類の動作を実装できる、より汎用的な対話のエンティティーになりました。この非常に高度な抽象化により、多種多様な対話の可能性があるため、アプリケーションと資源との間を疎結合することが難しくなっています。その結果、執筆時点で、一般的なAPI記述は、アプリケーションの意図(application intent)から資源のアドレス、メソッド、リクエスト・ペイロード構造、応答ペイロード構造、および予期されるエラーへの静的マッピングで構成されています。これにより、ウェブ・クライアントとウェブ・サービスが密結合されます。</p>
+<p>当初、ウェブ資源とは通常、ウェブクライアントが容易に取得できるウェブ上のドキュメントを表していた。ウェブサービスの導入により、資源は、あらゆる種類の動作を実装できる、より汎用的な相互作用のエンティティーとなった。この非常に高度な抽象化により、多種多様な相互作用の可能性があるため、アプリケーションと資源との間を疎結合することが難しくなっている。その結果、執筆時点で、一般的なAPI記述は、アプリケーションの意図(application intent)から資源のアドレス、メソッド、リクエスト・ペイロード構造、応答ペイロード構造、および予期されるエラーへの静的マッピングで構成されている。これにより、ウェブクライアントとウェブサービスが密結合されることとなる。</p>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">対話モデル</a>は、アプリケーションの意図(application intent)から具体的なプロトコル操作へのマッピングを形式化する仲介抽象化を導入し、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>をモデル化できる方法の可能性を狭めます。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>は、アプリケーションの意図(application intent)から具体的なプロトコル操作へのマッピングを形式化する仲介的な抽象化を導入し、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>をどのようにモデル化するかの可能性を絞り込む。</p>
 
-<p><span class="rfc2119-assertion" id="arch-affordances">ナビゲーション・アフォーダンス(つまり、ウェブ・リンク)に加えて、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>は、この仕様で定義している<a href="#dfn-property" class="internalDFN" data-link-type="dfn">プロパティー</a>、<a href="#dfn-action" class="internalDFN" data-link-type="dfn">アクション</a>、<a href="#dfn-event" class="internalDFN" data-link-type="dfn">イベント</a>という他の3種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>を提供できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>このナロー・ウエスト(narrow waist)は、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を分離することを可能にしますが、これら4種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>は依然として、IoTデバイスとサービスで見つかるほぼすべての対話の可能性をモデル化できます。</p>
+<p><span class="rfc2119-assertion" id="arch-affordances">ナビゲーションのアフォーダンス(つまり、ウェブリンク)に加えて、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>は、この仕様で定義している<a href="#dfn-property" class="internalDFN" data-link-type="dfn">Property</a>、<a href="#dfn-action" class="internalDFN" data-link-type="dfn">Action</a>、<a href="#dfn-event" class="internalDFN" data-link-type="dfn">Event</a>という他の3種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用アフォーダンス</a>を提供できる(<em class="rfc2119" title="MAY">MAY</em>)。</span>このナローウエスト(narrow waist)は、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の分離を可能とする一方で、これら4種類の<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>により、IoTのデバイスおよびサービスで見られるほぼすべての相互作用の可能性をモデル化することができる。</p>
 
 <section id="properties">
 
@@ -3045,7 +3045,7 @@
 
 <p><a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoTモノの記述</a>(TD)仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]は、セマンティックな語彙に基づく<em>情報モデル</em>と<em>JSONに基づくシリアル化表現</em>を定義しています。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、人間が読めて機械が理解できる方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>に豊かなメタデータを提供します。未加工のJSON処理に加えて、実装でJSON-LD[<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>]とグラフ・データベースを使用してメタデータの強力なセマンティック処理を行えるように、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の情報モデルと表現形式は、どちらもリンクト・データ[<cite><a class="bibref" data-link-type="biblio" href="#bib-linked-data" title="Linked Data Design Issues">LINKED-DATA</a></cite>]と連携を図っています。</p>
 
-<p><a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>(TD)は、名前、ID、内容記述などの一般的なメタデータで<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のインスタンスを記述し、関係する<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>やその他のドキュメントへのリンクを介して関連メタデータを提供することもできます。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>には、<a href="#sec-interaction-model" class="sec-ref">§&nbsp;<bdi class="secno">6.4</bdi> 対話モデル</a>で定義している対話モデルに基づく<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>のメタデータ、つまり、<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>と、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>を定義している通信メタデータも含まれています。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、提供されているサービスと関連資源(どちらもハイパーメディア制御を使用して記述される)について知るためのエントリ・ポイントを提供するため、<em><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のindex.html</em>と考えることができます。</p>
+<p><a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>(TD)は、名前、ID、内容記述などの一般的なメタデータで<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のインスタンスを記述し、関係する<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>やその他のドキュメントへのリンクを介して関連メタデータを提供することもできます。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>には、<a href="#sec-interaction-model" class="sec-ref">§&nbsp;<bdi class="secno">6.4</bdi> 相互作用モデル</a>で定義している対話モデルに基づく<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>のメタデータ、つまり、<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>と、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>を定義している通信メタデータも含まれています。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、提供されているサービスと関連資源(どちらもハイパーメディア制御を使用して記述される)について知るためのエントリ・ポイントを提供するため、<em><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のindex.html</em>と考えることができます。</p>
 
 <p>理想的には、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>自体によって作成および(または)提供され、発見時に取得されます。しかし、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>に資源の制限がある場合(例えば、メモリ空間やパワーが限られている場合)や、モノのウェブの一部となるように既存のデバイスが改造されている場合には、外部で提供することもできます。発見を改善し(例えば、制約のあるデバイスに対する)デバイス管理を容易にするための一般的なパターンは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>をディレクトリに登録することです。利用者は、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>のキャッシング・メカニズムを、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>が更新されて新しいバージョンの<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>を取得する必要がある場合に通知してくれる通知メカニズムと組み合わせて用いることをお勧めします。</p>
 
