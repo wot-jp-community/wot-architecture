@@ -2837,7 +2837,7 @@
 <p><span class="rfc2119-assertion" id="arch-op-expected-request">フォーム・フィールドはオプションであり、特定の操作に期待されるリクエスト・メッセージをさらに指定できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>これはペイロードに限定されず、プロトコルのヘッダにも影響する可能性があることに注意してください。<span class="rfc2119-assertion" id="arch-op-form-fields-protocol">フォーム・フィールドは、URIスキームで指定されている送信ターゲットに用いられるプロトコルに依存できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>例は、HTTPヘッダ・フィールド、CoAPオプション、リクエスト・ペイロードのパラメータ(つまり、完全なコンテンツ・タイプ)などのプロトコルに依存しないメディア・タイプ[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>]、または予期される応答に関する情報です。</p>
 
 <div id="table-operation-types">
-<div style="text-align: center; font-style: italic;">表1 モノのウェブの有名な操作型</div>
+<div style="text-align: center; font-style: italic;">表1 Web of Thingsのよく知られた操作型</div>
 
 <table class="def">
 <thead>
@@ -2849,47 +2849,47 @@
 <tbody>
   <tr>
     <td>readproperty</td>
-    <td>対応するデータを検索するために、プロパティー・アフォーダンスにおける読み取り操作を識別します。</td>
+    <td>対応するデータを検索するための、Propertyのアフォーダンスに関する読み取り操作</td>
   </tr>
   <tr>
     <td>writeproperty</td>
-    <td>対応するデータを更新するために、プロパティー・アフォーダンスにおける書き込み操作を識別します。</td>
+    <td>対応するデータを更新するための、Propertyのアフォーダンスに関する書き込み操作</td>
   </tr>
   <tr>
     <td>observeproperty</td>
-    <td>プロパティーが更新されたときに新しいデータで通知されるように、プロパティー・アフォーダンスにおける監視操作を識別します。</td>
+    <td>Propertyが更新されたときに新しいデータにより通知を受けるための、Propertyのアフォーダンスに関する監視操作</td>
   </tr>
   <tr>
     <td>unobserveproperty</td>
-    <td>対応する通知を停止するために、プロパティー・アフォーダンスにおける監視解除操作を識別します。</td>
+    <td>対応する通知を停止するための、Propertyのアフォーダンスに関する監視解除操作</td>
   </tr>
   <tr>
     <td>invokeaction</td>
-    <td>対応するアクションを実行するために、アクション・アフォーダンスにおける呼び出し操作を識別します。</td>
+    <td>対応するActionを実行するための、Actionのアフォーダンスに関する呼び出し操作</td>
   </tr>
   <tr>
     <td>subscribeevent</td>
-    <td>イベントが発生したときにモノによって通知されるように、イベント・アフォーダンスにおける購読操作を識別します。</td>
+    <td>Eventが発生したときにThingによって通知を受けるための、Eventのアフォーダンスに関する登録操作</td>
   </tr>
   <tr>
     <td>unsubscribeevent</td>
-    <td>対応する通知を停止するために、イベント・アフォーダンスにおける購読解除操作を識別します。</td>
+    <td>対応する通知を停止するために、Eventのアフォーダンスに関する登録解除操作</td>
   </tr>
   <tr>
     <td>readallproperties</td>
-    <td>すべてのプロパティーのデータを1回の対話で検索するために、モノにおけるreadallproperties(すべてのプロパティーの読み込み)操作を識別します。</td>
+    <td>すべてのPropertyのデータを1回の相互作用で検索するための、Thingに関するreadallproperties(すべてのPropertyの読み込み)操作</td>
   </tr>
   <tr>
     <td>writeallproperties</td>
-    <td>すべての書き込み可能なプロパティーのデータを1回の対話で更新するために、モノにおけるwriteallproperties(すべてのプロパティーの書き込み)操作を識別します。</td>
+    <td>すべての書き込み可能なPropertyのデータを1回の相互作用で更新するための、Thingに関するwriteallproperties(すべてのPropertyの書き込み)操作</td>
   </tr>
   <tr>
     <td>readmultipleproperties</td>
-    <td>選択したプロパティーのデータを1回の対話で検索するために、モノにおけるreadmultipleproperties(複数のプロパティーの読み込み)操作を識別します。</td>
+    <td>選択したプロパティーのデータを1回の相互作用で検索するための、Thingに関するreadmultipleproperties(複数のPropertyの読み込み)操作</td>
   </tr>
   <tr>
     <td>writemultipleproperties</td>
-    <td>選択した書き込み可能なプロパティーのデータを1回の対話で更新するために、モノにおけるwritemultipleproperties(複数のプロパティーの書き込み)操作を識別します。</td>
+    <td>選択した書き込み可能なPropertyのデータを1回の相互作用で更新するための、Thingに関するwritemultipleproperties(複数のPropertyの書き込み)操作</td>
   </tr>
 </tbody>
 </table>
@@ -2898,7 +2898,7 @@
 <div class="note" id="issue-container-generatedID">
 <div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>編集者のメモ</span></div>
 
-<p class="">この仕様の時点では、有名な操作型は、WoT<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">対話モデル</a>に由来する固定セットです。他の仕様では、それぞれのドキュメント形式やフォームのシリアル化に有効な、有名な操作型を追加定義できます。この仕様の今後のバージョンや別の仕様では、将来、WoT仕様以外に適用される可能性のある拡張やより汎用的なウェブ・フォームモデルを可能にするためにIANAレジストリを設定するかもしれません。</p>
+<p class="">本仕様の執筆時点では、(上記の)よく知られた操作型は、WoT<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>に由来する一定の集合である。他の仕様では、それぞれのドキュメント形式やフォームのシリアライゼーションにとって有効な、よく知られた操作型を追加定義してもよい。本仕様の今後のバージョンや別の仕様では、将来、WoT関連仕様の範囲を越えて適用される可能性のある拡張やより汎用的なWebフォームモデルを可能にするためにIANAレジストリを設定してもよい。</p>
 
 </div>
 </section>
