@@ -2787,20 +2787,20 @@
 
 <h4 id="x6-5-1-links"><bdi class="secno">6.5.1</bdi> リンク<a class="self-link" aria-label="§" href="#sec-hypermedia-links"></a></h4>
 
-<p>リンクにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>(または広義のウェブ・クライアント)は、現在のコンテキストを変更したり(ウェブ・ブラウザで現在表示されている資源の表現と比較)、コンテキストとリンク・ターゲットの関係に応じて追加の資源を現在のコンテキストに含めるたりすることができます。<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>は、ターゲットURIを<em>逆参照</em>することで、つまりリンクをたどることで資源の表現を取得します。</p>
+<p>リンクにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>(または広義ではウェブクライアント)は、現在のコンテキストを変更したり(ウェブブラウザで現在表示されている資源の表現と比較)、コンテキストとリンクターゲットの関係に応じて追加の資源を現在のコンテキストに含めたりすることができる。<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>は、ターゲットURIを<em>逆参照</em>することで、つまりリンクをたどって資源の表現を取得することでこれを行う。</p>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTは、Web Linking[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>]の定義に従っており、リンクは次のもので構成されます。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTは、Web Linking[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>]の定義に従っており、リンクは次のもので構成される。</p>
 
 <ul>
   <li>リンクのコンテキスト</li>
   <li>関係型</li>
-  <li>リンク・ターゲット</li>
-  <li>オプションでターゲット属性</li>
+  <li>リンクターゲット</li>
+  <li>オプションで、ターゲット属性</li>
 </ul>
 
-<p>リンク関係型は、ABNF[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5234" title="Augmented BNF for Syntax Specifications: ABNF">RFC5234</a></cite>] <code style="white-space: nowrap;">LOALPHA *( LOALPHA / DIGIT / "." / "-" )</code>(例えば、<code>stylesheet</code>)に準拠していなければならないIANA[<cite><a class="bibref" data-link-type="biblio" href="#bib-iana-relations" title="Link Relations">IANA-RELATIONS</a></cite>]に登録されている定義済みトークンか、URI形式の拡張型[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]のいずれかです。<span class="rfc2119-assertion" id="arch-rel-types">拡張関係型は、大文字と小文字を区別しない比較により、文字列として比較されなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。(異なる形式でシリアル化されている場合は、URIに変換すべき)。</span><span class="rfc2119-assertion" id="arch-rel-type-lowercase">それにも関わらず、拡張関係型には、すべて小文字のURIを用いるべきです(<em class="rfc2119" title="SHOULD">SHOULD</em>)。[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>]</span></p>
+<p>リンク関係型は、ABNF[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5234" title="Augmented BNF for Syntax Specifications: ABNF">RFC5234</a></cite>] <code style="white-space: nowrap;">LOALPHA *( LOALPHA / DIGIT / "." / "-" )</code>(例えば、<code>stylesheet</code>)に準拠していなければならないIANA[<cite><a class="bibref" data-link-type="biblio" href="#bib-iana-relations" title="Link Relations">IANA-RELATIONS</a></cite>]に登録されている定義済みトークンか、URIの形式の拡張型[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]のいずれかである。<span class="rfc2119-assertion" id="arch-rel-types">拡張関係型は、大文字と小文字を区別しない比較方法により、文字列として比較しなければならない(<em class="rfc2119" title="MUST">MUST</em>)。(異なる形式でシリアル化されている場合は、URIに変換すべき)。</span><span class="rfc2119-assertion" id="arch-rel-type-lowercase">それにも関わらず、拡張関係型には、すべて小文字のURIを用いるべきである(<em class="rfc2119" title="SHOULD">SHOULD</em>)。[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>]</span></p>
 
-<p>モノのウェブでは、リンクは発見に用いられ、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の間の関係(例えば、階層的または機能的)、およびウェブ上の他のドキュメント(例えば、マニュアルや、CADモデルなどの代替表現)との関係を表現するために用いられます。</p>
+<p>Web of Thingsでは、リンクは発見に用いたり、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>間の関係(例えば、階層的か、機能的か)やウェブ上の他のドキュメント(例えば、マニュアルや、CADモデルなどの代替表現)との関係を表したりするために用いる。</p>
 
 </section>
 <section id="sec-hypermedia-forms">
