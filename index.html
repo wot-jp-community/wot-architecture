@@ -1799,7 +1799,7 @@
       <li class="tocline"><a class="tocxref" href="#sec-hypermedia-forms"><bdi class="secno">6.5.2</bdi> フォーム</a></li>
     </ol>
     </li>
-    <li class="tocline"><a class="tocxref" href="#sec-protocol-bindings"><bdi class="secno">6.6</bdi> プロトコル・バインディング</a>
+    <li class="tocline"><a class="tocxref" href="#sec-protocol-bindings"><bdi class="secno">6.6</bdi> プロトコルバインディング</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#hypermedia-driven"><bdi class="secno">6.6.1</bdi> ハイパーメディア駆動</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-arch-URIs"><bdi class="secno">6.6.2</bdi> URI</a></li>
@@ -2905,11 +2905,11 @@
 </section>
 <section id="sec-protocol-bindings">
 
-<h3 id="x6-6-protocol-bindings"><bdi class="secno">6.6</bdi> プロトコル・バインディング<a class="self-link" aria-label="§" href="#sec-protocol-bindings"></a></h3>
+<h3 id="x6-6-protocol-bindings"><bdi class="secno">6.6</bdi> プロトコルバインディング<a class="self-link" aria-label="§" href="#sec-protocol-bindings"></a></h3>
 
-<p>プロトコル・バインディングは、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>から、HTTP[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7231" title="Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content">RFC7231</a></cite>]、CoAP[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7252" title="The Constrained Application Protocol (CoAP)">RFC7252</a></cite>]、MQTT[<cite><a class="bibref" data-link-type="biblio" href="#bib-mqtt" title="MQTT Version 3.1.1 Plus Errata 01">MQTT</a></cite>]などの特定プロトコルの具体的なメッセージへのマッピングです。これは、ネットワーク向けインターフェースを介して<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>を<em>どのように</em>作動させるかを<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>に通知します。<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>は、相互運用性をサポートするためにREST[<cite><a class="bibref" data-link-type="biblio" href="#bib-rest" title="REST: Architectural Styles and the Design of Network-based Software Architectures">REST</a></cite>]の統一インターフェース(Uniform Interface)制約に従います。したがって、すべての通信プロトコルが<abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>の実装の条件を満たしているわけではありません。要件は以下の言明で示しています。</p>
+<p>プロトコル・バインディングは、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>から、HTTP[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7231" title="Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content">RFC7231</a></cite>]、CoAP[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7252" title="The Constrained Application Protocol (CoAP)">RFC7252</a></cite>]、MQTT[<cite><a class="bibref" data-link-type="biblio" href="#bib-mqtt" title="MQTT Version 3.1.1 Plus Errata 01">MQTT</a></cite>]などの特定プロトコルの具体的なメッセージへのマッピングである。これは、ネットワークに接続するインタフェースを介して<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>を<em>どのように</em>作動させるかを<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>に通知する。<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>は、相互運用性をサポートするためにREST[<cite><a class="bibref" data-link-type="biblio" href="#bib-rest" title="REST: Architectural Styles and the Design of Network-based Software Architectures">REST</a></cite>]の統一インターフェース(Uniform Interface)制約に従う。したがって、すべての通信プロトコルが<abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>の実装のために適格なわけではない。要件は以下の言明で示す。</p>
 
-<p><a href="#sec-affordances" class="sec-ref">§&nbsp;<bdi class="secno">6.2</bdi> アフォーダンス</a>で示したドアの例では、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>は、ノブかレバーかのレベルでドアの取っ手に対応しており、それは、ドアが<em>どのように</em>開くかを示しています。</p>
+<p><a href="#sec-affordances" class="sec-ref">§&nbsp;<bdi class="secno">6.2</bdi> アフォーダンス</a>で示したドアの例では、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>は、ノブかレバーかのレベルでドアの取っ手に対応しており、それは、ドアが<em>どのように</em>開くかを示している。</p>
 
 <section id="hypermedia-driven">
 
