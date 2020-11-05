@@ -2810,34 +2810,34 @@
 
 <h4 id="x6-5-2-forms"><bdi class="secno">6.5.2</bdi> フォーム<a class="self-link" aria-label="§" href="#sec-hypermedia-forms"></a></h4>
 
-<p>フォームにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>(または広義のウェブ・クライアント)は、URIの逆参照を超える操作を実行できます(例えば、モノの状態を操作するなど)。<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>は、フォームに<em>記入</em>して、その送信ターゲットに<em>送信</em>することでこれを行います。これには通常、リンクが提供できるよりも詳細な(リクエスト)メッセージの内容に関する情報が必要です(例えば、メソッド、ヘッダ・フィールド、またはその他のプロトコルのオプション)。フォームはリクエスト・テンプレートと考えることができ、提供者は、独自のインターフェースと状態に従って情報の一部を事前に入力し、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>(または、一般的にはウェブ・クライアント)が入力する部分を空白のままにします。</p>
+<p>フォームにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>(または広義のウェブクライアント)は、URIの解決を超える操作を実行できる(例えば、Thingの状態を操作するなど)。<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>は、フォームに<em>記入</em>して、その送信ターゲットに<em>送信</em>することでこれを行う。これには通常、リンクが提供できるよりも詳細な(リクエスト)メッセージの内容に関する情報が必要である(例えば、メソッド、ヘッダフィールド、またはその他のプロトコルのオプション)。フォームはリクエストテンプレートと考えることができ、提供者は、独自のインターフェースと状態に従って情報の一部を事前に入力し、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>(または、一般的にはウェブクライアント)が入力する部分を空白のままにする。</p>
 
-<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTは、フォームを新しいハイパーメディア制御と定義しています。CoRALの定義は実質的に同じであり、したがって互換性があることに注意してください[<cite><a class="bibref" data-link-type="biblio" href="#bib-coral" title="The Constrained RESTful Application Language (CoRAL)">CoRAL</a></cite>]。フォームは次のもので構成されます。</p>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> WoTは、フォームを新しいハイパーメディア制御と定義している。CoRALの定義は実質的に同じであり、したがって互換性があることに注意すること[<cite><a class="bibref" data-link-type="biblio" href="#bib-coral" title="The Constrained RESTful Application Language (CoRAL)">CoRAL</a></cite>]。フォームは次のもので構成される。</p>
 
 <ul>
   <li>フォームのコンテキスト</li>
   <li>操作型</li>
   <li>送信ターゲット</li>
-  <li>リクエスト・メソッド</li>
-  <li>オプションでフォーム・フィールド</li>
+  <li>リクエストメソッド</li>
+  <li>オプションでフォームフィールド</li>
 </ul>
 
-<p>フォームは、「<code>form context</code>(フォームのコンテキスト)に<code>operation type</code>(操作型)の操作を実行し、<code>submission target</code>(送信ターゲット)に<code>request method</code>(リクエスト・メソッド)のリクエストを発信する」ステートメントと考えることができ、オプションのフォーム・フィールドで、必要なリクエストをさらに記述できます。</p>
+<p>フォームは、「ある<code>フォームのコンテキスト</code>に関する<code>操作型</code>の操作を実行するために、<code>送信ターゲット</code>に<code>リクエストメソッド</code>のリクエストを発信せよ」という表明と考えることができ、オプションのフォームフィールドで、必要なリクエストをさらに記述できる。</p>
 
-<p><span class="rfc2119-assertion" id="arch-form-iris">フォームのコンテキストと送信ターゲットは、両方とも国際化資源識別子(IRI;Internationalized Resource Identifier)[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3987" title="Internationalized Resource Identifiers (IRIs)">RFC3987</a></cite>]でなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span>しかし、一般的なケースでは、多くのプロトコル(HTTPなど)がIRIをサポートしていないため、それらはURI[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]でもあるでしょう。</p>
+<p><span class="rfc2119-assertion" id="arch-form-iris">フォームのコンテキストと送信ターゲットは、両方とも国際化資源識別子(IRI;Internationalized Resource Identifier)[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3987" title="Internationalized Resource Identifiers (IRIs)">RFC3987</a></cite>]でなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span>しかし、一般的なケースでは、多くのプロトコル(HTTPなど)がIRIをサポートしていないため、それらはURI[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]になることもある。</p>
 
-<p><span class="rfc2119-assertion" id="arch-form-iris2">フォームのコンテキストと送信ターゲットは、同じ資源または異なる資源を指し示すことができ(<em class="rfc2119" title="MAY">MAY</em>)、その場合、送信ターゲットの資源はコンテキストの操作を実装します。</span></p>
+<p><span class="rfc2119-assertion" id="arch-form-iris2">フォームのコンテキストと送信ターゲットは、同じ資源または異なる資源を指し示すことができ(<em class="rfc2119" title="MAY">MAY</em>)、その場合、送信ターゲットの資源はコンテキストの操作を実装する。</span></p>
 
-<p>操作型は、操作のセマンティクスを識別します。操作型は、リンク関係型と同様の形で示されます。</p>
+<p>操作型は、操作のセマンティクスを示す。操作型は、リンク関係型と同様の形で示される。</p>
 
 <ul>
-  <li><span class="rfc2119-assertion" id="arch-op-wellknown">有名な(well-known)操作型は、ABNF <code style="white-space: nowrap;">LOALPHA *( LOALPHA / DIGIT / "." / "-" )</code>に従わなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-wellknown-compare">有名な操作型は、大文字と小文字を区別しない比較により比較されなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span>この仕様で定義しているモノのウェブの有名な操作型を<a href="#table-operation-types">表1</a>に示します。</li>
-  <li><span class="rfc2119-assertion" id="arch-op-extension">事前に定義されている操作型は、アプリケーションが選択した<em>拡張操作型</em>によって拡張できます(<em class="rfc2119" title="MAY">MAY</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-uri">拡張操作型は、型を一意に識別するURI[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]でなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-comparison">拡張操作型は、大文字と小文字を区別しない比較により、文字列として比較されなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-lowercase">それにも関わらず、拡張操作型には、すべて小文字のURIを用いるべきです(<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></li>
+  <li><span class="rfc2119-assertion" id="arch-op-wellknown">よく知られた(well-known)操作型は、ABNF <code style="white-space: nowrap;">LOALPHA *( LOALPHA / DIGIT / "." / "-" )</code>に従わなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-wellknown-compare">よく知られた操作型は、大文字と小文字を区別しない比較により比較されなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span>この仕様で定義しているWeb of Thingsのよく知られた操作型を<a href="#table-operation-types">表1</a>に示す。</li>
+  <li><span class="rfc2119-assertion" id="arch-op-extension">事前に定義されている操作型は、アプリケーションが選択した<em>拡張操作型</em>によって拡張できる(<em class="rfc2119" title="MAY">MAY</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-uri">拡張操作型は、型を一意に識別するURI[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]でなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-comparison">拡張操作型は、大文字と小文字を区別しない比較により、文字列として比較されなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-extension-lowercase">それにも関わらず、拡張操作型には、すべて小文字のURIを用いるべきである(<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></li>
 </ul>
 
-<p><span class="rfc2119-assertion" id="arch-op-request-method">リクエスト・メソッドでは、送信ターゲットのURIスキームで識別されるプロトコル標準集合のうちの1つのメソッドを特定しなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span></p>
+<p><span class="rfc2119-assertion" id="arch-op-request-method">リクエストメソッドでは、送信ターゲットのURIスキームで識別されるプロトコルでの標準的なメソッド集合のうちの1つを特定しなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span></p>
 
-<p><span class="rfc2119-assertion" id="arch-op-expected-request">フォーム・フィールドはオプションであり、特定の操作に期待されるリクエスト・メッセージをさらに指定できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>これはペイロードに限定されず、プロトコルのヘッダにも影響する可能性があることに注意してください。<span class="rfc2119-assertion" id="arch-op-form-fields-protocol">フォーム・フィールドは、URIスキームで指定されている送信ターゲットに用いられるプロトコルに依存できます(<em class="rfc2119" title="MAY">MAY</em>)。</span>例は、HTTPヘッダ・フィールド、CoAPオプション、リクエスト・ペイロードのパラメータ(つまり、完全なコンテンツ・タイプ)などのプロトコルに依存しないメディア・タイプ[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>]、または予期される応答に関する情報です。</p>
+<p><span class="rfc2119-assertion" id="arch-op-expected-request">フォームフィールドはオプションであり、特定の操作に期待されるリクエストメッセージをさらに指定できる(<em class="rfc2119" title="MAY">MAY</em>)。</span>これはペイロードに限定されず、プロトコルのヘッダにも影響する可能性があることに注意すること。<span class="rfc2119-assertion" id="arch-op-form-fields-protocol">フォームフィールドは、URIスキームで指定されている送信ターゲットに用いられるプロトコルに依存することもある(<em class="rfc2119" title="MAY">MAY</em>)。</span>例えば、HTTPヘッダフィールド、CoAPオプション、リクエストペイロードのパラメータ(つまり、完全なコンテンツタイプ)などのプロトコルに依存しないメディアタイプ[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>]、または期待される応答に関する情報などである。</p>
 
 <div id="table-operation-types">
 <div style="text-align: center; font-style: italic;">表1 モノのウェブの有名な操作型</div>
