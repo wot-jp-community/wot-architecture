@@ -2819,13 +2819,13 @@
   <li>オプションでフォームフィールド</li>
 </ul>
 
-<p>フォームは、「<code>フォームのコンテキスト</code>に<code>操作型</code>の操作を実行するには、<code>送信ターゲット</code>に<code>リクエストメソッド</code>のリクエストを発信せよ」という表明と考えることができ、オプションのフォームフィールドで、必要なリクエストをさらに記述できる。</p>
+<p>フォームは、「ある<code>フォームのコンテキスト</code>に関する<code>操作型</code>の操作を実行するために、<code>送信ターゲット</code>に<code>リクエストメソッド</code>のリクエストを発信せよ」という表明と考えることができ、オプションのフォームフィールドで、必要なリクエストをさらに記述できる。</p>
 
 <p><span class="rfc2119-assertion" id="arch-form-iris">フォームのコンテキストと送信ターゲットは、両方とも国際化資源識別子(IRI;Internationalized Resource Identifier)[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3987" title="Internationalized Resource Identifiers (IRIs)">RFC3987</a></cite>]でなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span>しかし、一般的なケースでは、多くのプロトコル(HTTPなど)がIRIをサポートしていないため、それらはURI[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">RFC3986</a></cite>]になることもある。</p>
 
 <p><span class="rfc2119-assertion" id="arch-form-iris2">フォームのコンテキストと送信ターゲットは、同じ資源または異なる資源を指し示すことができ(<em class="rfc2119" title="MAY">MAY</em>)、その場合、送信ターゲットの資源はコンテキストの操作を実装する。</span></p>
 
-<p>操作型は、操作のセマンティクスを特定する。操作型は、リンク関係型と同様の形で示される。</p>
+<p>操作型は、操作のセマンティクスを示す。操作型は、リンク関係型と同様の形で示される。</p>
 
 <ul>
   <li><span class="rfc2119-assertion" id="arch-op-wellknown">よく知られた(well-known)操作型は、ABNF <code style="white-space: nowrap;">LOALPHA *( LOALPHA / DIGIT / "." / "-" )</code>に従わなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span><span class="rfc2119-assertion" id="arch-op-wellknown-compare">よく知られた操作型は、大文字と小文字を区別しない比較により比較されなければならない(<em class="rfc2119" title="MUST">MUST</em>)。</span>この仕様で定義しているWeb of Thingsのよく知られた操作型を<a href="#table-operation-types">表1</a>に示す。</li>
