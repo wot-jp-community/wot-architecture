@@ -1745,8 +1745,8 @@
         <li class="tocline"><a class="tocxref" href="#legacy-devices"><bdi class="secno">4.2.6.2</bdi> 旧式デバイス</a></li>
       </ol>
       </li>
-      <li class="tocline"><a class="tocxref" href="#multi-cloud"><bdi class="secno">4.2.7</bdi> マルチ・クラウド</a></li>
-      <li class="tocline"><a class="tocxref" href="#cross-domain-collaboration"><bdi class="secno">4.2.8</bdi> 領域横断型コラボレーション</a></li>
+      <li class="tocline"><a class="tocxref" href="#multi-cloud"><bdi class="secno">4.2.7</bdi> マルチクラウド</a></li>
+      <li class="tocline"><a class="tocxref" href="#cross-domain-collaboration"><bdi class="secno">4.2.8</bdi> 領域横断型連携</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-use-case-summary"><bdi class="secno">4.3</bdi> 要約</a></li>
@@ -2362,20 +2362,20 @@
 </section>
 <section id="multi-cloud">
 
-<h4 id="x4-2-7-multi-cloud"><bdi class="secno">4.2.7</bdi> マルチ・クラウド<a class="self-link" aria-label="§" href="#multi-cloud"></a></h4>
+<h4 id="x4-2-7-multi-cloud"><bdi class="secno">4.2.7</bdi> マルチクラウド<a class="self-link" aria-label="§" href="#multi-cloud"></a></h4>
 
-<p>一般的なIoTの展開は、複数(数千)のデバイスで構成されます。標準的なメカニズムがなければ、特定クラウドのファームウェア更新の管理には多大な労力が必要であり、IoTの広範な採用の妨げとなります。</p>
+<p>典型的なIoTのデプロイメントは、複数(数千)のデバイスで構成される。標準的なメカニズムがなければ、特定のクラウドのためのファームウェア更新の管理には、多大な労力が必要であり、IoTの広範な採用の妨げとなる。</p>
 
-<p>デバイスとデバイスの種類を記述するための標準的なメカニズムの主な利点は、デバイスのソフトウェア/ファームウェアのレベルでカスタマイズを行う、つまり、クラウド固有のコードをデバイスにインストールする必要なく、デバイスを異なるクラウド環境に展開できることです。これは、このソリューションには、複数のIoTクラウド環境のデバイスに接続して(on-boarding)使用できるようなデバイスの記述に十分な柔軟性があることを意味します。</p>
+<p>デバイスおよびデバイス型を記述するための標準的なメカニズムの主な利点は、デバイスに対してソフトウェアやファームウェアのレベルでカスタマイズを行う必要なく、つまり、クラウド固有のコードをデバイスにインストールする必要なく、デバイスを異なるクラウド環境にデプロイできることである。これは、このソリューションは、複数のIoTクラウド環境のデバイスに対して新規に接続し(on-boarding)使用することを可能とするような形でデバイスの記述ができるくらいに柔軟なものであることを意味する。</p>
 
-<p>これにより、既存の展開で新しいデバイスを簡単に使用できるようになるとともに、既存のデバイスをクラウドからクラウドへと移行できるようになるため、モノのウェブ用デバイスの採用が促進されます。</p>
+<p>これにより、既存のデバイスをクラウドからクラウドへ移行することが可能になるとともに、既存のデプロイにおける新しいデバイスの利用が簡単になるため、Web of Thingsデバイスの採用が促進される。</p>
 
 </section>
 <section id="cross-domain-collaboration">
 
-<h4 id="x4-2-8-cross-domain-collaboration"><bdi class="secno">4.2.8</bdi> 領域横断型コラボレーション<a class="self-link" aria-label="§" href="#cross-domain-collaboration"></a></h4>
+<h4 id="x4-2-8-cross-domain-collaboration"><bdi class="secno">4.2.8</bdi> 領域横断型連携<a class="self-link" aria-label="§" href="#cross-domain-collaboration"></a></h4>
 
-<p><a href="#cross-domain" class="fig-ref" title="領域横断型コラボレーション">図<bdi class="figno">13</bdi></a>は、領域横断型コラボレーションの例を示しています。このケースでは、各システムには、スマート・ファクトリーとスマート・シティ、スマート・シティとスマート・ホームなど、他の領域の他のシステムが含まれています。[<cite><a class="bibref" data-link-type="biblio" href="#bib-iec-fotf" title="Factory of the future">IEC-FOTF</a></cite>]で示しているように、この種のシステムは「共生」(symbiotic)エコシステムと呼ばれます。直接コラボレーションと間接コラボレーションの2つのコラボレーション・モデルがあります。直接コラボレーション・モデルでは、システムはピア・ツー・ピア(peer-to-peer)方式で互いに情報を直接交換します。間接コラボレーションでは、システムは何らかのコラボレーション・プラットフォームを介して情報を交換します。このコラボレーションを維持・継続するために、各システムは自身の性能のメタデータとインターフェースを提供し、他のシステムに適応させます。</p>
+<p><a href="#cross-domain" class="fig-ref" title="領域横断型連携">図<bdi class="figno">13</bdi></a>は、領域横断型連携の例を示している。この場合、各システムは、スマートファクトリーとスマートシティ、スマートシティとスマートホームのように、他の領域に含まれる他のシステムと関わり合いを持っている。[<cite><a class="bibref" data-link-type="biblio" href="#bib-iec-fotf" title="Factory of the future">IEC-FOTF</a></cite>]で示す通り、この種のシステムは「共生」(symbiotic)エコシステムと呼ばれる。その中には、直接的連携と間接的連携の2つのモデルがある。直接的連携モデルでは、システムはピアツーピア(peer-to-peer)方式で互いに情報を直接交換する。間接的連携では、システムは何らかの連携プラットフォームを介して情報を交換する。この連携を維持・継続するために、各システムは自身の能力やインタフェースに関するメタデータを提供し、他のシステムに適応させます。</p>
 
 <figure id="cross-domain">
 <img src="images/cross-domain-direct.png" srcset="images/cross-domain-direct.svg" class="wot-arch-diagram" alt="領域横断型直接のユースケース"> <img src="images/cross-domain-indirect.png" srcset="images/cross-domain-indirect.svg" class="wot-arch-diagram" alt="領域横断型直接のユースケース">
