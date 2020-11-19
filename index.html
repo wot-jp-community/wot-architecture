@@ -1790,7 +1790,7 @@
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">6.4.1</bdi> Property</a></li>
       <li class="tocline"><a class="tocxref" href="#actions"><bdi class="secno">6.4.2</bdi> Action</a></li>
-      <li class="tocline"><a class="tocxref" href="#events"><bdi class="secno">6.4.3</bdi> イベント</a></li>
+      <li class="tocline"><a class="tocxref" href="#events"><bdi class="secno">6.4.3</bdi> Event</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-hypermedia-controls"><bdi class="secno">6.5</bdi> ハイパーメディア制御</a>
@@ -2765,13 +2765,13 @@
 </section>
 <section id="events">
 
-<h4 id="x6-4-3-events"><bdi class="secno">6.4.3</bdi> イベント<a class="self-link" aria-label="§" href="#events"></a></h4>
+<h4 id="x6-4-3-events"><bdi class="secno">6.4.3</bdi> Event<a class="self-link" aria-label="§" href="#events"></a></h4>
 
-<p>イベント対話アフォーダンスは、モノから利用者にデータを非同期的にプッシュするイベントの情報源を記述します。ここでは状態ではなく、状態の推移(つまり、イベント)が伝達されます。<span class="rfc2119-assertion" id="arch-event-trigger">イベントは、プロパティーとして公開されていない条件によって始動させることができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p>Eventは、Thingから利用者にデータを非同期的にプッシュする出来事の発生源を記述する相互作用のアフォーダンスである。ここでは状態ではなく、状態の遷移(つまり、イベント)が伝達される。<span class="rfc2119-assertion" id="arch-event-trigger">Eventは、Propertyとして公開されていない条件によって始動させることができる(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p><span class="rfc2119-assertion" id="arch-event-dataschema">用いるプロトコル・バインディングでデータが完全に指定されていない場合(例えば、メディア・タイプにより)、イベントにはイベント・データおよび可能な購読制御メッセージの<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データ・スキーマ</a>(例えば、WebhookコールバックURIで購読するため)を含めることができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p><span class="rfc2119-assertion" id="arch-event-dataschema">使用されるプロトコルバインディングによる(例えば、メディアタイプを通じての)データの指定が完全には行われていない場合、Eventには、その出来事に関するデータのための<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データスキーマ</a>、および(例えば、WebhookコールバックURIにより登録するために)可能な登録制御メッセージを含めることができる(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>イベントの例は、定期的にプッシュされるアラームや時系列のサンプルなどの個別のイベントです。</p>
+<p>Eventの例は、アラームや時系列のサンプルなどの、定期的にプッシュされる離散的な出来事である。</p>
 
 </section>
 </section>
