@@ -3028,19 +3028,19 @@
 
 <h2 id="x7-wot-building-blocks"><bdi class="secno">7.</bdi> WoT構成要素<a class="self-link" aria-label="§" href="#sec-building-blocks"></a></h2>
 
-<p><em>この項は規範的です。</em></p>
+<p><em>この章は規定である。</em></p>
 
-<p>モノのウェブ(WoT)の構成要素により、抽象的なWoTアーキテクチャに準拠したシステムを実装できます。これらの構成要素の詳細は、別の仕様で定義しています。この項では、概要と要約を示します。</p>
+<p>Web of Things(WoT)の構成要素により、WoTの抽象アーキテクチャに準拠したシステムを実装できる。この構成要素の詳細は、別の仕様で定義しており、この章では、概要と要約を示す。</p>
 
-<p>WoT構成要素は、<a href="#sec-web-thing" class="sec-ref">§&nbsp;<bdi class="secno">6.3</bdi> ウェブのモノ</a>で論じ、<a href="#arch-webthing" class="fig-ref" title="モノのアーキテクチャの側面">図<bdi class="figno">19</bdi></a>で示している<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の各アーキテクチャの側面をサポートします。個々の構成要素を<a href="#arch-building-blocks" class="fig-ref" title="モノのアーキテクチャの側面に対するWoT構成要素の関係">図<bdi class="figno">25</bdi></a>の抽象的な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のコンテキストで示しています。これは抽象的な図であり、特定の実装を表していません。代わりに、構成要素と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の主要なアーキテクチャの側面との関係を示しています。この図では、WoT構成要素を黒の輪郭線で強調表示しています。分野横断的な関心事であるセキュリティは、公開されている構成要素と保護されている非公開の構成要素とに分けています。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>はオプションであり、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">バインディング・テンプレート</a>は参考情報です。</p>
+<p>WoT構成要素は、<a href="#sec-web-thing" class="sec-ref">§&nbsp;<bdi class="secno">6.3</bdi> Web Thing</a>で論じ、<a href="#arch-webthing" class="fig-ref" title="Thingのアーキテクチャの側面">図<bdi class="figno">19</bdi></a>で示している<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の各アーキテクチャの側面をサポートする。個々の構成要素を<a href="#arch-building-blocks" class="fig-ref" title="Thingのアーキテクチャの側面に対するWoT構成要素の関係">図<bdi class="figno">25</bdi></a>の抽象的な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のコンテキストで示している。これは抽象的な図であり、特定の実装を表しているものではない。代わりに、構成要素と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の主要なアーキテクチャの側面との関係を示している。この図では、WoT構成要素を黒の輪郭線で強調表示している。分野横断的な関心事であるセキュリティは、公開されている構成要素と保護されている非公開の構成要素とに分けている。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>はオプションであり、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">バインディングテンプレート</a>は参考情報である。</p>
 
 <figure id="arch-building-blocks">
 <img src="images/abstract.png" srcset="images/abstract.svg" class="wot-arch-diagram" alt="wot構成要素">
-<figcaption>図<bdi class="figno">25</bdi> <span class="fig-title">モノのアーキテクチャの側面に対するWoT構成要素の関係</span>
+<figcaption>図<bdi class="figno">25</bdi> <span class="fig-title">Thingのアーキテクチャの側面に対するWoT構成要素の関係</span>
 </figcaption>
 </figure>
 
-<p>以下の項では、<a href="#sec-thing-description">WoTモノの記述</a>、<a href="#sec-binding-templates">WoTバインディング・テンプレート</a>、<a href="#sec-scripting-api">WoTスクリプトAPI</a>という個々のWoT構成要素に関する追加情報を提供します。セキュリティは、分野横断的な関心事ですが、4番目の構成要素と考えることができます。</p>
+<p>以下の節では、<a href="#sec-thing-description">WoT Thing Description</a>、<a href="#sec-binding-templates">WoTバインディングテンプレート</a>、<a href="#sec-scripting-api">WoTスクリプティングAPI</a>という個々のWoT構成要素に関する追加情報を提供する。セキュリティは、分野横断的な関心事であるが、4番目の構成要素と考えることができる。</p>
 
 <section id="sec-thing-description">
 
