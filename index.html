@@ -1804,7 +1804,7 @@
       <li class="tocline"><a class="tocxref" href="#hypermedia-driven"><bdi class="secno">6.6.1</bdi> ハイパーメディア駆動</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-arch-URIs"><bdi class="secno">6.6.2</bdi> URI</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-standard-method"><bdi class="secno">6.6.3</bdi> メソッドの標準的な集合</a></li>
-      <li class="tocline"><a class="tocxref" href="#media-types"><bdi class="secno">6.6.4</bdi> メディア・タイプ</a></li>
+      <li class="tocline"><a class="tocxref" href="#media-types"><bdi class="secno">6.6.4</bdi> メディアタイプ</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-wot-servient-architecture-high-level"><bdi class="secno">6.7</bdi> WoTシステム構成要素とその相互接続性</a>
@@ -2943,13 +2943,13 @@
 </section>
 <section id="media-types">
 
-<h4 id="x6-6-4-media-types"><bdi class="secno">6.6.4</bdi> メディア・タイプ<a class="self-link" aria-label="§" href="#media-types"></a></h4>
+<h4 id="x6-6-4-media-types"><bdi class="secno">6.6.4</bdi> メディアタイプ<a class="self-link" aria-label="§" href="#media-types"></a></h4>
 
-<p><span class="rfc2119-assertion" id="arch-media-type">対話アフォーダンスを作動させたときに交換されるすべてのデータ(別名、内容) は、プロトコル・バインディングのメディア・タイプ[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>]により識別されなければなりません(<em class="rfc2119" title="MUST">MUST</em>)。</span>メディア・タイプは、例えば、JSONの<code>application/json</code>[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8259" title="The JavaScript Object Notation (JSON) Data Interchange Format">RFC8259</a></cite>]またはCBORの<code>application/cbor</code>[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7049" title="Concise Binary Object Representation (CBOR)">RFC7049</a></cite>]などの、表現形式を識別するためのラベルです。これらはIANAによって管理されています。</p>
+<p><span class="rfc2119-assertion" id="arch-media-type">相互作用のアフォーダンスを作動させたときに交換されるすべてのデータ(別名、コンテンツ) は、プロトコルバインディングのメディアタイプ[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>]により識別されなければならない (<em class="rfc2119" title="MUST">MUST</em>)。</span>メディアタイプは、例えば、JSONの<code>application/json</code>[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8259" title="The JavaScript Object Notation (JSON) Data Interchange Format">RFC8259</a></cite>]またはCBORの<code>application/cbor</code>[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7049" title="Concise Binary Object Representation (CBOR)">RFC7049</a></cite>]などの、表現形式を識別するためのラベルである。メディアタイプはIANAによって管理されている。</p>
 
-<p>一部のメディア・タイプでは、用いる表現形式を完全に指定するために追加のパラメータが必要になる場合があります。例は、<code>text/plain; charset=utf-8</code>や<code>application/ld+json; profile="http://www.w3.org/ns/json-ld#compacted"</code>です。これは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>に送信されるデータを記述する際に特に考慮する必要があります。内容コーディング[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7231" title="Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content">RFC7231</a></cite>]などのデータに関する標準的な変換も存在するかもしれません。<span class="rfc2119-assertion" id="arch-media-type-extra">プロトコル・バインディングは、メディア・タイプのみよりも詳細に表現形式を指定する追加情報を持つことができます(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p>一部のメディアタイプでは、用いる表現形式を完全に指定するために追加のパラメータが必要になる場合がある。例は、<code>text/plain; charset=utf-8</code>や<code>application/ld+json; profile="http://www.w3.org/ns/json-ld#compacted"</code>である。これは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に送信されるデータを記述する際に特に考慮する必要がある。HTTPのcontent coding [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7231" title="Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content">RFC7231</a></cite>]などのデータに関する標準的な変換も存在するかもしれない。<span class="rfc2119-assertion" id="arch-media-type-extra">プロトコルバインディングは、メディアタイプのみよりも詳細に表現形式を指定する追加情報を持つことができる(<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>多くのメディア・タイプは、その要素に追加的なセマンティクスを提供しない汎用的なシリアル化形式のみを識別することに注意してください(例えば、XML、JSON、CBOR)。<span class="rfc2119-assertion" id="arch-schema">したがって、対応する対話アフォーダンスは、交換されるデータにより詳細な構文メタデータを提供する<em><a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データ・スキーマ</a></em>を宣言すべきです(<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></p>
+<p>多くのメディアタイプは、その要素に追加的なセマンティクスを提供しない汎用的なシリアライゼーション形式のみを識別することに注意すること (例えば、XML、JSON、CBOR)。<span class="rfc2119-assertion" id="arch-schema">したがって、対応する相互作用のアフォーダンスは、交換されるデータにより詳細な構文メタデータを提供する<em><a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">data schema</a></em>を宣言すべきである (<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></p>
 
 </section>
 </section>
