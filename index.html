@@ -3179,11 +3179,11 @@
 </section>
 <section id="wot-scripting-api">
 
-<h3 id="x8-3-wot-scripting-api"><bdi class="secno">8.3</bdi> WoTスクリプトAPI<a class="self-link" aria-label="§" href="#wot-scripting-api"></a></h3>
+<h3 id="x8-3-wot-scripting-api"><bdi class="secno">8.3</bdi> WoTスクリプティングAPI<a class="self-link" aria-label="§" href="#wot-scripting-api"></a></h3>
 
-<p><a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の構成要素は、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoTモノの記述</a>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]に厳密に従ったECMAScript APIを定義します。これは、動作の実装とスクリプト・ベースの<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>との間のインターフェースを定義します。例えば、ウェブ・ブラウザAPI用のjQueryと同様に、他のよりシンプルなAPIを追加実装できます。</p>
+<p><a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の構成要素は、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thingの記述</a>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]に厳密に従ったECMAScript APIを定義する。これは、動作の実装とスクリプティングベースの<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>との間のインターフェースを定義する。例えば、ウェブブラウザAPIのjQueryと同様に、その上に他のよりシンプルなAPIを追加実装できる。</p>
 
-<p>詳細に関しては、[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>]を参照してください。</p>
+<p>詳細に関しては、[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>]を参照すること。</p>
 
 </section>
 <section id="exposed-thing-and-consumed-thing-abstractions">
@@ -3201,9 +3201,9 @@
 </section>
 <section id="private-security-data">
 
-<h3 id="x8-5-private-security-data"><bdi class="secno">8.5</bdi> 非公開のセキュリティ・データ<a class="self-link" aria-label="§" href="#private-security-data"></a></h3>
+<h3 id="x8-5-private-security-data"><bdi class="secno">8.5</bdi> プライベートセキュリティデータ<a class="self-link" aria-label="§" href="#private-security-data"></a></h3>
 
-<p>モノと対話を行うための秘密鍵などの非公開のセキュリティ・データも<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>によって概念的に管理されますが、意図的にアプリケーションが直接アクセスできないようにされています。実際には、最も安全なハードウェアの実装では、このような<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">非公開のセキュリティ・データ</a>は別の分離されたメモリ(例えば、安全な処理要素またはTPM)に格納され、操作の抽象的な集合のみ(分離されたプロセッサとソフトウェア・スタックによって実装される場合さえある)が提供され、攻撃対象領域を制限してこのデータの外部漏洩を防止します。<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">非公開のセキュリティ・データ</a>は、承認を行い、対話の完全性と機密性を保護するために、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>によって透過的に用いられます。</p>
+<p>Thingと相互作用するための秘密鍵などのプライベートセキュリティデータも<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>によって概念的に管理されるが、意図的にアプリケーションが直接アクセスできないようにされている。実際に、最も安全なハードウェアの実装では、このような<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は個別の分離されたメモリ(例えば、安全な処理要素またはTPM)に格納され、操作の抽象的な集合のみ(分離されたプロセッサとソフトウェアスタックによって実装される場合もある)が提供され、攻撃対象領域を制限してこのデータの外部漏洩を防止する。<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は、承認を行い、相互作用の完全性と機密性を保護するために、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>によって透過的に用いられる。</p>
 
 </section>
 <section id="protocol-stack-implementation">
