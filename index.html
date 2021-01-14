@@ -1823,7 +1823,7 @@
     <li class="tocline"><a class="tocxref" href="#sec-security-guidelines"><bdi class="secno">7.4</bdi> WoTセキュリティとプライバシーに関するガイドライン</a></li>
   </ol>
   </li>
-  <li class="tocline"><a class="tocxref" href="#sec-servient-implementation"><bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>
+  <li class="tocline"><a class="tocxref" href="#sec-servient-implementation"><bdi class="secno">8.</bdi> 抽象的なServientのアーキテクチャ</a>
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#behavior-implementation"><bdi class="secno">8.1</bdi> 動作の実装</a></li>
     <li class="tocline"><a class="tocxref" href="#wot-runtime"><bdi class="secno">8.2</bdi> WoTランタイム</a></li>
@@ -3126,30 +3126,30 @@
 
 <p><em>この項は参考情報である。</em></p>
 
-<p>セキュリティは分野横断的な関心事であり、システム設計のすべての側面において考慮すべきである。WoTアーキテクチャでは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>のサポートなどの特定の明示的な機能、および<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の設計における懸念の分離によって、セキュリティがサポートされる。各構成要素の仕様には、その構成要素の特定のセキュリティとプライバシーに関する留意点の議論も含まれている。別の参考情報仕様である<em>WoTセキュリティとプライバシーに関するガイドライン</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]は、分野横断的なセキュリティとプライバシーに関するガイダンスを追加提供する。</p>
+<p>セキュリティは分野横断的な関心事であり、システム設計のすべての側面において考慮すべきである。WoTアーキテクチャでは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>のサポートなどの特定の明示的な機能、および<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の設計における懸念の分離によって、セキュリティがサポートされる。各構成要素の仕様には、その構成要素の特定のセキュリティとプライバシーに関する留意点の議論も含まれている。別の参考情報仕様である<em>WoTセキュリティとプライバシーに関するガイドライン</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]は、分野横断的なセキュリティとプライバシーに関するガイダンスを追加提供する。</p>
 
 </section>
 </section>
 <section id="sec-servient-implementation" class="informative">
 
-<h2 id="x8-abstract-servient-architecture"><bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ<a class="self-link" aria-label="§" href="#sec-servient-implementation"></a></h2>
+<h2 id="x8-abstract-servient-architecture"><bdi class="secno">8.</bdi> 抽象的なServientのアーキテクチャ<a class="self-link" aria-label="§" href="#sec-servient-implementation"></a></h2>
 
-<p><em>この項は非規範的です。</em></p>
+<p><em>この項は参考情報である。</em></p>
 
-<p><a href="#sec-wot-servient-architecture-high-level" class="sec-ref">§&nbsp;<bdi class="secno">6.7</bdi> WoTシステム構成要素とその相互接続性</a>で定義しているように、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>は、前の項で示したWoT構成要素を実装するソフトウェア・スタックです。<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を提供および公開、および(または)<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を利用できます(つまり、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>を提供します)。<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>に応じてサーバーとクライアントの両方の役割で実行できることから、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>という命名法は混成語型です。</p>
+<p><a href="#sec-wot-servient-architecture-high-level" class="sec-ref">§&nbsp;<bdi class="secno">6.7</bdi> WoTシステム構成要素とその相互接続性</a>で定義しているように、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>は、前の項で示したWoT構成要素を実装するソフトウェアスタックである。<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>を提供および公開したり、および(または)<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>を利用することができる(つまり、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>を提供することができる)。<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>に応じて、サーバーとクライアントの両方の役割を実行できることから、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>という混成語が命名された。</p>
 
-<p>前項では、WoT構成要素が概念的にどのように相互に関連し、それらが抽象WoTアーキテクチャにどのように対応するかについて説明しています(<a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoTアーキテクチャ</a>を参照)。これらの概念を実装する場合、特定の技術的側面を考慮したより詳細な観点が必要です。この項では、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の実装に関する詳細なアーキテクチャについて説明します。</p>
+<p>前項では、WoT構成要素が概念的にどのように相互に関連し、それらが抽象WoTアーキテクチャにどのように対応するかについて説明している(<a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoTアーキテクチャ</a>を参照)。これらの概念を実装する場合、特定の技術的側面を考慮した、より詳細な観点が必要となる。この項では、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>の実装に関するアーキテクチャの詳細について説明する。</p>
 
-<p><a href="#architecture-implementation" class="fig-ref" title="WoTスクリプトAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>は、(オプションの)<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の構成要素を用いた<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の実装を示しています。ここでは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、WoT固有の側面の管理に加えて、アプリケーションのスクリプトの解釈と実行も行うスクリプト・ランタイム・システムです。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>をサポートする<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>は通常、強力なデバイス、エッジ・ノード、またはクラウドで実行されます。WoTアーキテクチャは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のアプリケーション向けAPIをJavaScript/ECMAScriptに制限しません。また、他のランタイム・システムを用いて<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>を実装することもできます。</p>
+<p><a href="#architecture-implementation" class="fig-ref" title="WoTスクリプティングAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>は、(オプションの)<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>という構成要素を用いた<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>の実装を示している。ここでは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、WoT固有の側面の管理に加えて、アプリケーションスクリプトの解釈と実行も行う、スクリプトランタイムシステムである。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>をサポートする<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>は、通常、強力なデバイスやエッジノード、またはクラウド上で実行される。WoTアーキテクチャは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のアプリケーション向けAPIをJavaScript/ECMAScriptに制限しない。他のランタイムシステムを用いて<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>を実装することもできる。</p>
 
-<p><a href="#native-impl" class="sec-ref">§&nbsp;<bdi class="secno">8.8.1</bdi> ネイティブなWoT API</a>の項では、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の構成要素を用いない代替の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の実装を示しています。<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、アプリケーション向けAPIに任意のプログラミング言語を使用できます。通常それは<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>のソフトウェア・スタックのネイティブ言語です。例えば、埋め込み<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>ではC/C++、クラウド・ベースの<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>ではJavaです。それは、アプリケーションのスクリプトの利点を低い資源利用と組み合わせるLuaなどの代替スクリプト言語でもありえます。</p>
+<p><a href="#native-impl" class="sec-ref">§&nbsp;<bdi class="secno">8.8.1</bdi> ネイティブなWoT API</a>の項では、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>という構成要素を用いない、代替の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>実装を示している。<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、アプリケーション向けAPIに任意のプログラミング言語を使用できる。通常、それは、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>のソフトウェアスタックのネイティブ言語である。例えば、組み込み<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>ではC/C++、クラウドベースの<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Srvient</a>ではJavaが挙げられる。それは、アプリケーションスクリプトの利点を、低い資源利用と組み合わせるLuaなどの代替スクリプト言語であってもよい。</p>
 
 <figure id="architecture-implementation">
 <img src="images/wot-thing-scripting.png" srcset="images/wot-thing-scripting.svg" class="wot-arch-diagram" alt="アーキテクチャの実装">
-<figcaption>図<bdi class="figno">27</bdi> <span class="fig-title">WoTスクリプトAPIを用いたサービエントの実装</span></figcaption>
+<figcaption>図<bdi class="figno">27</bdi> <span class="fig-title">WoTスクリプティングAPIを用いたサービエントの実装</span></figcaption>
 </figure>
 
-<p><a href="#architecture-implementation" class="fig-ref" title="WoTスクリプトAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>で示した各モジュールの役割と機能については、次の項で説明します。</p>
+<p><a href="#architecture-implementation" class="fig-ref" title="WoTスクリプティングAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>で示した各モジュールの役割と機能については、次の項で説明する。</p>
 
 <section id="behavior-implementation">
 
