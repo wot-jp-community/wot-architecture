@@ -3240,9 +3240,9 @@
 
 <h4 id="x8-8-1-native-wot-api"><bdi class="secno">8.8.1</bdi> ネイティブなWoT API<a class="self-link" aria-label="§" href="#native-impl"></a></h4>
 
-<p>開発者が<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>を用いずに、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の実装を選択しうる理由は様々です。メモリやコンピュータ資源が不足しているために、開発者が必要なソフトウェア・スタックまたはフル機能のスクリプト・エンジンを使用できないことが原因である場合があります。または、開発者が独自のユースケース(例えば、独自の通信プロトコル)をサポートするために、特定のプログラミング環境や言語でしか利用できない特定の機能やライブラリを用いなければならない場合もありえます。</p>
+<p>開発者が<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>を用いずに、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>の実装を選択しうる理由は様々である。メモリやコンピュータ資源が不足しているために、開発者が必要なソフトウェアスタックまたはフル機能のスクリプトエンジンを使用できないことが原因である場合がある。または、開発者が独自のユースケース(例えば、独自の通信プロトコル)をサポートするために、特定のプログラミング環境や言語でしか利用できない特定の機能やライブラリを用いなければならない場合もありえる。</p>
 
-<p>このケースでは、依然として<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>を使用できますが、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の代わりに別のアプリケーション向けインターフェースを用いて同等の抽象化と機能が公開されます。後者を除き、<a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>のすべてのブロック形式の説明は<a href="#architecture-implementation-native" class="fig-ref" title="ネイティブなWoT APIを用いたサービエントの実装">図<bdi class="figno">28</bdi></a>でも有効です。</p>
+<p>このケースでは、依然として<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>を使用できるが、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の代わりに別のアプリケーション向けインターフェースを用いて同等の抽象概念と機能が公開されます。後者を除き、<a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なServientのアーキテクチャ</a>のすべてのブロック形式の説明は<a href="#architecture-implementation-native" class="fig-ref" title="ネイティブなWoT APIを用いたServientの実装">図<bdi class="figno">28</bdi></a>でも有効である。</p>
 
 <figure id="architecture-implementation-native">
 <img src="images/wot-thing-native.png" srcset="images/wot-thing-native.svg" class="wot-arch-diagram" alt="ネイティブな実装">
