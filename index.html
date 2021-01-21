@@ -1829,7 +1829,7 @@
     <li class="tocline"><a class="tocxref" href="#wot-runtime"><bdi class="secno">8.2</bdi> WoTランタイム</a></li>
     <li class="tocline"><a class="tocxref" href="#wot-scripting-api"><bdi class="secno">8.3</bdi> WoTスクリプトAPI</a></li>
     <li class="tocline"><a class="tocxref" href="#exposed-thing-and-consumed-thing-abstractions"><bdi class="secno"> 8.4</bdi> 公開対象のモノと利用対象のモノの抽象化</a></li>
-    <li class="tocline"><a class="tocxref" href="#private-security-data"><bdi class="secno">8.5</bdi> 非公開のセキュリティ・データ</a></li>
+    <li class="tocline"><a class="tocxref" href="#private-security-data"><bdi class="secno">8.5</bdi> Private Security Data</a></li>
     <li class="tocline"><a class="tocxref" href="#protocol-stack-implementation"><bdi class="secno">8.6</bdi> プロトコル・スタックの実装</a></li>
     <li class="tocline"><a class="tocxref" href="#system-api"><bdi class="secno">8.7</bdi> システムAPI</a></li>
     <li class="tocline"><a class="tocxref" href="#alt-servient-impl"><bdi class="secno">8.8</bdi> 代替のサービエントとWoT実装</a>
@@ -1988,8 +1988,8 @@
   <dd>ある情報と関係性がある自然人を特定するために使用できる情報、または自然人に直接または間接的にリンクされている、またはその可能性がある情報。[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology &#x2014; Security techniques &#x2014; Privacy framework">ISO-IEC-29100</a></cite>]と同じ定義を用います。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-privacy">プライバシー</dfn>(Privacy)</dt>
   <dd>私生活や個人的な出来事への侵害(その個人に関するデータを不当または違法に収集し使用した結果、侵害が生じた場合)がないこと。[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-2382" title="Information technology &#x2014; Vocabulary">ISO-IEC-2382</a></cite>]と同じ定義を用います。<a href="#dfn-personally-identifiable-information" class="internalDFN" data-link-type="dfn">個人を特定できる情報</a>、<a href="#dfn-security" class="internalDFN" data-link-type="dfn">セキュリティ</a>、および[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology &#x2014; Security techniques &#x2014; Privacy framework">ISO-IEC-29100</a></cite>]のその他の関連定義も参照してください。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-private-security-data">非公開のセキュリティ・データ</dfn>(Private Security Data)</dt>
-  <dd>非公開のセキュリティ・データは、モノのセキュリティ設定の構成要素であり、秘密に保たれ、他のデバイスやユーザと共有されません。ひとつの例は、PKIシステムの秘密鍵です。理想的には、そのようなデータは、アプリケーションがアクセスできない別のメモリに保存され、それを利用するアプリケーションにも秘密情報を漏らさない、署名などの抽象的な操作を介してしか用いられません。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-private-security-data">Private Security Data</dfn></dt>
+  <dd>Private Security Dataは、Thingのセキュリティ設定の構成要素であり、秘密に保たれ、他のデバイスやユーザと共有されません。ひとつの例は、PKIシステムの秘密鍵です。理想的には、そのようなデータは、アプリケーションがアクセスできない別のメモリに保存され、それを利用するアプリケーションにも秘密情報を漏らさない、署名などの抽象的な操作を介してしか用いられません。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="properties" id="dfn-property">プロパティー</dfn>(Property)</dt>
   <dd>モノの状態を公開する対話アフォーダンス。この状態は、後で取得(読み取り)し、オプションで更新(書き込み)できます。モノは、変更後の新しい状態をプッシュすることにより、プロパティーを監視可能にすることも選択できます。</dd>
   <dt><dfn data-lt="WoT Protocol Binding|Protocol Binding" data-dfn-type="dfn" data-plurals="protocol bindings" id="dfn-wot-protocol-binding">プロトコル・バインディング</dfn>(Protocol Binding)</dt>
@@ -3181,7 +3181,7 @@
 
 <h3 id="x8-3-wot-scripting-api"><bdi class="secno">8.3</bdi> WoTスクリプティングAPI<a class="self-link" aria-label="§" href="#wot-scripting-api"></a></h3>
 
-<p><a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の構成要素は、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thingの記述</a>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]に厳密に従ったECMAScript APIを定義する。これは、動作の実装とスクリプティングベースの<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>との間のインターフェースを定義する。例えば、ウェブブラウザAPIのjQueryと同様に、その上に他のよりシンプルなAPIを追加実装できる。</p>
+<p><a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の構成要素は、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thingの記述</a>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]に厳密に従ったECMAScript APIを定義する。これは、動作の実装とスクリプトを使った<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>との間のインターフェースを定義する。さらに、例えば、ウェブブラウザAPI向けのjQueryと同様に、スクリプティングAPIにもとづいて、よりシンプルなAPIを実装してもよい。</p>
 
 <p>詳細に関しては、[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>]を参照すること。</p>
 
@@ -3201,10 +3201,15 @@
 </section>
 <section id="private-security-data">
 
-<h3 id="x8-5-private-security-data"><bdi class="secno">8.5</bdi> プライベートセキュリティデータ<a class="self-link" aria-label="§" href="#private-security-data"></a></h3>
+<h3 id="x8-5-private-security-data"><bdi class="secno">8.5</bdi> Private Security Data<a class="self-link" aria-label="§" href="#private-security-data"></a></h3>
 
-<p>Thingと相互作用するための秘密鍵などのプライベートセキュリティデータも<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>によって概念的に管理されるが、意図的にアプリケーションが直接アクセスできないようにされている。実際に、最も安全なハードウェアの実装では、このような<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は個別の分離されたメモリ(例えば、安全な処理要素またはTPM)に格納され、操作の抽象的な集合のみ(分離されたプロセッサとソフトウェアスタックによって実装される場合もある)が提供され、攻撃対象領域を制限してこのデータの外部漏洩を防止する。<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は、承認を行い、相互作用の完全性と機密性を保護するために、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>によって透過的に用いられる。</p>
+<p>Thingと相互作用するための秘密鍵などのプライベートセキュリティデータも<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>によって概念的に管理されるが、意図的にアプリケーションが直接アクセスできないようにされている。実際に、最も安全なハードウェアの実装では、このような<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は個別の分離されたメモリ(例えば、安全な処理要素またはTPM)に格納され、操作の抽象的な集合のみ(分離されたプロセッサとソフトウェアスタックによって実装される可能性さえある)が提供され、攻撃対象領域を制限してこのデータの外部漏洩を防止する。<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">プライベートセキュリティデータ</a>は、承認を行い、相互作用の完全性と機密性を保護するために、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>によって透過的に用いられる。</p>
 
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>文頭の「Private security data」も、「3. 用語」で定義された「Private Security Data」として扱うべきと考えられる。
+</p>
+</div>
 </section>
 <section id="protocol-stack-implementation">
 
@@ -3329,7 +3334,7 @@
 <img src="images/arch-simple-conf-consumer-intermediary-thing.png" srcset="images/arch-simple-conf-consumer-intermediary-thing.svg" class="wot-arch-diagram" alt="プロキシとして機能する仲介を介して接続される利用者とモノ">
 <figcaption>図<bdi class="figno">31</bdi> <span class="fig-title">プロキシとして機能する仲介を介した利用者とモノの接続</span></figcaption>
 </figure>
-
+文頭の「Private security data」も、用語定義された「Private Security Data」として扱うべき
 </section>
 <section id="sec-deployment-digital-twin">
 
