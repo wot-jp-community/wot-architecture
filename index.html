@@ -1835,7 +1835,7 @@
     <li class="tocline"><a class="tocxref" href="#alt-servient-impl"><bdi class="secno">8.8</bdi> 代替のServientとWoT実装</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#native-impl"><bdi class="secno">8.8.1</bdi> ネイティブなWoT API</a></li>
-      <li class="tocline"><a class="tocxref" href="#existing-impl"><bdi class="secno">8.8.2</bdi> 既存のデバイスに関するモノの記述</a></li>
+      <li class="tocline"><a class="tocxref" href="#existing-impl"><bdi class="secno">8.8.2</bdi> 既存デバイスのThing Description</a></li>
     </ol>
     </li>
   </ol>
@@ -3257,9 +3257,9 @@
 </section>
 <section id="existing-impl">
 
-<h4 id="x8-8-2-thing-description-for-existing-devices"><bdi class="secno">8.8.2</bdi> 既存のデバイスに関するモノの記述<a class="self-link" aria-label="§" href="#existing-impl"></a></h4>
+<h4 id="x8-8-2-thing-description-for-existing-devices"><bdi class="secno">8.8.2</bdi> 既存デバイスのThing Description<a class="self-link" aria-label="§" href="#existing-impl"></a></h4>
 
-<p><em>既存</em>のIoTデバイスやサービスを<abbr title="World Wide Web Consortium">W3C</abbr>モノのウェブに統合し、これらのデバイスやサービスに関する<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>を作成することにより、それらを<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>として用いることもできます。このようなTDは、手動でもツールやサービスを用いても作成できます。例えば、TDは、別のエコシステムに依存している機械可読形式で提供されるメタデータの自動翻訳を提供するサービスにより生成できます。しかし、これは、対象とするデバイスが<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>で記述できるプロトコルを用いている場合にのみ行えます。これに関する要件は<a href="#sec-protocol-bindings" class="sec-ref">§&nbsp;<bdi class="secno">6.6</bdi> プロトコル・バインディング</a>で示しています。これまでの議論の多くは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>が独自の<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>を提供することも暗示しています。これは便利なパターンですが、必須ではありません。特に、既存のデバイスを変更して独自の<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>を直接提供することはできない場合があります。このケースでは、ディレクトリやその他の外部の別の配信メカニズムなどのサービスを用いて<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>を別途提供する必要があります。</p>
+<p><em>既存</em>のIoTデバイスやサービスを<abbr title="World Wide Web Consortium">W3C</abbr>Web of Thingsに統合し、これらのデバイスやサービスに関する<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>を作成することにより、それらを<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として用いることもできる。このようなTDは、手動でもツールやサービスを用いても作成できる。例えば、TDは、別のエコシステムに依存している機械可読形式で提供されるメタデータの自動翻訳を提供するサービスにより生成できる。しかし、これは、対象とするデバイスが<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>で記述できるプロトコルを用いている場合にのみ行える。これに関する要件は<a href="#sec-protocol-bindings" class="sec-ref">§&nbsp;<bdi class="secno">6.6</bdi> プロトコルバインディング</a>で示される。これまでの議論の多くは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>が自身の<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>を提供することも暗示している。これは便利なパターンだが、必須ではない。特に、既存のデバイスを変更して自身の<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>を直接提供することはできない場合がある。このケースでは、ディレクトリやその他の外部の別の配信メカニズムなどのサービスを用いて<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>を別途提供する必要がある。</p>
 
 <figure id="architecture-implementation-existing">
 <img src="images/wot-thing-existing.png" srcset="images/wot-thing-existing.svg" class="wot-arch-diagram" alt="既存の実装">
