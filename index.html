@@ -1840,7 +1840,7 @@
     </li>
   </ol>
   </li>
-  <li class="tocline"><a class="tocxref" href="#sec-deployment-scenario"><bdi class="secno">9.</bdi> WoTの展開例</a>
+  <li class="tocline"><a class="tocxref" href="#sec-deployment-scenario"><bdi class="secno">9.</bdi> WoTのデプロイメント例</a>
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#sec-client-server-roles"><bdi class="secno">9.1</bdi> モノと利用者の役割</a></li>
     <li class="tocline"><a class="tocxref" href="#sec-topologies-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーと展開シナリオ</a>
@@ -1923,7 +1923,7 @@
   <li><a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoTアーキテクチャ</a>では、抽象アーキテクチャの定義、</li>
   <li><a href="#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT構成要素</a>では、WoT構成要素とその相互作用の概要、</li>
   <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>では、抽象アーキテクチャを可能な具体的な実装にマッピングする方法に関する参考情報のガイドライン、</li>
-  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTの展開例</a>では、可能な展開シナリオに関する参考情報の例、</li>
+  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTのデプロイメント例</a>では、可能な展開シナリオに関する参考情報の例、</li>
  <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
 </ul>
 
@@ -3271,13 +3271,13 @@
 </section>
 <section id="sec-deployment-scenario" class="informative">
 
-<h2 id="x9-example-wot-deployments"><bdi class="secno">9.</bdi> WoTの展開例<a class="self-link" aria-label="§" href="#sec-deployment-scenario"></a></h2>
+<h2 id="x9-example-wot-deployments"><bdi class="secno">9.</bdi> WoTのデプロイメント例<a class="self-link" aria-label="§" href="#sec-deployment-scenario"></a></h2>
 
-<p><em>この項は非規範的です。</em></p>
+<p><em>この項は非規範的である。</em></p>
 
-<p>この項では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の役割を実装しているデバイスとサービスを様々な具体的なトポロジーと展開シナリオで相互接続する際に、モノのウェブ(WoT)の抽象アーキテクチャをインスタンス化する様々な方法の例を示します。これらのトポロジーとシナリオは規範的ではありませんが、WoT抽象アーキテクチャによって認められ、サポートされています。</p>
+<p>この項では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割を実装しているデバイスとサービスを様々な具体的なトポロジーとデプロイメントシナリオで相互接続する際に、Web of Things (WoT)の抽象アーキテクチャをインスタンス化する様々な方法の例を示す。これらのトポロジーとシナリオは規範的ではないが、WoT抽象アーキテクチャによって認められ、サポートされている。</p>
 
-<p>特定のトポロジーについて論じる前に、まず<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>がWoTネットワークで担うことができる役割と、それらが持っている<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>のソフトウェア抽象化との関係について振り返ります。<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>は、それぞれ<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の役割における<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の動作の実装に内部的に利用できます。</p>
+<p>特定のトポロジーについて論じる前に、まず<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>がWoTネットワークで担うことができる役割と、それらが持っている<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開されたThing</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>のソフトウェア抽象化との関係について振り返る。<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開されたThing</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>は、それぞれ<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割をする<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>の動作の実装に内部的に利用できる。</p>
 
 <section id="sec-client-server-roles">
 
