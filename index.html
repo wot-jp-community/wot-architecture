@@ -3304,23 +3304,23 @@
 
 <section id="sec-deployment-app-dev">
 
-<h4 id="x9-2-1-consumer-and-thing-on-the-same-network"><bdi class="secno">9.2.1</bdi> 同じネットワーク上の利用者とモノ<a class="self-link" aria-label="§" href="#sec-deployment-app-dev"></a></h4>
+<h4 id="x9-2-1-consumer-and-thing-on-the-same-network"><bdi class="secno">9.2.1</bdi> 同じネットワーク上のConsumerとThing<a class="self-link" aria-label="§" href="#sec-deployment-app-dev"></a></h4>
 
-<p><a href="#simple-conf-application-device" class="fig-ref" title="同じネットワーク上の利用者とモノ">図<bdi class="figno">30</bdi></a>で示している最もシンプルな相互接続のトポロジーでは、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>は同じネットワーク上にあり、仲介なしに互いに直接通信を行えます。このトポロジーが生じる1つのユースケースは、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>がゲートウェイで実行されているオーケストレーション・サービス(orchestration service)やその他のIoTアプリケーションで、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>がセンサーや作動装置に接続しているデバイスである場合です。しかし、クライアント/サーバーの関係は簡単に逆転可能で、クライアントは、ゲートウェイやクラウド上で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>として実行されているサービスにアクセスする<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の役割を持つデバイスになりえます。</p>
+<p><a href="#simple-conf-application-device" class="fig-ref" title="同じネットワーク上のConsumerとThing">図<bdi class="figno">30</bdi></a>で示している最もシンプルな相互接続のトポロジーでは、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>と<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>は同じネットワーク上にあり、仲介なしに互いに直接通信を行える。このトポロジーになるユースケースの一つは、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>がゲートウェイで実行されているオーケストレーションサービス(orchestration service)やその他のIoTアプリケーションで、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>がセンサーやアクチュエータに接続しているデバイスである場合である。しかし、クライアント/サーバーの関係は簡単に逆転可能で、クライアントは、ゲートウェイやクラウド上で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として実行されているサービスにアクセスする<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割を持つデバイスになりえる。</p>
 
 <figure id="simple-conf-application-device">
-<img src="images/arch-simple-conf-consumer-thing.png" srcset="images/arch-simple-conf-consumer-thing.svg" class="wot-arch-diagram" alt="同じネットワーク上の利用者とモノ">
-<figcaption>図<bdi class="figno">30</bdi> <span class="fig-title">同じネットワーク上の利用者とモノ</span></figcaption>
+<img src="images/arch-simple-conf-consumer-thing.png" srcset="images/arch-simple-conf-consumer-thing.svg" class="wot-arch-diagram" alt="同じネットワーク上のConsumerとThing">
+<figcaption>図<bdi class="figno">30</bdi> <span class="fig-title">同じネットワーク上のConsumerとThing</span></figcaption>
 </figure>
 
-<p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>がクラウド内にあり、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>がローカル・ネットワーク上にある場合(スマート・ホームのユースケースの例については<a href="#smart-home" class="fig-ref" title="スマート・ホーム">図<bdi class="figno">1</bdi></a>を参照)は、例えば、NATトラバーサルが必要で、ある種の発見は認められていないなど、実際のネットワーク・トポロジーはより複雑になりえます。このようなケースでは、後に論じるより複雑なトポロジーの1つの方が適切でありえます。</p>
+<p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>がクラウド内にあり、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>がローカルネットワーク上にある場合(スマートホームのユースケースの例については<a href="#smart-home" class="fig-ref" title="スマートホーム">図<bdi class="figno">1</bdi></a>を参照)は、実際のネットワークトポロジーはより複雑になる。例えば、NATトラバーサルが必要で、ある種の発見は認められていない場合がある。このようなケースでは、後に論じるより複雑なトポロジーの1つの方が適切である。</p>
 
 </section>
 <section id="sec-deployment-intermediaries">
 
-<h4 id="x9-2-2-consumer-and-thing-connected-via-intermediaries"><bdi class="secno">9.2.2</bdi> 仲介を介して接続された利用者とモノ<a class="self-link" aria-label="§" href="#sec-deployment-intermediaries"></a></h4>
+<h4 id="x9-2-2-consumer-and-thing-connected-via-intermediaries"><bdi class="secno">9.2.2</bdi> Intermediaryを介して接続されたConsumerとThing<a class="self-link" aria-label="§" href="#sec-deployment-intermediaries"></a></h4>
 
-<p><a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>は、ネットワーク上で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の両方の役割を担い、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>の両方のソフトウェア抽象化をサポートします。<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>は、デバイスとネットワークとの間のプロキシや<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>に使用できます。</p>
+<p><a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>は、ネットワーク上で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の両方の役割を担い、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開されたThing</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>の両方のソフトウェア抽象化をサポートする。<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>は、デバイスとネットワークとの間のプロキシや<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>に使用できる。</p>
 
 <section id="sec-deployment-app-proxy-dev">
 
