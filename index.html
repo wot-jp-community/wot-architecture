@@ -1840,10 +1840,10 @@
     </li>
   </ol>
   </li>
-  <li class="tocline"><a class="tocxref" href="#sec-deployment-scenario"><bdi class="secno">9.</bdi> WoTの展開例</a>
+  <li class="tocline"><a class="tocxref" href="#sec-deployment-scenario"><bdi class="secno">9.</bdi> WoTのデプロイメント例</a>
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#sec-client-server-roles"><bdi class="secno">9.1</bdi> ThingとConsumerの役割</a></li>
-    <li class="tocline"><a class="tocxref" href="#sec-topologies-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーと展開シナリオ</a>
+    <li class="tocline"><a class="tocxref" href="#sec-topologies-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーとデプロイメントシナリオ</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-deployment-app-dev"><bdi class="secno">9.2.1</bdi> 同じネットワーク上の利用者とモノ</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-deployment-intermediaries"><bdi class="secno">9.2.2</bdi> 仲介を介して接続された利用者とモノ</a>
@@ -1923,7 +1923,7 @@
   <li><a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoTアーキテクチャ</a>では、抽象アーキテクチャの定義、</li>
   <li><a href="#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT構成要素</a>では、WoT構成要素とその相互作用の概要、</li>
   <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>では、抽象アーキテクチャを可能な具体的な実装にマッピングする方法に関する参考情報のガイドライン、</li>
-  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTの展開例</a>では、可能な展開シナリオに関する参考情報の例、</li>
+  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTのデプロイメント例</a>では、可能な展開シナリオに関する参考情報の例、</li>
  <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
 </ul>
 
@@ -3168,13 +3168,13 @@
 
 <h3 id="x8-2-wot-runtime"><bdi class="secno">8.2</bdi> WoTランタイム<a class="self-link" aria-label="§" href="#wot-runtime"></a></h3>
 
-<p>技術的には、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の抽象化とその<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">対話モデル</a>はランタイム・システムに実装されます。この<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、動作の実装に関する実行環境を維持し、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を公開および(または)利用できるため、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoTモノの記述</a>を取得、処理、シリアル化、提供できなければなりません。</p>
+<p>技術的には、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の抽象化とその<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>はランタイムシステムに実装される。この<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、動作の実装に関する実行環境を整備し、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>を公開および(または)利用できるため、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>を取得し、処理し、シリアライズし、提供することができなければならない。</p>
 
-<p>すべての<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>には、動作実装用のアプリケーション向けインターフェース(つまり、API)があります。<a href="#architecture-implementation" class="fig-ref" title="WoTスクリプトAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>で示しているオプションの<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>の構成要素は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の抽象化に従ったアプリケーション向けインターフェースを定義し、実行中にアプリケーションのスクリプトを介して動作の実装を展開できるようにします。代替APIに関しては、<a href="#native-impl" class="sec-ref">§&nbsp;<bdi class="secno">8.8.1</bdi> ネイティブなWoT API</a>を参照してください。これも、コンパイル中にのみ使用できます。一般的に、アプリケーション・ロジックは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の管理面、特に<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">非公開のセキュリティ・データ</a>に対する不正アクセスを防止するために、分離された実行環境で実行すべきです。マルチ・テナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>では、様々なテナントに対して実行環境の分離を追加する必要があります。</p>
+<p>すべての<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>には、動作実装用のアプリケーション向けインターフェース(つまり、API)がある。<a href="#architecture-implementation" class="fig-ref" title="WoTスクリプティングAPIを用いたサービエントの実装">図<bdi class="figno">27</bdi></a>に示される、オプション機能である<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>という構成要素は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の抽象化に従ったアプリケーション向けインターフェースを定義し、実行中にアプリケーションのスクリプトを介して動作の実装がデプロイできるようにする。これも、コンパイル中にのみ使用できます。コンパイル時にのみ使用できる、WoTスクリプティングAPI以外のAPIに関しては、<a href="#native-impl" class="sec-ref">§&nbsp;<bdi class="secno">8.8.1</bdi> ネイティブなWoT API</a>を参照のこと。一般的に、アプリケーションのロジックは、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の管理面、特に<a href="#dfn-private-security-data" class="internalDFN" data-link-type="dfn">Private Security Data</a>に対する不正アクセスを防止するために、分離された実行環境で実行されるべきである。マルチテナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>では、異なる利用者に対して実行環境の分離を追加する必要がある。</p>
 
-<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のライフサイクル、より正確にはそのソフトウェアの抽象化と記述を管理するための特定の操作を提供する必要があります。ライフサイクル管理(LCM)システムは、これらのライフサイクル操作を<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>内にカプセル化し、内部インターフェースを用いてライフサイクル管理を実現できます。このような操作の詳細は、実装によって異なります。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>にはLCM機能が含まれているため、このようなシステムの1つの可能な実装となります。</p>
+<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のライフサイクル、より正確にはそのソフトウェアの抽象化と記述を管理するための特定の操作を提供する必要がある。ライフサイクル管理(LCM)システムは、これらのライフサイクル操作を<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>内にカプセル化し、内部インターフェースを用いてライフサイクル管理を実現してもよい。このような操作の詳細は、実装によって異なる。<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>にはLCM機能が含まれているため、このようなシステムの1つの可能な実装となる。</p>
 
-<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、動作の実装を<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>の詳細から切り離すため、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>のプロトコル・スタックの実装と連動しなければなりません。<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は通常、例えば、接続されているセンサーや作動装置などのローカルなハードウェアにアクセスしたり、ストレージなどのシステム・サービスにアクセスしたりするために、基礎となるシステムとも連動します。両方のインターフェースは実装固有ですが、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は実装された<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>の抽象化に必要な適応を提供しなければなりません。</p>
+<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、動作の実装を<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>の詳細から切り離すため、<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>のプロトコルスタック実装とインタフェースしなければならない。また、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は通常、例えば、接続されているセンサーやアクチュエーターなどのローカルなハードウェアにアクセスしたり、ストレージなどのシステムサービスにアクセスしたりするために、根底にあるシステムともインタフェースする。これらのインターフェースは両方とも実装に固有のものだが、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は実装された<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>の抽象化に必要な適応を提供しなければならない。</p>
 
 </section>
 <section id="wot-scripting-api">
@@ -3271,13 +3271,13 @@
 </section>
 <section id="sec-deployment-scenario" class="informative">
 
-<h2 id="x9-example-wot-deployments"><bdi class="secno">9.</bdi> WoTの展開例<a class="self-link" aria-label="§" href="#sec-deployment-scenario"></a></h2>
+<h2 id="x9-example-wot-deployments"><bdi class="secno">9.</bdi> WoTのデプロイメント例<a class="self-link" aria-label="§" href="#sec-deployment-scenario"></a></h2>
 
-<p><em>この項は非規範的です。</em></p>
+<p><em>この項は参考情報である。</em></p>
 
-<p>この項では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の役割を実装しているデバイスとサービスを様々な具体的なトポロジーと展開シナリオで相互接続する際に、モノのウェブ(WoT)の抽象アーキテクチャをインスタンス化する様々な方法の例を示します。これらのトポロジーとシナリオは規範的ではありませんが、WoT抽象アーキテクチャによって認められ、サポートされています。</p>
+<p>この項では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割を実装しているデバイスとサービスを様々な具体的なトポロジーとデプロイメントシナリオで相互接続する際に、Web of Things (WoT)の抽象アーキテクチャをインスタンス化する様々な方法の例を示す。これらのトポロジーとシナリオは規範的ではないが、WoT抽象アーキテクチャによって認められ、サポートされている。</p>
 
-<p>特定のトポロジーについて論じる前に、まず<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>がWoTネットワークで担うことができる役割と、それらが持っている<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>のソフトウェア抽象化との関係について振り返ります。<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>は、それぞれ<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の役割における<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>の動作の実装に内部的に利用できます。</p>
+<p>特定のトポロジーについて論じる前に、まず<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>がWoTネットワークで担うことができる役割と、それらが持っている<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開されたThing</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>のソフトウェア抽象化との関係について振り返る。<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開されたThing</a>と<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>は、それぞれ<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割をする<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>の動作の実装に内部的に利用できる。</p>
 
 <section id="sec-client-server-roles">
 
@@ -3298,9 +3298,9 @@
 </section>
 <section id="sec-topologies-deployment-scenarios">
 
-<h3 id="x9-2-topology-of-wot-systems-and-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーと展開シナリオ<a class="self-link" aria-label="§" href="#sec-topologies-deployment-scenarios"></a></h3>
+<h3 id="x9-2-topology-of-wot-systems-and-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーとデプロイメントシナリオ<a class="self-link" aria-label="§" href="#sec-topologies-deployment-scenarios"></a></h3>
 
-<p>この項では、WoTシステムの様々なトポロジーと展開シナリオについて論じます。これらはパターンの例にすぎず、他の相互接続トポロジーも可能です。ここで説明するトポロジーは、モノのウェブのユースケース(<a href="#sec-use-cases" class="sec-ref">§&nbsp;<bdi class="secno">4.</bdi> ユースケース</a>)と、そこから抽出された技術要件(<a href="#sec-requirements" class="sec-ref">§&nbsp;<bdi class="secno">5.</bdi> 要件</a>)から導かれました。</p>
+<p>この項では、WoTシステムの様々なトポロジーとデプロイメントシナリオについて論じる。これらはパターンの例にすぎず、他の相互接続トポロジーも可能である。ここで説明するトポロジーは、Web of Thingsのユースケース(<a href="#sec-use-cases" class="sec-ref">§&nbsp;<bdi class="secno">4.</bdi> ユースケース</a>)と、そこから抽出された技術要件(<a href="#sec-requirements" class="sec-ref">§&nbsp;<bdi class="secno">5.</bdi> 要件</a>)に基づくものである。</p>
 
 <section id="sec-deployment-app-dev">
 
