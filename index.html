@@ -1846,10 +1846,10 @@
     <li class="tocline"><a class="tocxref" href="#sec-topologies-deployment-scenarios"><bdi class="secno">9.2</bdi> WoTシステムのトポロジーとデプロイメントシナリオ</a>
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-deployment-app-dev"><bdi class="secno">9.2.1</bdi> 同じネットワーク上の利用者とモノ</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-deployment-intermediaries"><bdi class="secno">9.2.2</bdi> 仲介を介して接続された利用者とモノ</a>
+      <li class="tocline"><a class="tocxref" href="#sec-deployment-intermediaries"><bdi class="secno">9.2.2</bdi> Intermediaryを介して接続されたConsumerとThing</a>
       <ol class="toc">
-        <li class="tocline"><a class="tocxref" href="#sec-deployment-app-proxy-dev"><bdi class="secno">9.2.2.1</bdi> プロキシとして機能する仲介</a></li>
-        <li class="tocline"><a class="tocxref" href="#sec-deployment-digital-twin"><bdi class="secno">9.2.2.2</bdi> デジタル・ツインとして機能する仲介</a></li>
+        <li class="tocline"><a class="tocxref" href="#sec-deployment-app-proxy-dev"><bdi class="secno">9.2.2.1</bdi> プロキシとして機能するIntermediary</a></li>
+        <li class="tocline"><a class="tocxref" href="#sec-deployment-digital-twin"><bdi class="secno">9.2.2.2</bdi> デジタルツインとして機能するIntermediary</a></li>
       </ol>
       </li>
       <li class="tocline"><a class="tocxref" href="#sec-deployment-cloud"><bdi class="secno">9.2.3</bdi> クラウド・サービスから制御されるローカル・ネットワーク内のデバイス</a></li>
@@ -3324,23 +3324,27 @@
 
 <section id="sec-deployment-app-proxy-dev">
 
-<h5 id="x9-2-2-1-intermediary-acting-as-a-proxy"><bdi class="secno">9.2.2.1</bdi> プロキシとして機能する仲介<a class="self-link" aria-label="§" href="#sec-deployment-app-proxy-dev"></a></h5>
+<h5 id="x9-2-2-1-intermediary-acting-as-a-proxy"><bdi class="secno">9.2.2.1</bdi> プロキシとして機能するIntermediary<a class="self-link" aria-label="§" href="#sec-deployment-app-proxy-dev"></a></h5>
 
-<p><a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>のシンプルな応用の1つは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>に対するプロキシです。<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>がプロキシとして機能する場合、2つの別々のネットワークまたはプロトコルとのインターフェースを持っています。これには、TLSエンドポイントの提供など、付加的なセキュリティ・メカニズムの実装が伴う場合があります。一般的に、プロキシによって対話が変わることはないため、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>によって公開されるTDの対話は、利用されるTDの対話と同じですが、接続メタデータは変更されています。</p>
+<p><a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>のシンプルな応用の1つは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に対するプロキシである。<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>がプロキシとして機能する場合、2つの別々のネットワークまたはプロトコルとのインターフェースを持っている。これには、TLSエンドポイントの提供など、付加的なセキュリティのメカニズムの実装が伴う場合がある。一般的に、プロキシによって相互作用が変わることはないため、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>によって公開されるTDの相互作用は、利用されるTDの相互作用と同じであるが、接続メタデータは変更されている。</p>
 
-<p>このプロキシのパターンを実装するために、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のTDを取得して<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用対象のモノ</a>を作成します。これにより、同じ<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">対話アフォーダンス</a>を持つソフトウェアの実装として<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のプロキシ・オブジェクトが作成されます。次に、新しい識別子と、場合によっては新しい通信メタデータ(<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>)および(または)新しい<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>を備えたプロキシ・オブジェクトのTDが作成されます。最後に、このTDに基づいて<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のモノ</a>が作成され、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>は、適切な公開メカニズムを介して、他の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>や<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>にTDを通知します。</p>
+<p>このプロキシのパターンを実装するために、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のTDを取得して<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>を作成する。これにより、同じ<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>を持つソフトウェアの実装として<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のプロキシオブジェクトが作成される。次に、新しい識別子と、場合によっては新しい通信メタデータ(<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>)および(または)新しい<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティメタデータ</a>を備えたプロキシオブジェクトのTDが作成される。最後に、このTDに基づいて<a href="#dfn-exposed-thing" class="internalDFN" data-link-type="dfn">公開対象のThing</a>が作成され、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>は、適切な公開メカニズムを介して、他の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>や<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>にTDを通知する。</p>
 
 <figure id="simple-conf-application-intermediary-device">
-<img src="images/arch-simple-conf-consumer-intermediary-thing.png" srcset="images/arch-simple-conf-consumer-intermediary-thing.svg" class="wot-arch-diagram" alt="プロキシとして機能する仲介を介して接続される利用者とモノ">
-<figcaption>図<bdi class="figno">31</bdi> <span class="fig-title">プロキシとして機能する仲介を介した利用者とモノの接続</span></figcaption>
+<img src="images/arch-simple-conf-consumer-intermediary-thing.png" srcset="images/arch-simple-conf-consumer-intermediary-thing.svg" class="wot-arch-diagram" alt="プロキシとして機能するIntermediaryを介して接続されるConsumerとThing">
+<figcaption>図<bdi class="figno">31</bdi> <span class="fig-title">プロキシとして機能するIntermediaryを介したConsumerとThingの接続</span></figcaption>
 </figure>
-文頭の「Private security data」も、用語定義された「Private Security Data」として扱うべき
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+文頭の「Private security data」も、用語定義された「Private Security Data」として扱うべき。@@@どこにある「Private security data」のこと???
+</p>
+</div>
 </section>
 <section id="sec-deployment-digital-twin">
 
-<h5 id="x9-2-2-2-intermediary-acting-as-a-digital-twin"><bdi class="secno">9.2.2.2</bdi> デジタル・ツインとして機能する仲介<a class="self-link" aria-label="§" href="#sec-deployment-digital-twin"></a></h5>
+<h5 id="x9-2-2-2-intermediary-acting-as-a-digital-twin"><bdi class="secno">9.2.2.2</bdi> デジタルツインとして機能するIntermediary<a class="self-link" aria-label="§" href="#sec-deployment-digital-twin"></a></h5>
 
-<p>より複雑な<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>は、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>として知られています。<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>は、プロトコルの変更や、ネットワーク間の変換を行う場合も行わない場合もありますが、状態のキャッシュ、繰延更新、対象とするデバイスの動作の予測シミュレーションなどの追加サービスを提供します。例えば、IoTデバイスのパワーが限られていれば、あまり頻繁には起動せず、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>と同期した直後にスリープ状態に戻ることを選択できます。このケースでは通常、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>はパワーの制約が少ないデバイス上(クラウドやゲートウェイなど)で実行され、制約のあるデバイスの代わりに対話に応答することができます。現在のプロパティーの状態に対するリクエストを、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>がキャッシュされた状態を用いて満たす場合もあります。対象としているIoTデバイスがスリープ状態にあるときに到着したリクエストはキューに入れられ、起動時に送信されます。このパターンを実装するためには、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>、つまり<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタル・ツイン</a>は、いつデバイスが起動しているかを知る必要があります。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>としてのデバイスの実装には、そのための通知メカニズムを含める必要があります。これは、別の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>/<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のペアを用いて、またはこの目的のための<a href="#dfn-event" class="internalDFN" data-link-type="dfn">イベント</a>の対話を用いて実装できます。</p>
+<p>より複雑な<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>は、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>として知られている。<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>は、プロトコルの変更や、ネットワーク間の通訳を行う場合も行わない場合もあるが、状態のキャッシング、更新の先延ばし、対象デバイスの動作の予測シミュレーションなどの追加サービスを提供する。例えば、IoTデバイスの電力が限られていれば、あまり頻繁には起動せず、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>と同期した直後にスリープ状態に戻ることを選択できる。このケースでは通常、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>は電力の制約が少ないデバイス上(クラウドやゲートウェイなど)で実行され、制約のあるデバイスの代わりに相互作用に応答することができる。現在のプロパティーの状態に対するリクエストを、<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>がキャッシュされた状態を用いて満たす場合もある。対象としているIoTデバイスがスリープ状態にあるときに到着したリクエストはキューに入れられ、起動時に送信される。このパターンを実装するためには、<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>、つまり<a href="#dfn-digital-twin" class="internalDFN" data-link-type="dfn">デジタルツイン</a>は、いつデバイスが起動しているかを知る必要がある。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>としてのデバイスの実装には、そのための通知メカニズムを含める必要がある。これは、別の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>/<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のペアを用いて、またはこの目的のための<a href="#dfn-event" class="internalDFN" data-link-type="dfn">イベント</a>の相互作用を用いて実装できる。</p>
 
 </section>
 </section>
