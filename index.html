@@ -1853,7 +1853,7 @@
       </ol>
       </li>
       <li class="tocline"><a class="tocxref" href="#sec-deployment-cloud"><bdi class="secno">9.2.3</bdi> クラウドサービスから制御されるローカルネットワーク内のデバイス</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-deployment-discovery-with-directory"><bdi class="secno">9.2.4</bdi> モノのディレクトリを用いた発見</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-deployment-discovery-with-directory"><bdi class="secno">9.2.4</bdi> Thing Directoryを用いた発見</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-deployment-service-to-service"><bdi class="secno">9.2.5</bdi> 複数の領域にまたがるサービス間の接続</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#sec-deployment-service-to-service-synchronized"><bdi class="secno">9.2.5.1</bdi> モノのディレクトリの同期を介した接続</a></li>
@@ -3264,7 +3264,13 @@
 <figure id="architecture-implementation-existing">
 <img src="images/wot-thing-existing.png" srcset="images/wot-thing-existing.svg" class="wot-arch-diagram" alt="既存の実装">
 <figcaption>図<bdi class="figno">29</bdi> <span class="fig-title">既存のIoTデバイスの<abbr title="World Wide Web Consortium">W3C</abbr> WoT</span>への統合</figcaption>
-</figure>
+</figure><<<<<<< yamanoi823-patch-8
+3384
+ 
+<p>しかし、遠隔の<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介者</a>がクライアントアプリケーションにサービスを提供しているクラウドプラットフォームの一部である場合、クライアントは、例えば、接続されているデバイスのディレクトリにアクセスすることにより、デバイス情報を見つけることができる必要がある。下の図では、シンプルにするために、すべてのローカルデバイスが<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として実装され、すべてのクラウドアプリケーションが<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>として実装されていると想定している。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として実装されているローカルデバイスのメタデータをクラウドアプリケーションで利用できるようにするために、そのメタデータを<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>サービスに登録することができる。このメタデータは、具体的には、遠隔の<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介者</a>によって提供される<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティメタデータ</a>と通信メタデータ(<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>)を反映するように変更されたローカルデバイスのTDである。その後で、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>を照会することにより、クライアントアプリケーションは、ローカルデバイスと通信するために必要なメタデータを取得し、その機能を実現できる。</p>
+3385
+ 
+=======
 
 </section>
 </section>
@@ -3376,19 +3382,18 @@
 </section>
 <section id="sec-deployment-discovery-with-directory">
 
-<h4 id="x9-2-4-discovery-using-a-thing-directory"><bdi class="secno">9.2.4</bdi> モノのディレクトリを用いた発見<a class="self-link" aria-label="§" href="#sec-deployment-discovery-with-directory"></a></h4>
+<h4 id="x9-2-4-discovery-using-a-thing-directory"><bdi class="secno">9.2.4</bdi> Thing Directoryを用いた発見<a class="self-link" aria-label="§" href="#sec-deployment-discovery-with-directory"></a></h4>
 
-<p>クラウド上のサービスによってローカル・デバイス(および場合によってはサービス)を監視または制御できるようになると、その上で様々な付加的なサービスを構築できます。例えば、クラウド・アプリケーションは、収集されたデータの分析に基づいてデバイスの動作条件を変更できます。</p>
+<p>クラウド上のサービスによってローカルデバイス(および場合によってはサービス)を監視または制御できるようになると、その上で様々な付加的なサービスを構築できる。例えば、クラウドアプリケーションは、収集されたデータの分析に基づいてデバイスの動作条件を変更できる。</p>
 
-<p>しかし、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>がクライアント・アプリケーションにサービスを提供しているクラウド・プラットフォームの一部である場合、クライアントは、例えば、接続されているデバイスのディレクトリにアクセスすることにより、デバイス情報を見つけることができる必要があります。下の図では、シンプルにするために、すべてのローカル・デバイスが<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>として実装され、すべてのクラウド・アプリケーションが<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>として実装されていると想定しています。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>として実装されているローカル・デバイスのメタデータをクラウド・アプリケーションで利用できるようにするために、そのメタデータを<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>・サービスに登録することができます。このメタデータは、具体的には、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>によって提供される<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>と通信メタデータ(<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>)を反映するように変更されたローカル・デバイスのTDです。その後で、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>を照会することにより、クライアント・アプリケーションは、ローカル・デバイスと通信するために必要なメタデータを取得し、その機能を実現できます。</p>
+<p>しかし、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>がクライアント・アプリケーションにサービスを提供しているクラウド・プラットフォームの一部である場合、クライアントは、例えば、接続されているデバイスのディレクトリにアクセスすることにより、デバイス情報を見つけることができる必要がある。下の図では、シンプルにするために、すべてのローカルデバイスが<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として実装され、すべてのクラウドアプリケーションが<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>として実装されていると想定している。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として実装されているローカルデバイスのメタデータをクラウドアプリケーションで利用できるようにするために、そのメタデータを<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>サービスに登録することができる。このメタデータは、具体的には、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>によって提供される<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">Public Security Metadata</a>と通信メタデータ(<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>)を反映するように変更されたローカルデバイスのTDである。その後で、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>に照会することにより、クライアントアプリケーションは、ローカルデバイスと通信するために必要なメタデータを取得し、その機能を実現できるようになる。</p>
 
 <figure id="deployment-cloud-directory">
-<img src="images/arch-deploy-service-directory.png" srcset="images/arch-deploy-service-directory.svg" class="wot-arch-diagram" alt="クラウドのディレクトリ">
-<figcaption>図<bdi class="figno">33</bdi> <span class="fig-title">モノのディレクトリを用いたクラウド・サービス</span></figcaption>
+<img src="images/arch-deploy-service-directory.png" srcset="images/arch-deploy-service-directory.svg" class="wot-arch-diagram" alt="クラウドのDirectory">
+<figcaption>図<bdi class="figno">33</bdi> <span class="fig-title">Thing Directoryを用いたクラウドサービス</span></figcaption>
 </figure>
 
-<p>図では示していないより複雑な状況では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>として機能するクラウド・サービスもあります。これも、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>に自身を登録することができます。<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>はウェブ・サービスであるため、NATやファイアウォール・デバイスを介してローカル・デバイスに表示されるべきで、そのインターフェースを独自のTDで提供することさえ可能です。<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>として動作するローカル・デバイスは、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>を介してクラウド内の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>を発見し、例えば、プロトコル変換が必要な場合には、直接またはローカルの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>を介して<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>に接続できます。</p>
-
+<p>上図では示していない、より複雑な状況では、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>として機能するクラウドサービスもありえる。この場合も、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>に自身を登録することができる。<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>はウェブサービスであるため、NATやファイアウォールデバイスを介してローカルデバイスから見ることができるべきであり、そのインターフェースを自身のTDにより提供することさえ可能である。そして、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>として動作するローカルデバイスは、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>を介してクラウド内の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>を発見し、直接、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に接続することができる。あるいは、例えば、プロトコル変換が必要な場合、ローカルにある<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>を介して、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に接続することができる。</p>
 </section>
 <section id="sec-deployment-service-to-service">
 
