@@ -1864,7 +1864,7 @@
     </li>
   </ol>
   </li>
-  <li class="tocline"><a class="tocxref" href="#sec-security-considerations"><bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>
+  <li class="tocline"><a class="tocxref" href="#sec-security-considerations"><bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-risks"><bdi class="secno">10.1</bdi> WoTモノの記述に関するリスク</a>
     <ol class="toc">
@@ -1910,7 +1910,7 @@
   <li><em>モノのウェブ(WoT)モノの記述</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]は、モノのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規範的に提供します。これは、対話アフォーダンスなどの、このドキュメントで紹介している基本概念に基づいています。</li>
   <li><em>モノのウェブ(WoT)バインディング・テンプレート</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>]は、特定のプロトコルとIoTエコシステムに対して、モノのネットワーク向けインターフェースを定義する方法に関する参考情報のガイドラインを提供しており、これをプロトコル・バインディングと呼びます。また、このドキュメントでは、多くの既存のIoTエコシステムと標準の例も提供しています。</li>
   <li><em>モノのウェブ(WoT)スクリプトAPI</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>]は、オプションであり、これを用いると、ウェブ・ブラウザAPIのような一般的なJavaScript APIでモノのアプリケーション・ロジックを実装できるようになります。これによって、IoTアプリケーションの開発が簡素化され、ベンダーやデバイスにまたがる移植が可能となります。</li>
-  <li><em>モノのウェブ(WoT)のセキュリティとプライバシーに関するガイドライン</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]は、分野横断的な構成要素を表します。この参考情報であるドキュメントは、モノの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じています。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきでしょう。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまります。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからです。このドキュメントでは、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行います。</li>
+  <li><em>モノのウェブ(WoT)のセキュリティとプライバシーに関するガイドライン</em>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]は、分野横断的な構成要素を表します。この参考情報であるドキュメントは、モノの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じています。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきでしょう。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまります。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからです。このドキュメントでは、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行います。</li>
 </ul>
 
 <p>この仕様は、WoTシステムの展開に関する非規範的なアーキテクチャの側面と条件もカバーしています。この仕様は特定の具体的な実装を規範的に定義するものではありませんが、このガイドラインは、展開シナリオの例に照らして記述しています。</p>
@@ -1924,7 +1924,7 @@
   <li><a href="#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT構成要素</a>では、WoT構成要素とその相互作用の概要、</li>
   <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>では、抽象アーキテクチャを可能な具体的な実装にマッピングする方法に関する参考情報のガイドライン、</li>
   <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTのデプロイメント例</a>では、可能な展開シナリオに関する参考情報の例、</li>
- <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
+ <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
 </ul>
 
 <p>追加の要件、ユースケース、概念的な機能、および新しい構成要素に関しては、このドキュメントの将来の改訂で取り組みます。</p>
@@ -3254,7 +3254,7 @@
 <figcaption>図<bdi class="figno">28</bdi> <span class="fig-title">ネイティブなWoT APIを用いたサービエントの実装</span></figcaption>
 </figure>
 
-</section>
+</section>https://kikakurui.com/x4/X4197-2012-01.html
 <section id="existing-impl">
 
 <h4 id="x8-8-2-thing-description-for-existing-devices"><bdi class="secno">8.8.2</bdi> 既存デバイスのThing Description<a class="self-link" aria-label="§" href="#existing-impl"></a></h4>
@@ -3286,7 +3286,7 @@
 
 <p><a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の役割を持つ<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>は、なにがしかの発見メカニズムを用いて<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のTDを取得し、その取得したTDに基づいて<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>を作成する。具体的な発見メカニズムは、個々のデプロイメントシナリオに依存している。それは、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>などの管理システムや、発見プロトコル、あるいは静的な割り当て等により提供される可能性がある。</p>
 
-<p>しかし、特定可能な人物に関連付けられているデバイスが記述されているTDは、プライバシー情報の推測に用いられる可能性があることに注意する必要がある。したがって、そのようなTDの配信に関する制約を具体的なTDの発見メカニズムに組み込まなければならない。可能であれば、特定のユースケースで絶対に必要な場合を除いて、IDや人間が読み取れる情報をフィルターで除外するなど、TDにより公開されている情報を制限する措置も講じなければならない。プライバシーに関する課題は、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点</a>でおおまかに論じられており、より詳細な議論が[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]仕様で提供されている。</p>
+<p>しかし、特定可能な人物に関連付けられているデバイスが記述されているTDは、プライバシー情報の推測に用いられる可能性があることに注意する必要がある。したがって、そのようなTDの配信に関する制約を具体的なTDの発見メカニズムに組み込まなければならない。可能であれば、特定のユースケースで絶対に必要な場合を除いて、IDや人間が読み取れる情報をフィルターで除外するなど、TDにより公開されている情報を制限する措置も講じなければならない。プライバシーに関する課題は、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>でおおまかに論じられており、より詳細な議論が[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]仕様で提供されている。</p>
 
 <p>接続されたセンサーやアクチュエーターとの相互作用などの、デバイスの内部システム機能もまた、オプションとして、<a href="#dfn-consumed-thing" class="internalDFN" data-link-type="dfn">利用されるThing</a>の抽象化として表現することができる。</p>
 
@@ -3418,19 +3418,19 @@
 </section>
 <section id="sec-security-considerations" class="informative">
 
-<h2 id="x10-security-and-privacy-considerations"><bdi class="secno">10.</bdi> セキュリティとプライバシーに関する留意点<a class="self-link" aria-label="§" href="#sec-security-considerations"></a></h2>
+<h2 id="x10-security-and-privacy-considerations"><bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮<a class="self-link" aria-label="§" href="#sec-security-considerations"></a></h2>
 
-<p><em>この項は非規範的です。</em></p>
+<p><em>この項は参考情報である。</em></p>
 
-<p>セキュリティとプライバシーは分野横断的な課題であり、すべての<a href="#sec-building-blocks">WoT構成要素</a>とWoT実装において考慮する必要があります。この章では、具体的なWoT実装のセキュリティとプライバシーの保護に役立つように、一般的な課題とガイドラインをまとめています。しかし、これらは一般的なガイドラインに過ぎず、このドキュメントで記述しているような抽象アーキテクチャ自体がセキュリティとプライバシーを保証することはできません。その代わりに、具体的な実装について詳細に考察する必要があります。セキュリティとプライバシーに関する課題のより詳細で完全な分析は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]を参照してください。</p>
+<p>セキュリティとプライバシーは分野横断的な課題であり、すべての<a href="#sec-building-blocks">WoT構成要素</a>とWoT実装において考慮する必要があります。この章では、具体的なWoT実装のセキュリティとプライバシーの保護に役立つように、一般的な課題とガイドラインをまとめる。しかし、これらは一般的なガイドラインに過ぎず、このドキュメントで記述しているような抽象アーキテクチャ自体がセキュリティとプライバシーを保証することはできない。その代わりに、具体的な実装の詳細について熟考する必要がある。セキュリティとプライバシーに関する課題の、より詳細で完全な分析は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]を参照のこと。</p>
 
-<p>全体として、WoTの目標は、セキュリティを含むIoTのデバイスとサービスの既存のアクセス方法とプロパティーを記述することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指しています。既存のシステムの記述は、理想的なセキュリティの動作を備えていなくても、そのシステムを正確に描写すべきです。システムのセキュリティの脆弱性を明確に理解することで、セキュリティの軽減策がサポートされます &#x2014; しかし、もちろん、そのようなデータを、悪用する可能性のある人に配信する必要はありません。</p>
+<p>全体として、WoTの目標は、セキュリティを含めて、IoTデバイスとIoTサービスの既存のアクセス方法とプロパティーを記述することです。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、何を実装するのかを規定することではなく、何が存在するのかを記述することを目指しています。既存システムの記述は、仮に理想的なセキュリティの動作を備えていなとしても、そのシステムを正確に描写すべきである。システムのセキュリティの脆弱性を明確に理解することは、セキュリティ脅威の軽減に役立つ &#x2014; しかし、もちろん、そのようなデータを、悪用する可能性のある人に配信する必要はない。</p>
 
-<p>しかし、特に新しいシステムの場合は、WoTアーキテクチャにより、セキュリティとプライバシーのベストプラクティスを利用<em>できる</em>ようになるべきです。一般的に、WoTのセキュリティのアーキテクチャは、接続するIoTプロトコルとシステムの目標とメカニズムをサポートしなければなりません。このようなシステムは、セキュリティ要件とリスクの許容度が異なるため、これらの要因に基づいてセキュリティ・メカニズムも異なります。</p>
+<p>しかし、特に新しいシステムの場合は、WoTアーキテクチャにより、セキュリティとプライバシーのベストプラクティスを利用<em>できる</em>ようになるべきである。一般的に、WoTのセキュリティアーキテクチャは、接続するIoTプロトコルとシステムの目的とメカニズムをサポートしなければならない。このようなシステムでは、セキュリティ要件とリスクの許容度が多岐に渡るため、これらの要因に基づいてセキュリティメカニズムも多岐に渡る。</p>
 
-<p>IoTのデバイスは自律的に動作する必要があり、多くの場合、個人データへのアクセスを有しており、加えて(または)安全を重視しているシステムの制御下にありえるため、セキュリティとプライバシーは、IoTの領域において特に重要です。IoTのデバイスは、ITシステムとは異なる、場合によってはより高いリスクにさらされます。IoTのシステムを保護し、他のコンピューター・システムに攻撃を仕掛けられないようにすることも重要です。</p>
+<p>IoTデバイスは自律的に動作する必要があり、多くの場合、個人データへのアクセスを有しており、加えて(または)安全を重視するシステムの制御下にありえるため、セキュリティとプライバシーは、IoTの領域において特に重要である。IoTデバイスは、ITシステムとは異なるリスク、場合によってはより高いリスクにさらされやすい。IoTシステムを保護し、他のコンピューターシステムへの攻撃を仕掛けるために用いられることのないようにすることも重要である。</p>
 
-<p>一般的に、セキュリティとプライバシーを保証することはできません。安全でないシステムをWoTによって安全なシステムに変えることはできませんが、WoTアーキテクチャが害を及ぼさないようにする必要があり、記述とサポートの対象であるシステムをサポートするのみでなく、少なくともセキュリティとプライバシーをサポートすべきです。</p>
+<p>一般的に、セキュリティとプライバシーを保証することはできない。安全でないシステムをWoTによって安全なシステムに変えることはできないが、WoTアーキテクチャが害を及ぼさないようにする必要があり、少なくとも、WoTアーキテクチャが記述しサポートする対象システムと同程度には、セキュリティとプライバシーをサポートすべきである。</p>
 
 <section id="sec-security-consideration-td-risks">
 
