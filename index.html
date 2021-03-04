@@ -3489,13 +3489,13 @@
 
 <section id="sec-security-consideration-cross-script">
 
-<h4 id="x10-2-1-cross-script-security-and-privacy-risk"><bdi class="secno">10.2.1</bdi> クロス・スクリプトのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-cross-script"></a></h4>
+<h4 id="x10-2-1-cross-script-security-and-privacy-risk"><bdi class="secno">10.2.1</bdi> クロススクリプトのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-cross-script"></a></h4>
 
-<p>基本的なWoTのセットアップにおいては、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行されるすべてのスクリプトは信頼できると見なしたうえで製造者が配信を行うため、実行する各スクリプトのインスタンス間で厳密な分離を行う必要はありません。しかし、デバイスの性能、展開のユースケース・シナリオ、リスク・レベルによっては、そうすることが望ましい場合があります。例えば、あるスクリプトで機密性の高いプライバシー関連のPIIデータが扱われていて、十分な監査が行われていれば、同じシステム内の他のスクリプトがランタイム中に侵害された場合にデータが露出するリスクを最小限に抑えるために、そのスクリプトを残りのスクリプトのインスタンスから分離することが望ましいかもしれません。別の例は、1つのWoTデバイス上に異なるテナントが共存している場合です。このケースでは、WoTランタイムのインスタンスでそれぞれ異なるテナントが提供されているため、それらを分離する必要があります。</p>
+<p>基本的なWoTのセットアップにおいては、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行されるすべてのスクリプトは信頼できると見なしたうえで製造者が配信を行うため、実行する各スクリプトのインスタンス間で厳密な分離を行う必要はない。しかし、デバイスの性能、展開のユースケース・シナリオ、リスク・レベルによっては、そうすることが望ましい場合がある。例えば、あるスクリプトで機密性の高いプライバシーに関わるPIIデータが扱われていて、十分な監査が行われていれば、同じシステム内の他のスクリプトがランタイム中に侵害された場合にデータが露出するリスクを最小限に抑えるために、そのスクリプトを残りのスクリプトのインスタンスから分離することが望ましいかもしれない。別の例は、1つのWoTデバイス上に異なるテナントが共存している場合である。このケースでは、WoTランタイムのインスタンスでそれぞれ異なるテナントが提供されているため、それらを分離する必要がある。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>プライバシーに関連するデータや、その他のクリティカルなセキュリティ・データをスクリプトで扱う場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>はスクリプトのインスタンスとそのデータを分離すべきです。同様に、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、あるWoTデバイスに複数のテナントがある場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のインスタンスとそのデータを分離すべきです。このような分離は、デバイスで利用できるプラットフォームのセキュリティ・メカニズムを用いて<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行できます。詳細に関しては、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]の「WoTサービエント・シングル・テナント」と「WoTサービエント・マルチ・テナント」の項を参照してください。</dd>
+  <dd>プライバシーに関わるデータや、その他のクリティカルなセキュリティデータをスクリプトで扱う場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>はスクリプトのインスタンスとそのデータを分離すべきである。同様に、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、あるWoTデバイスに複数のテナントがある場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のインスタンスとそのデータの分離を行うべきである。このような分離は、デバイスで利用できるプラットフォームのセキュリティメカニズムを用いて<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行できる。詳細に関しては、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]の「WoT Servientシングルテナント」と「WoT Servientマルチテナント」の項を参照していただきたい。</dd>
 </dl>
 
 </section>
