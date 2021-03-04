@@ -1856,7 +1856,7 @@
       <li class="tocline"><a class="tocxref" href="#sec-deployment-discovery-with-directory"><bdi class="secno">9.2.4</bdi> Thing Directoryを用いた発見</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-deployment-service-to-service"><bdi class="secno">9.2.5</bdi> 複数の領域にまたがるサービス間の接続</a>
       <ol class="toc">
-        <li class="tocline"><a class="tocxref" href="#sec-deployment-service-to-service-synchronized"><bdi class="secno">9.2.5.1</bdi> モノのディレクトリの同期を介した接続</a></li>
+        <li class="tocline"><a class="tocxref" href="#sec-deployment-service-to-service-synchronized"><bdi class="secno">9.2.5.1</bdi> Thing Directoryの同期を介した接続</a></li>
         <li class="tocline"><a class="tocxref" href="#sec-deployment-service-sync-proxy"><bdi class="secno">9.2.5.2</bdi> プロキシの同期を介した接続</a></li>
       </ol>
       </li>
@@ -3387,17 +3387,22 @@
 
 <h4 id="x9-2-5-service-to-service-connections-across-multiple-domains"><bdi class="secno">9.2.5</bdi> 複数の領域にまたがるサービス間の接続<a class="self-link" aria-label="§" href="#sec-deployment-service-to-service"></a></h4>
 
-<p>それぞれが異なるIoTプラットフォームに基づいている複数のクラウドのエコシステムは、連携してより大きなシステム・オブ・システムズのエコシステムを構築できます。下の図は、前述のクラウド・アプリケーションのエコシステムの構造に基づいて、システム・オブ・システムズを作成するために相互接続された2つのエコシステムを示しています。あるエコシステムのクライアント(つまり、下記の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>A)が別のエコシステムのサーバー(つまり、下記の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>B)を利用する必要がある場合を考えてみましょう。このエコシステムを横断するアプリケーションとデバイスの統合を実現するメカニズムは複数あります。以下では、これを実現する方法を示すために、2つの方法について、それぞれ図を用いて説明します。</p>
+<p>それぞれが異なるIoTプラットフォームに基づいている複数のクラウドのエコシステムは、連携してより大きな、「システムのシステム」というエコシステムを構築できる。下の図は、前述のクラウドアプリケーションのエコシステムの構造に基づいて、「システムのシステム」を作成するために相互接続された2つのエコシステムを示している。あるエコシステムのクライアント(つまり、下記の<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a> A)が別のエコシステムのサーバー(つまり、下記の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a> B)を利用する必要がある場合を考えてみよう。このエコシステムを横断するアプリケーションとデバイスの統合を実現するメカニズムは複数存在する。以下では、これを実現する方法を示すために、2つの方法について、それぞれ図を用いて説明する。</p>
 
 <section id="sec-deployment-service-to-service-synchronized">
 
-<h5 id="x9-2-5-1-connection-through-thing-directory-synchronization"><bdi class="secno">9.2.5.1</bdi> モノのディレクトリの同期を介した接続<a class="self-link" aria-label="§" href="#sec-deployment-service-to-service-synchronized"></a></h5>
+<h5 id="x9-2-5-1-connection-through-thing-directory-synchronization"><bdi class="secno">9.2.5.1</bdi> Thing Directoryの同期を介した接続<a class="self-link" aria-label="§" href="#sec-deployment-service-to-service-synchronized"></a></h5>
 
-<p><a href="#deployment-service-sync-directory" class="fig-ref" title="モノのディレクトリの同期を介した複数クラウドの接続">図<bdi class="figno">34</bdi></a>では、2つの<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>が情報を同期させており、それにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>Aは<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>Aを介して<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>Bの情報を取得できます。以前の項で説明したように、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>Bは<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>Bの影(shadow)の実装を維持します。この影のデバイスのTDを取得することにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>Aは、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>Bを介して<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>Bを使用できます。</p>
+<p><a href="#deployment-service-sync-directory" class="fig-ref" title="Thing Directoryの同期を介した複数クラウドの接続">図<bdi class="figno">34</bdi></a>では、2つの<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>が情報を同期させており、それによって、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a> Aは<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a> Aを介して<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a> Bの情報を取得できる。以前の項で説明したように、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a> Bは<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>Bの影 (shadow) の実装を維持する。この影のデバイスのTDを取得することにより、<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a> Aは、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a> Bを介して<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a> Bを使用できる。</p>
+
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>上記説明で用いられている「影 (shadow)」については、「デジタルツイン」とも呼ばれる、デバイスの仮想表現であることを明示的に説明するべき．</p>
+</div>
 
 <figure id="deployment-service-sync-directory">
-<img src="images/arch-deploy-service-sync-directory.png" srcset="images/arch-deploy-service-sync-directory.svg" class="wot-arch-diagram" alt="サービス同期ディレクトリ">
-<figcaption>図<bdi class="figno">34</bdi> <span class="fig-title">モノのディレクトリの同期を介した複数クラウドの接続</span></figcaption>
+<img src="images/arch-deploy-service-sync-directory.png" srcset="images/arch-deploy-service-sync-directory.svg" class="wot-arch-diagram" alt="サービス同期Directory">
+<figcaption>図<bdi class="figno">34</bdi> <span class="fig-title">Thing Directoryの同期を介した複数クラウドの接続</span></figcaption>
 </figure>
 
 </section>
@@ -3405,11 +3410,11 @@
 
 <h5 id="x9-2-5-2-connection-through-proxy-synchronization"><bdi class="secno">9.2.5.2</bdi> プロキシの同期を介した接続<a class="self-link" aria-label="§" href="#sec-deployment-service-sync-proxy"></a></h5>
 
-<p><a href="#deployment-service-sync-intermediary" class="fig-ref" title="仲介の同期を介した複数クラウドの接続">図<bdi class="figno">35</bdi></a>では、2つのリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>がデバイス情報を同期させています。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>Bの影がリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>Bで作成されると同時に、影のTDがリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>Aに同期されます。次に、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">仲介</a>Aは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>Bの独自の影を作成し、TDを<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>Aに登録します。この方法であれば、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">モノのディレクトリ</a>の間の同期は必要ありません。</p>
+<p><a href="#deployment-service-sync-intermediary" class="fig-ref" title="Intermediaryの同期を介した複数クラウドの接続">図<bdi class="figno">35</bdi></a>では、2つのリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a>がデバイス情報を同期させている。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a> Bの影がリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a> Bで作成されると同時に、影のTDがリモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a> Aに同期されます。次に、リモートの<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">Intermediary</a> Aは、自分自身の中に<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a> Bの影を作成し、TDを<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a> Aに登録します。この方法であれば、<a href="#dfn-thing-directory" class="internalDFN" data-link-type="dfn">Thing Directory</a>間の同期は必要ない。</p>
 
 <figure id="deployment-service-sync-intermediary">
-<img src="images/arch-deploy-service-sync-intermediary.png" srcset="images/arch-deploy-service-sync-intermediary.svg" class="wot-arch-diagram" alt="サービス同期仲介">
-<figcaption>図<bdi class="figno">35</bdi> <span class="fig-title">仲介の同期を介した複数クラウドの接続</span></figcaption>
+<img src="images/arch-deploy-service-sync-intermediary.png" srcset="images/arch-deploy-service-sync-intermediary.svg" class="wot-arch-diagram" alt="サービス同期するIntermediary">
+<figcaption>図<bdi class="figno">35</bdi> <span class="fig-title">Intermedaryの同期を介した複数クラウドの接続</span></figcaption>
 </figure>
 
 </section>
