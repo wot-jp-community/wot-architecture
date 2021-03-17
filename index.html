@@ -1870,7 +1870,7 @@
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-private"><bdi class="secno">10.1.1</bdi> Thing Descriptionの非公開のセキュリティデータに関するリスク</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-pii"><bdi class="secno">10.1.2</bdi> モノの記述の個人を特定できる情報に関するリスク</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> モノの記述のコミュニケーション・メタデータに関するリスク</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-security-consideration-scripting-risks"><bdi class="secno">10.2</bdi> WoTスクリプトAPIのセキュリティとプライバシーに関するリスク</a>
@@ -3475,13 +3475,13 @@
 </section>
 <section id="sec-security-consideration-td-cm">
 
-<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> モノの記述のコミュニケーション・メタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
+<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
 
-<p><a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>は、そのプラットフォームがWoTでの使用の条件を満たしていると見なされるように、基盤となる<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>で採用されているセキュリティ・メカニズムを正しくサポートしなければなりません。IoTを大規模に展開するために必要なネットワークの対話が自動化されているため、オペレーターは、セキュリティ方針に準拠した方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>が公開され利用されることを保証する必要があります。</p>
+<p><a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>は、そのプラットフォームがWoTでの使用の条件を満たしていると見なされるように、基盤となる<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>で採用されているセキュリティメカニズムを正しくサポートしなければならない。IoTを大規模に展開するために必要なネットワークの相互作用が自動化されているため、オペレーターは、セキュリティ方針に準拠した方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>が公開され利用されることを保証する必要がある。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>TDの作成者は、できる限り、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>で提供されている、入念なチェック済みの通信メタデータを用いるべきです。<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>でカバーされていないIoTエコシステム用にTDを生成する場合、<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>のすべてのセキュリティ要件が満たされていることを保証してください。</dd>
+  <dd>TDの作成者は、できる限り、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>で提供されている、入念なチェック済みの通信メタデータを用いるべきである。<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>でカバーされていないIoTエコシステム用にTDを生成する場合、<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>のすべてのセキュリティ要件が満たされていることを保証する必要がある。</dd>
 </dl>
 
 </section>
@@ -3490,7 +3490,7 @@
 
 <h3 id="x10-2-wot-scripting-api-security-and-privacy-risks"><bdi class="secno">10.2</bdi> WoTスクリプトAPIのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-scripting-risks"></a></h3>
 
-<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>には、システムへの悪意のあるアクセスを防ぎ、マルチ・テナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>のスクリプトを分離するメカニズムがあるべきです。より具体的には、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>を<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と併用する場合は、以下のセキュリティとプライバシーに関するリスクを考慮し、推奨される軽減策を実装すべきです。</p>
+<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>には、システムへの悪意のあるアクセスを防ぎ、マルチテナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>のスクリプトを分離するメカニズムがあるべきである。より具体的には、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>を<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と併用する場合は、以下のセキュリティとプライバシーに関するリスクを考慮し、推奨される軽減策を実装すべきである。</p>
 
 <section id="sec-security-consideration-cross-script">
 
