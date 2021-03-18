@@ -1870,18 +1870,18 @@
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-private"><bdi class="secno">10.1.1</bdi> Thing Descriptionの非公開のセキュリティデータに関するリスク</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-pii"><bdi class="secno">10.1.2</bdi> Thing Descriptionの個人識別可能情報に関するリスク</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> モノの記述のコミュニケーション・メタデータに関するリスク</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-security-consideration-scripting-risks"><bdi class="secno">10.2</bdi> WoTスクリプトAPIのセキュリティとプライバシーに関するリスク</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-cross-script"><bdi class="secno">10.2.1</bdi> クロス・スクリプトのセキュリティとプライバシーに関するリスク</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-cross-script"><bdi class="secno">10.2.1</bdi> クロススクリプトのセキュリティとプライバシーに関するリスク</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-device-direct-access"><bdi class="secno">10.2.2</bdi> 物理デバイス直接アクセスのセキュリティとプライバシーに関するリスク</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-security-consideration-runtime-risks"><bdi class="secno">10.3</bdi> WoTランタイムのセキュリティとプライバシーに関するリスク</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-update-provisioning"><bdi class="secno">10.3.1</bdi> プロビジョニングと更新のセキュリティ・リスク</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-update-provisioning"><bdi class="secno">10.3.1</bdi> プロビジョニングと更新のセキュリティリスク</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-credentials-storage"><bdi class="secno">10.3.2</bdi> セキュリティ証明書保管のセキュリティとプライバシーに関するリスク</a></li>
     </ol>
     </li>
@@ -3469,19 +3469,19 @@
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>TDでのPIIの保存はできる限り最小限に抑えるべきです。TDに明示的なPIIがなくても、追跡のリスクや特定のプライバシー・リスクが存在する場合があります。このリスクを最小限に抑えるために、一般的にPIIが含まれているかのようにTDを扱い、他のPIIと同じ管理方針に従うべきです。それは、承認された利用者にのみ提供すべきです。特定のユースケースに不要な情報は、できる限りTDで公開すべきではありません。例えば、TD内の情報を識別する明示的な型とインスタンスも、ユースケースで必要でない場合には含めるべきではありません。ユースケースで必要である場合でも、追跡のリスクを最小限に抑えるために、できる限り、グローバルに一意な識別子ではなく、分散型の限定的な範囲の識別子を用いるべきです。一部のユースケースでは、指紋採取のリスクを減らすために、人間が読める記述などのその他の形式の情報も削除可能です。</dd>
+  <dd>TDでのPIIの保存はできる限り最小限に抑えるべきである。TDに明示的なPIIがなくても、追跡のリスクや特定のプライバシーリスクが存在する場合がある。このリスクを最小限に抑えるために、一般的にPIIが含まれているかのようにTDを扱い、他のPIIと同じ管理方針に従うべきである。それは、承認された利用者にのみ提供すべきである。特定のユースケースに不要な情報は、できる限りTDで公開すべきではない。例えば、TD内の情報を識別する明示的な型とインスタンスも、ユースケースで必要でない場合には含めるべきではない。ユースケースで必要である場合でも、追跡のリスクを最小限に抑えるために、できる限り、グローバルに一意な識別子ではなく、分散型の限定的な範囲の識別子を用いるべきである。一部のユースケースでは、フィンガープリンティングのリスクを減らすために、人間が読める記述などのその他の形式の情報も削除可能である。</dd>
 </dl>
 
 </section>
 <section id="sec-security-consideration-td-cm">
 
-<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> モノの記述のコミュニケーション・メタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
+<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
 
-<p><a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>は、そのプラットフォームがWoTでの使用の条件を満たしていると見なされるように、基盤となる<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>で採用されているセキュリティ・メカニズムを正しくサポートしなければなりません。IoTを大規模に展開するために必要なネットワークの対話が自動化されているため、オペレーターは、セキュリティ方針に準拠した方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>が公開され利用されることを保証する必要があります。</p>
+<p><a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>は、そのプラットフォームがWoTでの使用の条件を満たしていると見なされるように、基盤となる<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>で採用されているセキュリティメカニズムを正しくサポートしなければならない。IoTを大規模に展開するために必要なネットワークの相互作用が自動化されているため、オペレーターは、セキュリティ方針に準拠した方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>が公開され利用されることを保証する必要がある。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>TDの作成者は、できる限り、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>で提供されている、入念なチェック済みの通信メタデータを用いるべきです。<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディング・テンプレート</a>でカバーされていないIoTエコシステム用にTDを生成する場合、<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>のすべてのセキュリティ要件が満たされていることを保証してください。</dd>
+  <dd>TDの作成者は、できる限り、<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>で提供されている、入念なチェック済みの通信メタデータを用いるべきである。<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>でカバーされていないIoTエコシステム用にTDを生成する場合、<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>のすべてのセキュリティ要件が満たされていることを保証する必要がある。</dd>
 </dl>
 
 </section>
@@ -3490,17 +3490,17 @@
 
 <h3 id="x10-2-wot-scripting-api-security-and-privacy-risks"><bdi class="secno">10.2</bdi> WoTスクリプトAPIのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-scripting-risks"></a></h3>
 
-<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>には、システムへの悪意のあるアクセスを防ぎ、マルチ・テナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">サービエント</a>のスクリプトを分離するメカニズムがあるべきです。より具体的には、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>を<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と併用する場合は、以下のセキュリティとプライバシーに関するリスクを考慮し、推奨される軽減策を実装すべきです。</p>
+<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>には、システムへの悪意のあるアクセスを防ぎ、マルチテナント方式の<a href="#dfn-servient" class="internalDFN" data-link-type="dfn">Servient</a>におけるスクリプトを分離するメカニズムがあるべきである。より具体的には、<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプトAPI</a>を<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装と併用する場合は、以下のセキュリティとプライバシーに関するリスクを考慮し、推奨される軽減策を実装すべきである。</p>
 
 <section id="sec-security-consideration-cross-script">
 
-<h4 id="x10-2-1-cross-script-security-and-privacy-risk"><bdi class="secno">10.2.1</bdi> クロス・スクリプトのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-cross-script"></a></h4>
+<h4 id="x10-2-1-cross-script-security-and-privacy-risk"><bdi class="secno">10.2.1</bdi> クロススクリプトのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-cross-script"></a></h4>
 
-<p>基本的なWoTのセットアップにおいては、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行されるすべてのスクリプトは信頼できると見なしたうえで製造者が配信を行うため、実行する各スクリプトのインスタンス間で厳密な分離を行う必要はありません。しかし、デバイスの性能、展開のユースケース・シナリオ、リスク・レベルによっては、そうすることが望ましい場合があります。例えば、あるスクリプトで機密性の高いプライバシー関連のPIIデータが扱われていて、十分な監査が行われていれば、同じシステム内の他のスクリプトがランタイム中に侵害された場合にデータが露出するリスクを最小限に抑えるために、そのスクリプトを残りのスクリプトのインスタンスから分離することが望ましいかもしれません。別の例は、1つのWoTデバイス上に異なるテナントが共存している場合です。このケースでは、WoTランタイムのインスタンスでそれぞれ異なるテナントが提供されているため、それらを分離する必要があります。</p>
+<p>基本的なWoTのセットアップにおいては、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行されるすべてのスクリプトは信頼できると見なしたうえで製造者が配信を行うため、実行する各スクリプトのインスタンス間で厳密な分離を行う必要はない。しかし、デバイスの性能、展開のユースケースシナリオ、リスクレベルによっては、そうすることが望ましい場合がある。例えば、あるスクリプトで機密性の高いプライバシーに関わるPIIデータが扱われていて、十分な監査が行われていれば、同じシステム内の他のスクリプトがランタイム中に侵害された場合にデータが露出するリスクを最小限に抑えるために、そのスクリプトを残りのスクリプトのインスタンスから分離することが望ましいかもしれない。別の例は、1つのWoTデバイス上に異なるテナントが共存している場合である。このケースでは、WoTランタイムのインスタンスでそれぞれ異なるテナントが提供されているため、それらを分離する必要がある。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>プライバシーに関連するデータや、その他のクリティカルなセキュリティ・データをスクリプトで扱う場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>はスクリプトのインスタンスとそのデータを分離すべきです。同様に、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、あるWoTデバイスに複数のテナントがある場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のインスタンスとそのデータを分離すべきです。このような分離は、デバイスで利用できるプラットフォームのセキュリティ・メカニズムを用いて<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行できます。詳細に関しては、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]の「WoTサービエント・シングル・テナント」と「WoTサービエント・マルチ・テナント」の項を参照してください。</dd>
+  <dd>プライバシーに関わるデータや、その他のクリティカルなセキュリティデータをスクリプトで扱う場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>はスクリプトのインスタンスとそのデータを分離すべきである。同様に、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、あるWoTデバイスに複数のテナントがある場合には、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>のインスタンスとそのデータの分離を行うべきである。このような分離は、デバイスで利用できるプラットフォームのセキュリティメカニズムを用いて<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>内で実行できる。詳細に関しては、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]の「WoT Servientシングルテナント」と「WoT Servientマルチテナント」の章を参照のこと。</dd>
 </dl>
 
 </section>
@@ -3508,11 +3508,11 @@
 
 <h4 id="x10-2-2-physical-device-direct-access-security-and-privacy-risk"><bdi class="secno">10.2.2</bdi> 物理デバイス直接アクセスのセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-device-direct-access"></a></h4>
 
-<p>直接公開されているネイティブなデバイスのインターフェースをスクリプトで使用できる場合は、スクリプトが侵害されたり誤動作したりすると、基礎的な物理デバイス(および潜在的に周辺環境)が被害を受ける可能性があります。そのようなインターフェースで、入力に対する安全性のチェックが不足していれば、基礎的な物理デバイス(または環境)は安全ではない状態となる可能性があります。</p>
+<p>直接公開されているネイティブなデバイスのインターフェースをスクリプトで使用できる場合は、スクリプトが侵害されたり誤動作したりすると、基盤となる物理デバイス(および潜在的に周辺環境)が被害を受ける可能性がある。そのようなインターフェースで、入力に対する安全性のチェックが不足していれば、基盤となる物理デバイス(または環境)は安全ではない状態となる可能性がある。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、ネイティブなデバイスのインターフェースをスクリプトの開発者に直接公開することを避けるべきです。代わりに、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、ネイティブなデバイスのインターフェースにアクセスするためのハードウェア抽象化レイヤーを提供すべきです。このようなハードウェア抽象化レイヤーは、デバイス(または環境)を安全でない状態にする可能性のあるコマンドの実行を拒否すべきです。さらに、スクリプトが侵害された場合の物理的なWoTデバイスの被害を減少させるために、その機能に基づく特定のスクリプトに対して公開またはアクセスできるインターフェースの数を最小限に抑えることが重要です。</dd>
+  <dd><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、ネイティブなデバイスのインターフェースをスクリプトの開発者に直接公開することを避けるべきである。代わりに、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、ネイティブなデバイスのインターフェースにアクセスするためのハードウェア抽象化レイヤーを提供すべきである。このようなハードウェア抽象化レイヤーは、デバイス(または環境)を安全でない状態にする可能性のあるコマンドの実行を拒否すべきである。さらに、スクリプトが侵害された場合の物理的なWoTデバイスへの被害を減少させるために、特定のスクリプトに対して公開またはアクセスできるインターフェースの数を、スクリプトの機能に応じて最小限に抑えることが重要である。</dd>
 </dl>
 
 </section>
@@ -3523,13 +3523,13 @@
 
 <section id="sec-security-consideration-update-provisioning">
 
-<h4 id="x10-3-1-provisioning-and-update-security-risk"><bdi class="secno">10.3.1</bdi> プロビジョニングと更新のセキュリティ・リスク<a class="self-link" aria-label="§" href="#sec-security-consideration-update-provisioning"></a></h4>
+<h4 id="x10-3-1-provisioning-and-update-security-risk"><bdi class="secno">10.3.1</bdi> プロビジョニングと更新のセキュリティリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-update-provisioning"></a></h4>
 
-<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装で、製造後のプロビジョニングや、それ自身、スクリプト、または関連するデータ(セキュリティ証明書を含む)の更新がサポートされている場合、それは主要な攻撃ベクトル(attack vector)になる可能性があります。攻撃者は、更新やプロビジョニングの工程の間に上記の要素を変更しようとしたり、攻撃者のコードとデータのプロビジョニングを直接行ったりすることができます。</p>
+<p><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装で、製造後のプロビジョニングや、WoTランタイム自身、スクリプト、または関連するデータ(セキュリティ証明書を含む)の更新がサポートされている場合、それは主要な攻撃ベクトル(attack vector)になる可能性がある。攻撃者は、更新やプロビジョニングの工程の間に上記の要素を変更しようとしたり、攻撃者のコードとデータのプロビジョニングを直接行ったりすることができる。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd>製造後のプロビジョニングやスクリプト、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>自身、または関連するデータの更新は、安全な方法で行うべきです。安全な更新と製造後のプロビジョニングに関する推奨は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]にあります。</dd>
+  <dd>製造後のプロビジョニングやスクリプト、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>自身、または関連するデータの更新は、安全な方法で行うべきである。安全な更新と製造後のプロビジョニングに関する推奨は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]にある。</dd>
 </dl>
 
 </section>
