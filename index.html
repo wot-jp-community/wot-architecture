@@ -3537,11 +3537,11 @@
 
 <h4 id="x10-3-2-security-credentials-storage-security-and-privacy-risk"><bdi class="secno">10.3.2</bdi> セキュリティ証明書保管のセキュリティとプライバシーに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-credentials-storage"></a></h4>
 
-<p>通常、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、ネットワークで動作するために、WoTデバイスにプロビジョニングを行ったセキュリティ証明書を保管する必要があります。攻撃者がこれらの証明書の機密性や完全性を侵害できれば、資産にアクセスできるようになったり、他のWoTモノ、デバイス、またはサービスになりすましたり、DoS(Denial-Of-Service)攻撃を仕掛けたりすることができます。</p>
+<p>通常、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、ネットワークで動作するために、WoTデバイスにプロビジョニングを行ったセキュリティ証明書を保管する必要がある。攻撃者がこれらの証明書の機密性や完全性を侵害できれば、資産にアクセスできるようになったり、他のWoTモノ、デバイス、またはサービスになりすましたり、DoS(Denial-Of-Service)攻撃を仕掛けたりすることができる。</p>
 
 <dl>
   <dt>軽減策:</dt>
-  <dd><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、プロビジョニング済みのセキュリティ証明書を安全に保管し、完全性と機密性を保証すべきです。1つのWoT対応デバイスに複数のテナントがある場合、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、各テナントのプロビジョニング済みのセキュリティ証明書の分離を保証すべきです。さらに、プロビジョニング済みのセキュリティ証明書が侵害されるリスクを最小限に抑えるために、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装は、プロビジョニング済みのセキュリティ証明書にクエリを実行するスクリプトのAPIを公開すべきではありません。そのような証明書(または、それを利用するけれども公開はしないという、ずっとましな抽象的操作であっても)には、それらを用いる<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>の実装のみがアクセスできるべきです。</dd>
+  <dd><a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>は、プロビジョニング済みのセキュリティ証明書を安全に保管し、完全性と機密性を保証すべきである。1つのWoT対応デバイスに複数のテナントがある場合、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装では、各テナントのプロビジョニング済みのセキュリティ証明書の分離を保証すべきである。さらに、プロビジョニング済みのセキュリティ証明書が侵害されるリスクを最小限に抑えるために、<a href="#dfn-wot-runtime" class="internalDFN" data-link-type="dfn">WoTランタイム</a>の実装は、プロビジョニング済みのセキュリティ証明書にクエリを実行するスクリプトのAPIを公開すべきではない。そのような証明書(または、それを利用するけれども公開はしないという、ずっとましな抽象的操作であっても)には、それらを用いる<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>の実装のみがアクセスできるべきである。</dd>
         </dl>
       </section>
     </section>
