@@ -1709,7 +1709,7 @@
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#sec-application-domains"><bdi class="secno">4.1</bdi> アプリケーション領域</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#consumer-use-cases"><bdi class="secno">4.1.1</bdi> 利用者</a></li>
+      <li class="tocline"><a class="tocxref" href="#consumer-use-cases"><bdi class="secno">4.1.1</bdi> 消費者</a></li>
       <li class="tocline"><a class="tocxref" href="#industrial-iot-usecases"><bdi class="secno">4.1.2</bdi> 産業</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#example-smart-factory"><bdi class="secno">4.1.2.1</bdi> 例: スマートファクトリー</a></li>
@@ -1724,8 +1724,8 @@
       <li class="tocline"><a class="tocxref" href="#healthcare"><bdi class="secno">4.1.9</bdi> 医療</a></li>
       <li class="tocline"><a class="tocxref" href="#environmentmonitoring"><bdi class="secno">4.1.10</bdi> 環境モニタリング</a></li>
       <li class="tocline"><a class="tocxref" href="#smartcities"><bdi class="secno">4.1.11</bdi> スマートシティ</a></li>
-      <li class="tocline"><a class="tocxref" href="#smartbuildings"><bdi class="secno">4.1.12</bdi> スマート・ビル</a></li>
-      <li class="tocline"><a class="tocxref" href="#connectedcar"><bdi class="secno">4.1.13</bdi> コネクテッド・カー</a>
+      <li class="tocline"><a class="tocxref" href="#smartbuildings"><bdi class="secno">4.1.12</bdi> スマートビルディング</a></li>
+      <li class="tocline"><a class="tocxref" href="#connectedcar"><bdi class="secno">4.1.13</bdi> コネクテッドカー</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#connectedcar-example"><bdi class="secno">4.1.13.1</bdi> コネクテッドカーの例</a></li>
       </ol>
@@ -1737,9 +1737,9 @@
       <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
       <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
       <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
-      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ</a></li>
+      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ</a></li>
       <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジデバイス</a></li>
-      <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン</a>
+      <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタルツイン</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#cloud-ready-devices"><bdi class="secno">4.2.6.1</bdi> クラウド対応デバイス</a></li>
         <li class="tocline"><a class="tocxref" href="#legacy-devices"><bdi class="secno">4.2.6.2</bdi> 旧式デバイス</a></li>
@@ -2053,7 +2053,7 @@
 
 <p>この項の消費者のユースケースには、スマート・ホームのユースケースが含まれる。</p>
 
-<p><a href="#smart-home" class="fig-ref" title="スマート・ホーム">図<bdi class="figno">1</bdi></a>は、スマート・ホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジ・デバイスに接続されている。1つの家に複数のゲートウェイが存在しえ、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
+<p><a href="#smart-home" class="fig-ref" title="スマート・ホーム">図<bdi class="figno">1</bdi></a>は、スマート・ホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジ・デバイスに接続されている。1つの家に複数のゲートウェイが存在可能で、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
 
 <p>ゲートウェイはインターネット経由でクラウドに接続できるが、クラウドに直接接続できる機器もある。クラウドで実行されているサービスは、エッジ・デバイスからデータ収集を行い、そのデータを分析し、その後でエッジ・デバイスやその他のUXデバイスを介してユーザに価値を提供する。</p>
 
@@ -2076,7 +2076,7 @@
 
 <h5 id="x4-1-2-1-example-smart-factory"><bdi class="secno">4.1.2.1</bdi> 例: スマートファクトリー<a class="self-link" aria-label="§" href="#example-smart-factory"></a></h5>
 
-<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジ・デバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウド・バックエンド・サービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
+<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジ・デバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウドのバックエンドサービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
 
 <figure id="smart-factory">
 <img src="images/smart_factory_new.png" srcset="images/smart_factory_new.svg" class="wot-arch-diagram" alt="スマートファクトリーのユースケース">
@@ -2139,7 +2139,7 @@
 
 <h4 id="engineering-and-construction"><bdi class="secno">4.1.7</bdi> 土木工事と建設<a class="self-link" aria-label="§" href="#engineering-and-construction"></a></h4>
 
-<p>産業上の安全性を監視することにより、セキュリティ上の危険性のリスクが軽減されます。建設現場の資産を監視することで、被害や損失を防止できる。</p>
+<p>産業上の安全性を監視することにより、セキュリティ上の危険性のリスクが軽減される。建設現場の資産を監視することで、被害や損失を防止できる。</p>
 
 </section>
 <section id="sec-agriculture">
@@ -2162,9 +2162,9 @@
 
 <h4 id="environmentmonitoring"><bdi class="secno">4.1.10</bdi> 環境モニタリング<a class="self-link" aria-label="§" href="#environmentmonitoring"></a></h4>
 
-<p>環境モニタリングは通常、測定データを共通のゲートウェイ、エッジ・デバイス、クラウド・サービスに送信する多くの分散型センサーに依存しています。</p>
+<p>環境モニタリングは通常、測定データを共通のゲートウェイ、エッジデバイス、クラウドサービスに送信する多くの分散型センサーに依存している。</p>
 
-<p>クリティカルな環境状態を検出するために、大気汚染や水質汚染、そして、微粉塵、オゾン、揮発性有機化合物、放射能、温度、湿度などのその他の環境リスク要因を監視することにより、回復不能な健康や環境の被害を防ぐことができます。</p>
+<p>クリティカルな環境状態を検出するために、大気汚染や水質汚染、そして、微粉塵、オゾン、揮発性有機化合物、放射能、温度、湿度などのその他の環境リスク要因を監視することにより、回復不能な健康や環境の被害を防ぐことができる。</p>
 
 </section>
 <section id="sec-smart-cities">
