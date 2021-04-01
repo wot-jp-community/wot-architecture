@@ -1709,7 +1709,7 @@
   <ol class="toc">
     <li class="tocline"><a class="tocxref" href="#sec-application-domains"><bdi class="secno">4.1</bdi> アプリケーション領域</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#consumer-use-cases"><bdi class="secno">4.1.1</bdi> 利用者</a></li>
+      <li class="tocline"><a class="tocxref" href="#consumer-use-cases"><bdi class="secno">4.1.1</bdi> 消費者</a></li>
       <li class="tocline"><a class="tocxref" href="#industrial-iot-usecases"><bdi class="secno">4.1.2</bdi> 産業</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#example-smart-factory"><bdi class="secno">4.1.2.1</bdi> 例: スマートファクトリー</a></li>
@@ -1724,8 +1724,8 @@
       <li class="tocline"><a class="tocxref" href="#healthcare"><bdi class="secno">4.1.9</bdi> 医療</a></li>
       <li class="tocline"><a class="tocxref" href="#environmentmonitoring"><bdi class="secno">4.1.10</bdi> 環境モニタリング</a></li>
       <li class="tocline"><a class="tocxref" href="#smartcities"><bdi class="secno">4.1.11</bdi> スマートシティ</a></li>
-      <li class="tocline"><a class="tocxref" href="#smartbuildings"><bdi class="secno">4.1.12</bdi> スマート・ビル</a></li>
-      <li class="tocline"><a class="tocxref" href="#connectedcar"><bdi class="secno">4.1.13</bdi> コネクテッド・カー</a>
+      <li class="tocline"><a class="tocxref" href="#smartbuildings"><bdi class="secno">4.1.12</bdi> スマートビルディング</a></li>
+      <li class="tocline"><a class="tocxref" href="#connectedcar"><bdi class="secno">4.1.13</bdi> コネクテッドカー</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#connectedcar-example"><bdi class="secno">4.1.13.1</bdi> コネクテッドカーの例</a></li>
       </ol>
@@ -1734,12 +1734,12 @@
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 共通パターン</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
+      <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイスコントローラー</a></li>
       <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
       <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
-      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマート・ホーム・ゲートウェイ</a></li>
+      <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ</a></li>
       <li class="tocline"><a class="tocxref" href="#edge-devices"><bdi class="secno">4.2.5</bdi> エッジデバイス</a></li>
-      <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタル・ツイン</a>
+      <li class="tocline"><a class="tocxref" href="#digital-twins"><bdi class="secno">4.2.6</bdi> デジタルツイン</a>
       <ol class="toc">
         <li class="tocline"><a class="tocxref" href="#cloud-ready-devices"><bdi class="secno">4.2.6.1</bdi> クラウド対応デバイス</a></li>
         <li class="tocline"><a class="tocxref" href="#legacy-devices"><bdi class="secno">4.2.6.2</bdi> 旧式デバイス</a></li>
@@ -2053,7 +2053,7 @@
 
 <p>この項の消費者のユースケースには、スマート・ホームのユースケースが含まれる。</p>
 
-<p><a href="#smart-home" class="fig-ref" title="スマート・ホーム">図<bdi class="figno">1</bdi></a>は、スマート・ホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジ・デバイスに接続されている。1つの家に複数のゲートウェイが存在しえ、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
+<p><a href="#smart-home" class="fig-ref" title="スマート・ホーム">図<bdi class="figno">1</bdi></a>は、スマート・ホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジ・デバイスに接続されている。1つの家に複数のゲートウェイが存在可能で、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
 
 <p>ゲートウェイはインターネット経由でクラウドに接続できるが、クラウドに直接接続できる機器もある。クラウドで実行されているサービスは、エッジ・デバイスからデータ収集を行い、そのデータを分析し、その後でエッジ・デバイスやその他のUXデバイスを介してユーザに価値を提供する。</p>
 
@@ -2076,7 +2076,7 @@
 
 <h5 id="x4-1-2-1-example-smart-factory"><bdi class="secno">4.1.2.1</bdi> 例: スマートファクトリー<a class="self-link" aria-label="§" href="#example-smart-factory"></a></h5>
 
-<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジ・デバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウド・バックエンド・サービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
+<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジ・デバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウドのバックエンドサービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
 
 <figure id="smart-factory">
 <img src="images/smart_factory_new.png" srcset="images/smart_factory_new.svg" class="wot-arch-diagram" alt="スマートファクトリーのユースケース">
@@ -2139,7 +2139,7 @@
 
 <h4 id="engineering-and-construction"><bdi class="secno">4.1.7</bdi> 土木工事と建設<a class="self-link" aria-label="§" href="#engineering-and-construction"></a></h4>
 
-<p>産業上の安全性を監視することにより、セキュリティ上の危険性のリスクが軽減されます。建設現場の資産を監視することで、被害や損失を防止できる。</p>
+<p>産業上の安全性を監視することにより、セキュリティ上の危険性のリスクが軽減される。建設現場の資産を監視することで、被害や損失を防止できる。</p>
 
 </section>
 <section id="sec-agriculture">
@@ -2162,9 +2162,9 @@
 
 <h4 id="environmentmonitoring"><bdi class="secno">4.1.10</bdi> 環境モニタリング<a class="self-link" aria-label="§" href="#environmentmonitoring"></a></h4>
 
-<p>環境モニタリングは通常、測定データを共通のゲートウェイ、エッジ・デバイス、クラウド・サービスに送信する多くの分散型センサーに依存しています。</p>
+<p>環境モニタリングは通常、測定データを共通のゲートウェイ、エッジデバイス、クラウドサービスに送信する多くの分散型センサーに依存している。</p>
 
-<p>クリティカルな環境状態を検出するために、大気汚染や水質汚染、そして、微粉塵、オゾン、揮発性有機化合物、放射能、温度、湿度などのその他の環境リスク要因を監視することにより、回復不能な健康や環境の被害を防ぐことができます。</p>
+<p>クリティカルな環境状態を検出するために、大気汚染や水質汚染、そして、微粉塵、オゾン、揮発性有機化合物、放射能、温度、湿度などのその他の環境リスク要因を監視することにより、回復不能な健康や環境の被害を防ぐことができる。</p>
 
 </section>
 <section id="sec-smart-cities">
@@ -2230,7 +2230,7 @@
 
 <section id="device-controllers">
 
-<h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
+<h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイスコントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
 
 <p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモートコントローラーで制御されるローカルなデバイスである。リモートコントローラーは、ローカルなホームネットワークを介して電子機器に直接アクセスできる。このケースでは、リモートコントローラーはブラウザやネイティブなアプリケーションで実装できる。</p>
 
@@ -2352,7 +2352,7 @@
   <li>火災警報や同様のイベントが発生したときにローカルで実行される緊急サービス</li>
 </ul>
 
-<p>クラウドは、接続されたすべての機器とのゲートウェイをミラーリングし、それらをゲートウェイと連携してクラウド内で管理するデジタルツインとして機能する。さらに、クラウドはどこにでも設置できるリモートコントローラー (例えば、スマートフォン) からの命令を受信することができる。</p>
+<p>クラウドは、接続されたすべての機器とゲートウェイをミラーリングし、それらをゲートウェイと連携してクラウド内で管理するデジタルツインとして機能する。さらに、クラウドはどこにでも設置できるリモートコントローラー (例えば、スマートフォン) からの命令を受信することができる。</p>
 
 <figure id="smart-home-cloud2">
 <img src="images/smart-home-cloud2.png" srcset="images/smart-home-cloud2.svg" class="wot-arch-diagram" alt="スマートホームクラウドのユースケース2">
@@ -2368,7 +2368,7 @@
 
 <p>デバイスおよびデバイス型を記述するための標準的なメカニズムの主な利点は、デバイスに対してソフトウェアやファームウェアのレベルでカスタマイズを行う必要なく、つまり、クラウド固有のコードをデバイスにインストールする必要なく、デバイスを異なるクラウド環境にデプロイできることである。これは、このソリューションは、複数のIoTクラウド環境のデバイスに対して新規に接続し (on-boarding) 使用することを可能とするような形でデバイスの記述ができるくらいに柔軟なものであることを意味する。</p>
 
-<p>これにより、既存のデバイスをクラウドからクラウドへ移行することが可能になるとともに、既存のデプロイにおける新しいデバイスの利用が簡単になるため、Web of Thingsデバイスの採用が促進される。</p>
+<p>これにより、既存のデバイスをクラウドからクラウドへ移行することが可能になるとともに、既存のデプロイメントにおける新しいデバイスの利用が簡単になるため、Web of Thingsデバイスの採用が促進される。</p>
 
 </section>
 <section id="cross-domain-collaboration">
@@ -2390,7 +2390,7 @@
 
 <p>前項では、様々なアーキテクチャのパターンについて説明した。これらのパターンでは、旧式デバイス、コントローラー、ゲートウェイ、クラウドサーバーを含むデバイスなどの一部の機能のエンティティーは、建物の内外やデータセンターなどの物理的な場所に置かれる。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要である。</p>
 
-<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えると理解する。</p>
+<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが相互作用を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと相互作用を行えると理解する。</p>
 
 <div class="note" id="issue-container-generatedID">
 <div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
