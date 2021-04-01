@@ -1661,9 +1661,9 @@
   <dd><a href="https://github.com/w3c/wot-architecture/graphs/contributors">In the GitHub repository</a></dd>
 </dl>
 
-<p>公開以後に報告されたエラーや問題がないか<a href="https://w3c.github.io/wot-architecture/errata.html"><strong>正誤表</strong></a>を確認してください。</p>
+<p>公開以後に報告されたエラーや問題がないか<a href="https://w3c.github.io/wot-architecture/errata.html"><strong>正誤表</strong></a>を確認のこと。</p>
 
-<p><a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=wot-architecture"><strong>翻訳版</strong></a>も参照してください。</p>
+<p><a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=wot-architecture"><strong>翻訳版</strong></a>も参照のこと。</p>
 
 <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &#xa9; 2017-2020 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&#xae;</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
 
@@ -1672,7 +1672,7 @@
 </div>
 <section id="abstract" class="introductory">
 
-<h2>要約</h2>
+<h2>概要</h2>
 
 <p><abbr title="World Wide Web Consortium">W3C</abbr>の Web of Things (WoT) は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としている。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することである。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指している。</p>
 
@@ -1681,7 +1681,7 @@
 </section>
 <section id="sotd" class="introductory">
 
-<h2>このドキュメントのステータス</h2>
+<h2>この文書のステータス</h2>
 
 <p><em>この項は、このドキュメントの公開時のステータスについて記述している。他のドキュメントがこのドキュメントに取って代わることがありえる。現行の<abbr title="World Wide Web Consortium">W3C</abbr>の刊行物およびこの技術報告の最新の改訂版のリストは、https://www.w3.org/TR/の<a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr>技術報告インデックス</a>にある。</em></p>
 
@@ -1689,11 +1689,11 @@
 
 <p>このドキュメントは、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済みドキュメントであり、参考資料として用いたり、別のドキュメントで引用することができる。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することである。これによってウェブの機能性および相互運用性が増強される。</p>
 
-<p>このドキュメントは、<a href="https://www.w3.org/WoT/WG/">Web of Thingsワーキンググループ</a>によって勧告として公開されました。</p>
+<p>このドキュメントは、<a href="https://www.w3.org/WoT/WG/">Web of Thingsワーキンググループ</a>によって勧告として公開された。</p>
 
-<p>この仕様の議論には<a href="https://github.com/w3c/wot-architecture/issues/">GitHubの課題</a>をお勧めする。または、メーリング・リストにコメントを送信することもできる。コメントは<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">アーカイブ</a>) に送信いただきたい。</p>
+<p>この仕様の議論には<a href="https://github.com/w3c/wot-architecture/issues/">GitHubのIssue</a>をお勧めする。または、メーリング・リストにコメントを送信することもできる。コメントは<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">アーカイブ</a>) に送信いただきたい。</p>
 
-<p>このドキュメントは、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針</a>の下で活動しているグループによって作成されました。<abbr title="World Wide Web Consortium">W3C</abbr>は、このグループの成果物に関連する<a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">あらゆる特許の開示の公開リスト</a>を維持し、このページには特許の開示に関する指示も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">不可欠な請求権</a> (Essential Claim(s)) を含んでいると思われる特許に関して実際に知っている人は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針の6項</a>に従って情報を開示しなければならない。</p>
+<p>このドキュメントは、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、このグループの成果物に関連する<a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">あらゆる特許の開示の公開リスト</a>を維持し、このページには特許の開示に関する指示も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">不可欠な請求権</a> (Essential Claim(s)) を含んでいると思われる特許に関して実際に知っている人は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針の6項</a>に従って情報を開示しなければならない。</p>
 
 <p>このドキュメントは、<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日の<abbr title="World Wide Web Consortium">W3C</abbr>プロセス・ドキュメント</a>によって管理されている。</p>
 
@@ -1904,16 +1904,16 @@
 
 <p><em>Web of Things</em> (WoT) の目標は、Internet of Things (IoT) の相互運用性と使いやすさを改善することである。多くの利害関係者が関わった長年にわたるコラボレーションを通じて、これらの課題の対処に役立ついくつかの構成要素が特定されている。</p>
 
-<p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの標準化の範囲に焦点を当てており、その構成要素と、その関係を定義する抽象アーキテクチャとに分類できる。構成要素は、別の仕様で詳細に定義され説明されてい。しかし、抽象アーキテクチャとその用語や概念フレームワークの定義に加え、この仕様は、WoT構成要素に対する入門としての機能も果たし、それらの連携について説明している。</p>
+<p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの標準化の範囲に焦点を当てており、その構成要素と、その関係を定義する抽象アーキテクチャとに分類できる。構成要素は、別の仕様で詳細に定義され説明されている。しかし、抽象アーキテクチャとその用語や概念フレームワークの定義に加え、この仕様は、WoT構成要素に対する入門としての機能も果たし、それらの連携について説明している。</p>
 
 <ul>
   <li><em>Web of Things (WoT) Thing Description</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、Thingのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規範的に提供する。これは、対話アフォーダンスなどの、このドキュメントで紹介している基本概念に基づいている。</li>
   <li><em>Web of Things (WoT) バインディングテンプレート</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、特定のプロトコルとIoTエコシステムに対して、Thingのネットワーク向けインターフェースを定義する方法に関する参考情報のガイドラインを提供しており、これをプロトコルバインディングと呼ぶ。また、このドキュメントでは、多くの既存のIoTエコシステムと標準の例も提供している。</li>
   <li><em>Web of Things (WoT) スクリプティングAPI</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>] は、オプションであり、これを用いると、ウェブブラウザAPIのような一般的なJavaScript APIでThingのアプリケーションロジックを実装できるようになる。これによって、IoTアプリケーションの開発が簡素化され、ベンダーやデバイスにまたがる移植が可能となる。</li>
-  <li><em>モノのウェブ (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報であるドキュメントは、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。このドキュメントでは、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行う。</li>
+  <li><em>Web of Things (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報であるドキュメントは、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。このドキュメントでは、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行う。</li>
 </ul>
 
-<p>この仕様は、WoTシステムの展開に関する非規範的なアーキテクチャの側面と条件もカバーしている。この仕様は特定の具体的な実装を規範的に定義するものではないが、このガイドラインは、展開シナリオの例に照らして記述している。</p>
+<p>この仕様は、WoTシステムの展開に関する非規定的なアーキテクチャの側面と条件もカバーしている。この仕様は特定の具体的な実装を規定的に定義するものではないが、このガイドラインは、展開シナリオの例に照らして記述している。</p>
 
 <p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoT仕様を包括する機能を有しており、用語や<abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブの基本となる抽象アーキテクチャなどの基礎を定義している。要約すると、この仕様の目的は次を提供することである。</p>
 
