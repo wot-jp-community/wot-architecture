@@ -1734,7 +1734,7 @@
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-common-usecase-patterns"><bdi class="secno">4.2</bdi> 共通パターン</a>
     <ol class="toc">
-      <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー</a></li>
+      <li class="tocline"><a class="tocxref" href="#device-controllers"><bdi class="secno">4.2.1</bdi> デバイスコントローラー</a></li>
       <li class="tocline"><a class="tocxref" href="#thing-to-thing"><bdi class="secno">4.2.2</bdi> ThingとThing</a></li>
       <li class="tocline"><a class="tocxref" href="#remote-access"><bdi class="secno">4.2.3</bdi> リモートアクセス</a></li>
       <li class="tocline"><a class="tocxref" href="#smart-home-gateways"><bdi class="secno">4.2.4</bdi> スマートホームゲートウェイ</a></li>
@@ -2230,7 +2230,7 @@
 
 <section id="device-controllers">
 
-<h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイス・コントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
+<h4 id="x4-2-1-device-controllers"><bdi class="secno">4.2.1</bdi> デバイスコントローラー<a class="self-link" aria-label="§" href="#device-controllers"></a></h4>
 
 <p><a href="#smart-home-device" class="fig-ref" title="デバイス制御">図<bdi class="figno">4</bdi></a>で示しているように、最初のユースケースは、ユーザが操作するリモートコントローラーで制御されるローカルなデバイスである。リモートコントローラーは、ローカルなホームネットワークを介して電子機器に直接アクセスできる。このケースでは、リモートコントローラーはブラウザやネイティブなアプリケーションで実装できる。</p>
 
@@ -2352,7 +2352,7 @@
   <li>火災警報や同様のイベントが発生したときにローカルで実行される緊急サービス</li>
 </ul>
 
-<p>クラウドは、接続されたすべての機器とのゲートウェイをミラーリングし、それらをゲートウェイと連携してクラウド内で管理するデジタルツインとして機能する。さらに、クラウドはどこにでも設置できるリモートコントローラー (例えば、スマートフォン) からの命令を受信することができる。</p>
+<p>クラウドは、接続されたすべての機器とゲートウェイをミラーリングし、それらをゲートウェイと連携してクラウド内で管理するデジタルツインとして機能する。さらに、クラウドはどこにでも設置できるリモートコントローラー (例えば、スマートフォン) からの命令を受信することができる。</p>
 
 <figure id="smart-home-cloud2">
 <img src="images/smart-home-cloud2.png" srcset="images/smart-home-cloud2.svg" class="wot-arch-diagram" alt="スマートホームクラウドのユースケース2">
@@ -2368,7 +2368,7 @@
 
 <p>デバイスおよびデバイス型を記述するための標準的なメカニズムの主な利点は、デバイスに対してソフトウェアやファームウェアのレベルでカスタマイズを行う必要なく、つまり、クラウド固有のコードをデバイスにインストールする必要なく、デバイスを異なるクラウド環境にデプロイできることである。これは、このソリューションは、複数のIoTクラウド環境のデバイスに対して新規に接続し (on-boarding) 使用することを可能とするような形でデバイスの記述ができるくらいに柔軟なものであることを意味する。</p>
 
-<p>これにより、既存のデバイスをクラウドからクラウドへ移行することが可能になるとともに、既存のデプロイにおける新しいデバイスの利用が簡単になるため、Web of Thingsデバイスの採用が促進される。</p>
+<p>これにより、既存のデバイスをクラウドからクラウドへ移行することが可能になるとともに、既存のデプロイメントにおける新しいデバイスの利用が簡単になるため、Web of Thingsデバイスの採用が促進される。</p>
 
 </section>
 <section id="cross-domain-collaboration">
@@ -2390,7 +2390,7 @@
 
 <p>前項では、様々なアーキテクチャのパターンについて説明した。これらのパターンでは、旧式デバイス、コントローラー、ゲートウェイ、クラウドサーバーを含むデバイスなどの一部の機能のエンティティーは、建物の内外やデータセンターなどの物理的な場所に置かれる。<a href="#usecase-overview" class="fig-ref" title="ユースケースの概要">図<bdi class="figno">14</bdi></a>は、これらのエンティティーの組み合わせと通信経路を示した概要である。</p>
 
-<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが対話を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと対話を行えると理解する。</p>
+<p>トランスポートプロトコル層では、各エンティティーが通信に適した役割を任意に選択する。例えば、デバイスが不特定多数のアプリケーションにサービスを提供する場合、そのデバイスはサーバーとして機能する。一方で、デバイスのネットワーク接続が制限されていたり断続的であったりする場合は、デバイスはクライアントとして機能し、ネットワークが利用できるときにアプリケーションにメッセージを活発に送信することもできる。これに関係なく、アプリケーション層では、アプリケーションは、デバイスが相互作用を行うための抽象的なインターフェースを提供しており、その抽象的なインターフェースを用いればデバイスと相互作用を行えると理解する。</p>
 
 <div class="note" id="issue-container-generatedID">
 <div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
