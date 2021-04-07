@@ -1618,8 +1618,8 @@
 
 <p><a href="http://www.asahi-net.or.jp/~ax2s-kmtn/index.html"><img src="http://www.asahi-net.or.jp/~ax2s-kmtn/images/logo.gif" alt="CyberLibrarian" width="105" height="19" /></a></p>
 
-<p>【注意】 このドキュメントは、W3Cの<a class="link_out" href="https://www.w3.org/TR/2020/REC-wot-architecture-20200409/">Web of Things (WoT) Architecture W3C Recommendation 9 April 2020</a>の和訳である。<br />
-このドキュメントの正式版はW3Cのサイト上にある英語版であり、このドキュメントには翻訳に起因する誤りがありえる。誤訳、誤植などのご指摘は、<a href="../../mail.html">訳者</a>までお願いしたい。</p>
+<p>【注意】 この文書は、W3Cの<a class="link_out" href="https://www.w3.org/TR/2020/REC-wot-architecture-20200409/">Web of Things (WoT) Architecture W3C Recommendation 9 April 2020</a>の和訳である。<br />
+この文書の正式版はW3Cのサイト上にある英語版であり、この文書には翻訳に起因する誤りがありえる。誤訳、誤植などのご指摘は、<a href="../../mail.html">訳者</a>までお願いしたい。</p>
 
 <p>First Update: 2020年05月25日 | Last Update: 2021年3月25日</p>
 
@@ -1676,26 +1676,26 @@
 
 <p><abbr title="World Wide Web Consortium">W3C</abbr>の Web of Things (WoT) は、IoTプラットフォームとアプリケーション領域にまたがる相互運用性を可能にすることを目的としている。全体として、WoTの目標は、既存のIoT標準とソリューションを維持し補完することである。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャは、何を実装するのかを規定するのではなく、何が存在するのかを記述することを目指している。</p>
 
-<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things の抽象アーキテクチャを記述している。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこのドキュメントで示している。他のドキュメントで詳細な仕様が示されているモジュール構成要素についても確認を行っている。このドキュメントでは、これらの構成要素がどのように関連付けられ、連携するかを記述している。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示している。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではない。</p>
+<p>この<em>WoTアーキテクチャ</em>の仕様では、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things の抽象アーキテクチャを記述している。この抽象アーキテクチャは、複数のアプリケーション領域のユースケースから導かれた一連の要件に基づいており、両方ともをこの文書で示している。他の文書で詳細な仕様が示されているモジュール構成要素についても確認を行っている。この文書では、これらの構成要素がどのように関連付けられ、連携するかを記述している。WoT抽象アーキテクチャは、様々な具体的な展開シナリオにマッピングできる基本的な概念フレームワークを定義したものであり、そのいくつかの例を示している。しかし、この仕様で記述している抽象アーキテクチャ自体は、具体的なメカニズムを定義したり、具体的な実装を規定したりするものではない。</p>
 
 </section>
 <section id="sotd" class="introductory">
 
 <h2>この文書のステータス</h2>
 
-<p><em>この項は、このドキュメントの公開時のステータスについて記述している。他のドキュメントがこのドキュメントに取って代わることがありえる。現行の<abbr title="World Wide Web Consortium">W3C</abbr>の刊行物およびこの技術報告の最新の改訂版のリストは、https://www.w3.org/TR/の<a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr>技術報告インデックス</a>にある。</em></p>
+<p><em>この項は、この文書の公開時のステータスについて記述している。他の文書がこの文書に取って代わることがありえる。現行の<abbr title="World Wide Web Consortium">W3C</abbr>の刊行物およびこの技術報告の最新の改訂版のリストは、https://www.w3.org/TR/の<a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr>技術報告インデックス</a>にある。</em></p>
 
-<p>このドキュメントは、抽象的なアーキテクチャの設計について記述している。しかし、関連する<em>WoT Thing Description</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>がある。これらは、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things のアーキテクチャに準拠した実装である。</p>
+<p>この文書は、抽象的なアーキテクチャの設計について記述している。しかし、関連する<em>WoT Thing Description</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>がある。これらは、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things のアーキテクチャに準拠した実装である。</p>
 
-<p>このドキュメントは、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済みドキュメントであり、参考資料として用いたり、別のドキュメントで引用することができる。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することである。これによってウェブの機能性および相互運用性が増強される。</p>
+<p>この文書は、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済み文書であり、参考資料として用いたり、別の文書で引用することができる。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することである。これによってウェブの機能性および相互運用性が増強される。</p>
 
-<p>このドキュメントは、<a href="https://www.w3.org/WoT/WG/">Web of Thingsワーキンググループ</a>によって勧告として公開された。</p>
+<p>この文書は、<a href="https://www.w3.org/WoT/WG/">Web of Thingsワーキンググループ</a>によって勧告として公開された。</p>
 
 <p>この仕様の議論には<a href="https://github.com/w3c/wot-architecture/issues/">GitHubのIssue</a>をお勧めする。または、メーリング・リストにコメントを送信することもできる。コメントは<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">アーカイブ</a>) に送信いただきたい。</p>
 
-<p>このドキュメントは、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、このグループの成果物に関連する<a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">あらゆる特許の開示の公開リスト</a>を維持し、このページには特許の開示に関する指示も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">不可欠な請求権</a> (Essential Claim(s)) を含んでいると思われる特許に関して実際に知っている人は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針の6項</a>に従って情報を開示しなければならない。</p>
+<p>この文書は、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、このグループの成果物に関連する<a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">あらゆる特許の開示の公開リスト</a>を維持し、このページには特許の開示に関する指示も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">不可欠な請求権</a> (Essential Claim(s)) を含んでいると思われる特許に関して実際に知っている人は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針の6項</a>に従って情報を開示しなければならない。</p>
 
-<p>このドキュメントは、<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日の<abbr title="World Wide Web Consortium">W3C</abbr>プロセス・ドキュメント</a>によって管理されている。</p>
+<p>この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日の<abbr title="World Wide Web Consortium">W3C</abbr>プロセスドキュメント</a>によって管理されている。</p>
 
 </section>
 <nav id="toc">
@@ -1907,10 +1907,10 @@
 <p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの標準化の範囲に焦点を当てており、その構成要素と、その関係を定義する抽象アーキテクチャとに分類できる。構成要素は、別の仕様で詳細に定義され説明されている。しかし、抽象アーキテクチャとその用語や概念フレームワークの定義に加え、この仕様は、WoT構成要素に対する入門としての機能も果たし、それらの連携について説明している。</p>
 
 <ul>
-  <li><em>Web of Things (WoT) Thing Description</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、Thingのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規範的に提供する。これは、対話アフォーダンスなどの、このドキュメントで紹介している基本概念に基づいている。</li>
-  <li><em>Web of Things (WoT) バインディングテンプレート</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、特定のプロトコルとIoTエコシステムに対して、Thingのネットワーク向けインターフェースを定義する方法に関する参考情報のガイドラインを提供しており、これをプロトコルバインディングと呼ぶ。また、このドキュメントでは、多くの既存のIoTエコシステムと標準の例も提供している。</li>
+  <li><em>Web of Things (WoT) Thing Description</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、Thingのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規範的に提供する。これは、対話アフォーダンスなどの、この文書で紹介している基本概念に基づいている。</li>
+  <li><em>Web of Things (WoT) バインディングテンプレート</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、特定のプロトコルとIoTエコシステムに対して、Thingのネットワーク向けインターフェースを定義する方法に関する参考情報のガイドラインを提供しており、これをプロトコルバインディングと呼ぶ。また、この文書では、多くの既存のIoTエコシステムと標準の例も提供している。</li>
   <li><em>Web of Things (WoT) スクリプティングAPI</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>] は、オプションであり、これを用いると、ウェブブラウザAPIのような一般的なJavaScript APIでThingのアプリケーションロジックを実装できるようになる。これによって、IoTアプリケーションの開発が簡素化され、ベンダーやデバイスにまたがる移植が可能となる。</li>
-  <li><em>Web of Things (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報であるドキュメントは、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。このドキュメントでは、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行う。</li>
+  <li><em>Web of Things (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報である文書は、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。この文書では、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行う。</li>
 </ul>
 
 <p>この仕様は、WoTシステムの展開に関する非規定的なアーキテクチャの側面と条件もカバーしている。この仕様は特定の具体的な実装を規定的に定義するものではないが、このガイドラインは、展開シナリオの例に照らして記述している。</p>
@@ -1927,7 +1927,7 @@
  <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
 </ul>
 
-<p>追加の要件、ユースケース、概念的な機能、および新しい構成要素に関しては、このドキュメントの将来の改訂で取り組む。</p>
+<p>追加の要件、ユースケース、概念的な機能、および新しい構成要素に関しては、この文書の将来の改訂で取り組む。</p>
 
 </section>
 <section id="conformance">
@@ -1936,7 +1936,7 @@
 
 <p>非規範的と記している項と同じく、この仕様のすべての作成ガイドライン、図、例、注は、参考情報である。この仕様のその他の部分はすべて規定的である。</p>
 
-<p>このドキュメントの「することができる／してもよい (<em class="rfc2119">MAY</em>)」、「しなければならない (<em class="rfc2119">MUST</em>)」、「すべきである／する必要がある (<em class="rfc2119">SHOULD</em>)」というキーワードは、ここで示しているように、すべて大文字で表示されている場合にのみ、<a href="https://tools.ietf.org/html/bcp14">BCP 14</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] で記述されているように解釈されるべきである。</p>
+<p>この文書の「することができる／してもよい (<em class="rfc2119">MAY</em>)」、「しなければならない (<em class="rfc2119">MUST</em>)」、「すべきである／する必要がある (<em class="rfc2119">SHOULD</em>)」というキーワードは、ここで示しているように、すべて大文字で表示されている場合にのみ、<a href="https://tools.ietf.org/html/bcp14">BCP 14</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] で記述されているように解釈されるべきである。</p>
 
 </section>
 <section id="terminology" class="informative">
@@ -1997,7 +1997,7 @@
   <dt><dfn data-dfn-type="dfn" id="dfn-public-security-metadata">公開セキュリティメタデータ</dfn> (Public Security Metadata)</dt>
   <dd>公開セキュリティメタデータは、Thingにアクセスするために必要なセキュリティメのカニズムとアクセス権を記述した、Thingのセキュリティ設定の構成要素である。これには秘密情報や具体的なデータ (公開キーを含む) は含まれておらず、単独でThingへのアクセスを提供することはありない。代わりに、ユーザがどのように認証を得なければならないかを含め、承認されたユーザがアクセスを取得する方法が記述されている。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-security">セキュリティ</dfn> (Security)</dt>
-  <dd>情報の機密性、完全性、および可用性の保持。真正性、責任追跡性、否認防止、信頼性などのプロパティーも関係する場合がある。この定義は、 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-27000" title="Information technology &#x2014; Security techniques &#x2014; Information security management systems &#x2014; Overview and vocabulary">ISO-IEC-27000</a></cite>] の<i>情報セキュリティ</i>の定義の焼き直しで、これには、言及されている個々のより具体的なプロパティーに関する追加定義も含まれている。その他の関連する定義については、このドキュメントを参照してください。さらに、このプロパティーは、通常動作時とシステムが攻撃にさらされている時の両方の場合において保持されることが望ましいことに注意のこと。</dd>
+  <dd>情報の機密性、完全性、および可用性の保持。真正性、責任追跡性、否認防止、信頼性などのプロパティーも関係する場合がある。この定義は、 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-27000" title="Information technology &#x2014; Security techniques &#x2014; Information security management systems &#x2014; Overview and vocabulary">ISO-IEC-27000</a></cite>] の<i>情報セキュリティ</i>の定義の焼き直しで、これには、言及されている個々のより具体的なプロパティーに関する追加定義も含まれている。その他の関連する定義については、この文書を参照してください。さらに、このプロパティーは、通常動作時とシステムが攻撃にさらされている時の両方の場合において保持されることが望ましいことに注意のこと。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-security-configuration">セキュリティ設定</dfn> (Security Configuration)</dt>
   <dd>公開セキュリティ・メタデータ、非公開のセキュリティ・データ、およびモノのセキュリティ・メカニズムを運用上設定するために必要なその他の設定情報 (公開キーなど) の組み合わせ。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="servients" id="dfn-servient">サービエント</dfn> (Servient)</dt>
@@ -2671,7 +2671,7 @@
 
 <p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>は、仮想エンティティーの抽象化にもなりえる。仮想エンティティーは、1つ以上のThingの合成物である (例えば、いくつかのセンサーとアクチュエーターで構成される部屋)。合成物の1つのオプションは、仮想エンティティーに関する機能のスーパーセットを含んだ1つの統合された<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>を提供することである。合成物がかなり複雑な場合は、その<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は合成物内の下位階層にあるThingに<em>リンク</em>することができる。中心的な<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>はエントリーポイントとして機能し、一般的なメタデータのみ、そして、場合によっては包括的な機能を含む。これにより、より複雑なThingの特定の側面をグループ化できる。</p>
 
-<p>リンクは、階層的な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に対してのみでなく、Thingとその他の資源との一般的な関係にも適用される。リンク関係型は、例えば、照明を制御するスイッチや、モーションセンサーで監視している部屋など、Thing間の関連性を表現する。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に関連付けられるその他の資源には、マニュアル、予備の部品のカタログ、CADファイル、GUIや、その他のウェブ上のドキュメントがある。全体として、Thingの間のウェブリンクにより、人間と機械の両方がWeb of Thingsをたどっていけるようになる。これは、利用可能な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のカタログを管理するThing Directoryを提供する (通常は、TD表現をキャッシュすることによる) ことでさらに容易になる。要約すると、<span class="rfc2119-assertion" id="arch-td-linking">モノのウェブを形成するために、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>を他の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>やウェブ上の他の資源にリンクしてもよい (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p>リンクは、階層的な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に対してのみでなく、Thingとその他の資源との一般的な関係にも適用される。リンク関係型は、例えば、照明を制御するスイッチや、モーションセンサーで監視している部屋など、Thing間の関連性を表現する。<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に関連付けられるその他の資源には、マニュアル、予備の部品のカタログ、CADファイル、GUIや、その他のウェブ上の文書がある。全体として、Thingの間のウェブリンクにより、人間と機械の両方がWeb of Thingsをたどっていけるようになる。これは、利用可能な<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のカタログを管理するThing Directoryを提供する (通常は、TD表現をキャッシュすることによる) ことでさらに容易になる。要約すると、<span class="rfc2119-assertion" id="arch-td-linking">モノのウェブを形成するために、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>を他の<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>やウェブ上の他の資源にリンクしてもよい (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
 <figure id="linked-things">
 <img src="images/linked-things.png" srcset="images/linked-things.svg" class="wot-arch-diagram" alt="リンクされたThing">
@@ -2735,7 +2735,7 @@
 
 <h3 id="x6-4-interaction-model"><bdi class="secno">6.4</bdi> 相互作用モデル<a class="self-link" aria-label="§" href="#sec-interaction-model"></a></h3>
 
-<p>当初、ウェブ資源とは通常、ウェブクライアントが容易に取得できるウェブ上のドキュメントを表していた。ウェブサービスの導入により、資源は、あらゆる種類の動作を実装できる、より汎用的な相互作用のエンティティーとなった。この非常に高度な抽象化により、多種多様な相互作用の可能性があるため、アプリケーションと資源との間を疎結合することが難しくなっている。その結果、執筆時点で、一般的なAPI記述は、アプリケーションの意図 (application intent) から資源のアドレス、メソッド、リクエストペイロード構造、応答ペイロード構造、および予期されるエラーへの静的マッピングで構成されている。これにより、ウェブクライアントとウェブサービスが密結合されることとなる。</p>
+<p>当初、ウェブ資源とは通常、ウェブクライアントが容易に取得できるウェブ上の文書を表していた。ウェブサービスの導入により、資源は、あらゆる種類の動作を実装できる、より汎用的な相互作用のエンティティーとなった。この非常に高度な抽象化により、多種多様な相互作用の可能性があるため、アプリケーションと資源との間を疎結合することが難しくなっている。その結果、執筆時点で、一般的なAPI記述は、アプリケーションの意図 (application intent) から資源のアドレス、メソッド、リクエストペイロード構造、応答ペイロード構造、および予期されるエラーへの静的マッピングで構成されている。これにより、ウェブクライアントとウェブサービスが密結合されることとなる。</p>
 
 <p><abbr title="World Wide Web Consortium">W3C</abbr> WoTの<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>は、アプリケーションの意図 (application intent) から具体的なプロトコル操作へのマッピングを形式化する仲介的な抽象化を導入し、<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>をどのようにモデル化するかの可能性を絞り込む。</p>
 
@@ -2760,7 +2760,7 @@
 
 <p><span class="rfc2119-assertion" id="arch-action-dataschema">用いるプロトコルバインディングでデータが完全に指定されていない場合 (例えば、メディアタイプにより)、Actionにはオプションの入力パラメータと出力結果の<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">data schema</a>を含めることができる (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>Actionの例は、複数のPropertyを同時に変更すること、照明の明るさを暗くしたり (減光)、独自の制御ループアルゴリズムなどの非公開なプロセスを用いるなどして経時的にPropertyを変更すること、ドキュメントの印刷などの長時間にわたるプロセスを呼び出すことである。</p>
+<p>Actionの例は、複数のPropertyを同時に変更すること、照明の明るさを暗くしたり (減光)、独自の制御ループアルゴリズムなどの非公開なプロセスを用いるなどして経時的にPropertyを変更すること、文書の印刷などの長時間にわたるプロセスを呼び出すことである。</p>
 
 </section>
 <section id="events">
@@ -2803,7 +2803,7 @@
 
 <p>リンク関係型は、ABNF [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5234" title="Augmented BNF for Syntax Specifications: ABNF">RFC5234</a></cite>] <code style="white-space: nowrap;">LOALPHA * ( LOALPHA / DIGIT / "." / "-" ) </code> (例えば、<code>stylesheet</code>) に準拠していなければならないIANA [<cite><a class="bibref" data-link-type="biblio" href="#bib-iana-relations" title="Link Relations">IANA-RELATIONS</a></cite>] に登録されている定義済みトークンか、URIの形式の拡張型 [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3986" title="Uniform Resource Identifier (URI) : Generic Syntax">RFC3986</a></cite>] のいずれかである。<span class="rfc2119-assertion" id="arch-rel-types">拡張関係型は、大文字と小文字を区別しない比較方法により、文字列として比較しなければならない (<em class="rfc2119" title="MUST">MUST</em>)。 (異なる形式でシリアル化されている場合は、URIに変換すべき)。</span><span class="rfc2119-assertion" id="arch-rel-type-lowercase">それにも関わらず、拡張関係型には、すべて小文字のURIを用いるべきである (<em class="rfc2119" title="SHOULD">SHOULD</em>)。 [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>] </span></p>
 
-<p>Web of Thingsでは、リンクは発見に用いたり、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>間の関係 (例えば、階層的か、機能的か) やウェブ上の他のドキュメント (例えば、マニュアルや、CADモデルなどの代替表現) との関係を表したりするために用いる。</p>
+<p>Web of Thingsでは、リンクは発見に用いたり、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>間の関係 (例えば、階層的か、機能的か) やウェブ上の他の文書 (例えば、マニュアルや、CADモデルなどの代替表現) との関係を表したりするために用いる。</p>
 
 </section>
 <section id="sec-hypermedia-forms">
@@ -2901,7 +2901,7 @@
 <div class="note" id="issue-container-generatedID">
 <div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>編集者のメモ</span></div>
 
-<p class="">本仕様の執筆時点では、(上記の) よく知られた操作型は、WoT<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>に由来する一定の集合である。他の仕様では、それぞれのドキュメント形式やフォームのシリアライゼーションにとって有効な、よく知られた操作型を追加定義してもよい。本仕様の今後のバージョンや別の仕様では、将来、WoT関連仕様の範囲を越えて適用される可能性のある拡張やより汎用的なWebフォームモデルを可能にするためにIANAレジストリを設定してもよい。</p>
+<p class="">本仕様の執筆時点では、(上記の) よく知られた操作型は、WoT<a href="#dfn-interaction-model" class="internalDFN" data-link-type="dfn">相互作用モデル</a>に由来する一定の集合である。他の仕様では、それぞれの文書形式やフォームのシリアライゼーションにとって有効な、よく知られた操作型を追加定義してもよい。本仕様の今後のバージョンや別の仕様では、将来、WoT関連仕様の範囲を越えて適用される可能性のある拡張やより汎用的なWebフォームモデルを可能にするためにIANAレジストリを設定してもよい。</p>
 
 </div>
 </section>
@@ -3048,7 +3048,7 @@
 
 <p><a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a> (TD) 仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、セマンティックな語彙に基づく<em>情報モデル</em>と<em>JSONに基づくシリアル化表現</em>を定義している。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、人間が読めて機械が理解できる方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に豊かなメタデータを提供する。生のJSONとしての処理に加えて、実装でJSON-LD [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>] とグラフ・データベースを使用してメタデータの強力なセマンティック処理を行えるように、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の情報モデルと表現形式は、どちらもリンクトデータ [<cite><a class="bibref" data-link-type="biblio" href="#bib-linked-data" title="Linked Data Design Issues">LINKED-DATA</a></cite>] に準じている。</p>
 
-<p><a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a> (TD) は、名前、ID、内容記述などの一般的なメタデータで<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のインスタンスを記述し、関係する<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>やその他のドキュメントへのリンクを介して関連メタデータを提供することもできる。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>には、<a href="#sec-interaction-model" class="sec-ref">§&nbsp;<bdi class="secno">6.4</bdi> 相互作用モデル</a>で定義している相互作用モデルに基づく<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>のメタデータ、<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティメタデータ</a>と、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>を定義している通信メタデータも含まれている。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、提供されているサービスと関連資源 (どちらもハイパーメディアコントロールを使用して記述される) について知るためのエントリポイントを提供するため、<em><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のindex.html</em>と考えることができる。</p>
+<p><a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a> (TD) は、名前、ID、内容記述などの一般的なメタデータで<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のインスタンスを記述し、関係する<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>やその他の文書へのリンクを介して関連メタデータを提供することもできる。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>には、<a href="#sec-interaction-model" class="sec-ref">§&nbsp;<bdi class="secno">6.4</bdi> 相互作用モデル</a>で定義している相互作用モデルに基づく<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>のメタデータ、<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティメタデータ</a>と、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>を定義している通信メタデータも含まれている。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、提供されているサービスと関連資源 (どちらもハイパーメディアコントロールを使用して記述される) について知るためのエントリポイントを提供するため、<em><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のindex.html</em>と考えることができる。</p>
 
 <p>理想的には、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>自体によって作成および (または) 提供され、ディスカバリ時に取得される。しかし、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に資源の制限がある場合 (例えば、メモリ空間や電力が限られている場合) や、Web of Thingsの一部となるように既存のデバイスが改造されている場合には、外部で提供することもできる。ディスカバリを改善し (例えば、制約のあるデバイスに対する) デバイス管理を容易にするための一般的なパターンは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>をディレクトリに登録することである。Consumerは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>のキャッシングメカニズムを、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>が更新されて新しいバージョンの<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>を取得する必要がある場合に通知してくれる通知メカニズムと組み合わせて用いることが推奨される。</p>
 
@@ -3062,7 +3062,7 @@
 </p>
 </div>
   
-<p>全体として、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>の構成要素は、2つの方法で相互運用性を促進する。まず、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、Web of Thingsにおける機械間通信を可能にする。次に、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、IoTデバイスにアクセスしてそのデータを利用できるアプリケーションを作成するために必要なすべての詳細情報を開発者がドキュメント化し、取得するための共通の統一形式として機能する。</p>
+<p>全体として、<a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a>の構成要素は、2つの方法で相互運用性を促進する。まず、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、Web of Thingsにおける機械間通信を可能にする。次に、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、IoTデバイスにアクセスしてそのデータを利用できるアプリケーションを作成するために必要なすべての詳細情報を開発者が文書化し、取得するための共通の統一形式として機能する。</p>
 
 </section>
 <section id="sec-binding-templates" class="informative">
@@ -3427,7 +3427,7 @@
 
 <p><em>この項は参考情報である。</em></p>
 
-<p>セキュリティとプライバシーは分野横断的な課題であり、すべての<a href="#sec-building-blocks">WoT構成要素</a>とWoT実装において考慮する必要がある。この章では、具体的なWoT実装のセキュリティとプライバシーの保護に役立つように、一般的な課題とガイドラインをまとめる。しかし、これらは一般的なガイドラインに過ぎず、このドキュメントで記述しているような抽象アーキテクチャ自体がセキュリティとプライバシーを保証することはできない。その代わりに、具体的な実装の詳細について熟考する必要がある。セキュリティとプライバシーに関する課題の、より詳細で完全な分析は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] を参照のこと。</p>
+<p>セキュリティとプライバシーは分野横断的な課題であり、すべての<a href="#sec-building-blocks">WoT構成要素</a>とWoT実装において考慮する必要がある。この章では、具体的なWoT実装のセキュリティとプライバシーの保護に役立つように、一般的な課題とガイドラインをまとめる。しかし、これらは一般的なガイドラインに過ぎず、この文書で記述しているような抽象アーキテクチャ自体がセキュリティとプライバシーを保証することはできない。その代わりに、具体的な実装の詳細について熟考する必要がある。セキュリティとプライバシーに関する課題の、より詳細で完全な分析は、<em>WoTセキュリティとプライバシーに関するガイドライン</em>仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] を参照のこと。</p>
 
 <p>全体として、WoTの目標は、セキュリティを含めて、IoTデバイスとIoTサービスの既存のアクセス方法とプロパティーを記述することである。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、何を実装するのかを規定することではなく、何が存在するのかを記述することを目指している。既存システムの記述は、仮に理想的なセキュリティの動作を備えていなかったとしても、そのシステムを正確に描写すべきである。システムのセキュリティの脆弱性を明確に理解することは、セキュリティ脅威の軽減に役立つ &#x2014; しかし、もちろん、そのようなデータを、悪用する可能性のある人に配信する必要はない。</p>
 
@@ -3590,9 +3590,9 @@
 
 <h2 id="b-acknowledgments"><bdi class="secno">B.</bdi> 謝辞<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
 
-<p>このドキュメントへの貢献に対し、Michael McCool、Takuki Kamiya、Kazuyuki Ashimura、Sebastian Käbisch、Zoltan Kis、Elena Reshetova、Klaus Hartke、Ari Keränen、Kazuaki Nimura、Philippe Le Hegaretに特に感謝する。</p>
+<p>この文書への貢献に対し、Michael McCool、Takuki Kamiya、Kazuyuki Ashimura、Sebastian Käbisch、Zoltan Kis、Elena Reshetova、Klaus Hartke、Ari Keränen、Kazuaki Nimura、Philippe Le Hegaretに特に感謝する。</p>
 
-<p>このドキュメントの改善につながったサポート、技術情報、提案に対し、<abbr title="World Wide Web Consortium">W3C</abbr>のスタッフ、および<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things利害団体 (WoT IG) とワーキンググループ (WoT WG) のすべての関係者に感謝する。</p>
+<p>この文書の改善につながったサポート、技術情報、提案に対し、<abbr title="World Wide Web Consortium">W3C</abbr>のスタッフ、および<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things利害団体 (WoT IG) とワーキンググループ (WoT WG) のすべての関係者に感謝する。</p>
 
 <p>WoT WGは、 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-pioneers-1" title="Mobile Service Interaction with the Web of Things">WOT-PIONEERS-1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-pioneers-2" title="Putting Things to REST">WOT-PIONEERS-2</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-pioneers-3" title="Poster Abstract: Dyser &#x2014; Towards a Real-Time Search Engine for the Web of Things">WOT-PIONEERS-3</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-pioneers-4" title="A Resource Oriented Architecture for the Web of Things">WOT-PIONEERS-4</a></cite>] などの刊行物の形で学術的イニシアチブとして開始された「Web of Things」の概念に関する先駆的な取り組みにも感謝する。これにより、2010年から<a href="https://webofthings.org/events/wot/">Web of Thingsの国際ワークショップ</a>が毎年開催されようになった。</p>
 
