@@ -1687,15 +1687,15 @@
 
 <p>この文書は、抽象的なアーキテクチャの設計について記述している。しかし、関連する<em>WoT Thing Description</em>の仕様に基づいて一連の具体的な実装を記述している<a href="https://w3c.github.io/wot-thing-description/testing/report.html">実装報告書</a>がある。これらは、<abbr title="World Wide Web Consortium">W3C</abbr> Web of Things のアーキテクチャに準拠した実装である。</p>
 
-<p>この文書は、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告として管理者の協賛を得ました。これは確定済み文書であり、参考資料として用いたり、別の文書で引用することができる。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を引き付け、広範囲な開発を促進することである。これによってウェブの機能性および相互運用性が増強される。</p>
+<p>この文書は、<abbr title="World Wide Web Consortium">W3C</abbr>会員、ソフトウェア開発者、他の<abbr title="World Wide Web Consortium">W3C</abbr>グループ、および他の利害関係者によりレビューされ、ディレクターにより<abbr title="World Wide Web Consortium">W3C</abbr>勧告として承認されたものである。安定した文書であり、参考資料として用いること、他の文書で引用することができる。勧告の作成における<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、その仕様への関心を引いて、広く普及させていくことにある。これにより、ウェブの機能および相互運用性の向上につながる。</p>
 
 <p>この文書は、<a href="https://www.w3.org/WoT/WG/">Web of Thingsワーキンググループ</a>によって勧告として公開された。</p>
 
-<p>この仕様の議論には<a href="https://github.com/w3c/wot-architecture/issues/">GitHubのIssue</a>をお勧めする。または、メーリング・リストにコメントを送信することもできる。コメントは<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">アーカイブ</a>) に送信いただきたい。</p>
+<p>この仕様の議論には<a href="https://github.com/w3c/wot-architecture/issues/">GitHubのIssue</a>をお勧めする。または、メーリングリストにコメントを送信することもできる。コメントは<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">アーカイブ</a>) に送信いただきたい。</p>
 
 <p>この文書は、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、このグループの成果物に関連する<a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">あらゆる特許の開示の公開リスト</a>を維持し、このページには特許の開示に関する指示も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">不可欠な請求権</a> (Essential Claim(s)) を含んでいると思われる特許に関して実際に知っている人は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>特許方針の6項</a>に従って情報を開示しなければならない。</p>
 
-<p>この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日の<abbr title="World Wide Web Consortium">W3C</abbr>プロセスドキュメント</a>によって管理されている。</p>
+<p>この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日の<abbr title="World Wide Web Consortium">W3C</abbr>プロセスドキュメント</a>に準拠している。</p>
 
 </section>
 <nav id="toc">
@@ -1907,23 +1907,23 @@
 <p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの標準化の範囲に焦点を当てており、その構成要素と、その関係を定義する抽象アーキテクチャとに分類できる。構成要素は、別の仕様で詳細に定義され説明されている。しかし、抽象アーキテクチャとその用語や概念フレームワークの定義に加え、この仕様は、WoT構成要素に対する入門としての機能も果たし、それらの連携について説明している。</p>
 
 <ul>
-  <li><em>Web of Things (WoT) Thing Description</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、Thingのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規範的に提供する。これは、対話アフォーダンスなどの、この文書で紹介している基本概念に基づいている。</li>
-  <li><em>Web of Things (WoT) バインディングテンプレート</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、特定のプロトコルとIoTエコシステムに対して、Thingのネットワーク向けインターフェースを定義する方法に関する参考情報のガイドラインを提供しており、これをプロトコルバインディングと呼ぶ。また、この文書では、多くの既存のIoTエコシステムと標準の例も提供している。</li>
+  <li><em>Web of Things (WoT) Thing Description</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、Thingのメタデータとネットワーク向けインターフェースを記述するための機械可読データ形式を規定的に提供する。これは、相互作用のアフォーダンスなどの、この文書で紹介している基本概念に基づいている。</li>
+  <li><em>Web of Things (WoT) バインディングテンプレート</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、特定のプロトコルとIoTエコシステムに対する、Thingのネットワーク向けインターフェースを定義する方法 (プロトコルバインディングと呼ぶ) に関する参考情報のガイドライン を提供している。また、この文書では、多くの既存のIoTエコシステムと標準の例も提供している。</li>
   <li><em>Web of Things (WoT) スクリプティングAPI</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>] は、オプションであり、これを用いると、ウェブブラウザAPIのような一般的なJavaScript APIでThingのアプリケーションロジックを実装できるようになる。これによって、IoTアプリケーションの開発が簡素化され、ベンダーやデバイスにまたがる移植が可能となる。</li>
-  <li><em>Web of Things (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報である文書は、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。この文書では、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策についても高いレベルの議論を行う。</li>
+  <li><em>Web of Things (WoT) のセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的な構成要素を表す。この参考情報である文書は、Thingの安全な実装と設定に関するガイドラインを提供し、<abbr title="World Wide Web Consortium">W3C</abbr> WoTを実装するシステムで検討すべき課題について論じている。しかし、セキュリティとプライバシーは、特定の実装に関する一揃いの具体的なメカニズムのコンテキストでのみ完全に評価されうるものであり、WoTの抽象アーキテクチャでは完全には規定していないことを強調しておくべきである。これは特に、WoTアーキテクチャが既存のシステムに記述的に用いられる場合に当てはまる。なぜならば、<abbr title="World Wide Web Consortium">W3C</abbr> WoTはそのようなシステムの動作を制約することはできず、それを記述することしかできないからである。この文書では、<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>の項で、プライバシーとセキュリティに関するリスクとその軽減策について概観する。</li>
 </ul>
 
-<p>この仕様は、WoTシステムの展開に関する非規定的なアーキテクチャの側面と条件もカバーしている。この仕様は特定の具体的な実装を規定的に定義するものではないが、このガイドラインは、展開シナリオの例に照らして記述している。</p>
+<p>この仕様は、WoTシステムの展開に関する非規定的なアーキテクチャの側面と条件もカバーしている。この仕様は特定の具体的な実装を規定的に定義するものではないが、このガイドラインは、展開シナリオの例に照らして記述されている。</p>
 
-<p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoT仕様を包括する機能を有しており、用語や<abbr title="World Wide Web Consortium">W3C</abbr>のモノのウェブの基本となる抽象アーキテクチャなどの基礎を定義している。要約すると、この仕様の目的は次を提供することである。</p>
+<p>この仕様は、<abbr title="World Wide Web Consortium">W3C</abbr> WoT仕様を包括する機能を有しており、用語や<abbr title="World Wide Web Consortium">W3C</abbr> Web of Thingsの基本となる抽象アーキテクチャなどの基礎を定義している。要約すると、この仕様の目的は次を提供することである。</p>
 
 <ul>
   <li><a href="#sec-use-cases" class="sec-ref">§&nbsp;<bdi class="secno">4.</bdi> ユースケース</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャへとつながったユースケース、</li>
   <li><a href="#sec-requirements" class="sec-ref">§&nbsp;<bdi class="secno">5.</bdi> 要件</a>では、WoT実装の要件、</li>
   <li><a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoTアーキテクチャ</a>では、抽象アーキテクチャの定義、</li>
   <li><a href="#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT構成要素</a>では、WoT構成要素とその相互作用の概要、</li>
-  <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なサービエントのアーキテクチャ</a>では、抽象アーキテクチャを可能な具体的な実装にマッピングする方法に関する参考情報のガイドライン、</li>
-  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTのデプロイメント例</a>では、可能な展開シナリオに関する参考情報の例、</li>
+  <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象的なServientのアーキテクチャ</a>では、抽象アーキテクチャを存在しうる具体的な実装にマッピングする方法に関する参考情報のガイドライン、</li>
+  <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoTのデプロイメント例</a>では、存在しうるデプロイメントシナリオに関する参考情報の例、</li>
  <li>および<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> セキュリティとプライバシーへの配慮</a>では、<abbr title="World Wide Web Consortium">W3C</abbr> WoTアーキテクチャに基づくシステムを実装する際に注意すべきセキュリティとプライバシーに関する留意点の高いレベルでの議論。</li>
 </ul>
 
@@ -1934,7 +1934,7 @@
 
 <h2 id="x2-conformance"><bdi class="secno">2.</bdi> 適合性<a class="self-link" aria-label="§" href="#conformance"></a></h2>
 
-<p>非規範的と記している項と同じく、この仕様のすべての作成ガイドライン、図、例、注は、参考情報である。この仕様のその他の部分はすべて規定的である。</p>
+<p>非規定的と記している項と同じく、この仕様のすべての作成ガイドライン、図、例、注は、参考情報である。この仕様のその他の部分はすべて規定的である。</p>
 
 <p>この文書の「することができる／してもよい (<em class="rfc2119">MAY</em>)」、「しなければならない (<em class="rfc2119">MUST</em>)」、「すべきである／する必要がある (<em class="rfc2119">SHOULD</em>)」というキーワードは、ここで示しているように、すべて大文字で表示されている場合にのみ、<a href="https://tools.ietf.org/html/bcp14">BCP 14</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] で記述されているように解釈されるべきである。</p>
 
@@ -1949,83 +1949,83 @@
 
 <dl>
   <dt><dfn data-dfn-type="dfn" data-plurals="actions" id="dfn-action">アクション</dfn> (Action)</dt>
-  <dd>状態を操作したり (例えば、照明のオン/オフを切り替える)、モノにおけるプロセスを始動させる (例えば、時間の経過とともに照明を暗くする) といった、モノの機能の呼び出しを可能にする対話アフォーダンス。</dd>
-  <dt><dfn data-lt="WoT Binding Templates|Binding Templates" data-dfn-type="dfn" data-plurals="binding template|wot binding template" id="dfn-wot-binding-templates">バインディング・テンプレート</dfn> (Binding Templates)</dt>
-  <dd>様々なIoTプラットフォームとの通信のための再利用可能な青写真の集合。この青写真は、WoTモノの記述と、必要なプロトコル・スタックや専用通信ドライバーに関する実装注記によって、対話アフォーダンスをプラットフォーム固有のメッセージにマッピングするための情報を提供する。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="consumed things" id="dfn-consumed-thing">利用対象のモノ</dfn> (Consumed Thing)</dt>
-  <dd>ローカルなアプリケーションが用いるリモートのモノを表すソフトウェア抽象化。この抽象化は、ネイティブなWoTランタイムが作成したり、WoTスクリプトAPIがオブジェクトとしてインスタンス化する可能性がある。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-consuming-a-thing">モノを利用する</dfn> (Consuming a Thing)</dt>
-  <dd>TDドキュメントを解析して処理し、それから、ローカルなランタイム環境にあるアプリケーションに対するインターフェースとして、利用対象のモノのソフトウェア抽象化を作成すること。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="consumers" id="dfn-consumer">利用者</dfn> (Consumer)</dt>
-  <dd>WoTモノの記述 (JSONベースの表現形式を含む) を処理し、モノと対話を行う (つまり、モノを利用する) ことができるエンティティー。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="data schemas" id="dfn-data-schema">データ・スキーマ</dfn> (Data Schema)</dt>
-  <dd>データ・スキーマは、情報モデルおよび関連するペイロード構造と、対話中に<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">利用者</a>の間で受け渡される対応するデータ項目を記述する。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="digital twins" id="dfn-digital-twin">デジタル・ツイン</dfn> (Digital Twin)</dt>
-  <dd>デジタル・ツインは、クラウドやエッジ・ノード上に存在するデバイスやデバイス群の仮想表現である。オンライン上に継続的に存在していない可能性のある実在するデバイスを表したり、実際のデバイスに展開する前に新しいアプリケーションやサービスをシミュレーションしたりするために使用できる。</dd>
+  <dd>状態を操作したり (例えば、照明のオン/オフを切り替える)、Thingにおけるプロセスを始動させる (例えば、時間の経過とともに照明を暗くする) といった、Thingの機能の呼び出しを可能にする相互作用のアフォーダンス。</dd>
+  <dt><dfn data-lt="WoT Binding Templates|Binding Templates" data-dfn-type="dfn" data-plurals="binding template|wot binding template" id="dfn-wot-binding-templates">バインディングテンプレート</dfn> (Binding Templates)</dt>
+  <dd>様々なIoTプラットフォームとの通信のための再利用可能な青写真の集合。この青写真は、WoT Thing Descriptionと、必要なプロトコルスタックや専用通信ドライバーに関する実装注記によって、相互作用のアフォーダンスをプラットフォーム固有のメッセージにマッピングするための情報を提供する。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="consumed things" id="dfn-consumed-thing">利用されるThing</dfn> (Consumed Thing)</dt>
+  <dd>ローカルなアプリケーションが用いるリモートのThingを表すソフトウェア抽象化。この抽象化は、ネイティブなWoTランタイムが作成したり、WoTスクリプティングAPIがオブジェクトとしてインスタンス化する可能性がある。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-consuming-a-thing">Thingを利用する</dfn> (Consuming a Thing)</dt>
+  <dd>TDドキュメントを解析して処理し、それから、ローカルなランタイム環境にあるアプリケーションに対するインターフェースとして、利用されるThingのソフトウェア抽象化を作成すること。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="consumers" id="dfn-consumer">Consumer</dfn></dt>
+  <dd>WoT Thing Description (JSONベースの表現形式を含む) を処理し、Thingと相互作用する (つまり、Thingを利用する) ことができるエンティティー。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="data schemas" id="dfn-data-schema">Data Schema</dfn></dt>
+  <dd>Data Schemaは、情報モデルおよび関連するペイロード構造と、相互作用中に<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の間で受け渡される対応するデータ項目を記述する。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="digital twins" id="dfn-digital-twin">デジタルツイン</dfn> (Digital Twin)</dt>
+  <dd>デジタルツインは、クラウドやエッジノード上に存在するデバイスやデバイス群の仮想表現である。オンライン上に継続的に存在していない可能性のある実在するデバイスを表したり、実際のデバイスに展開する前に新しいアプリケーションやサービスをシミュレーションしたりするために使用できる。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-domain-specific-vocabulary">領域固有の語彙</dfn> (Domain-specific Vocabulary)</dt>
-  <dd>WoTモノの記述で使用できるリンクト・データの語彙ですが、<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは定義していない。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-edge-device">エッジ・デバイス</dfn> (Edge Device)</dt>
-  <dd>企業やサービス提供者の基幹ネットワークへのエントリ・ポイントを提供するデバイス。例には、ゲートウェイ、ルーター、スイッチ、マルチプレクサ、およびその他の様々な接続デバイスが含まれる。</dd>
+  <dd>WoT Thing Descriptionで使用できるリンクトデータの語彙だが、<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは定義していない。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-edge-device">エッジデバイス</dfn> (Edge Device)</dt>
+  <dd>企業やサービス提供者の基幹ネットワークへのエントリポイントを提供するデバイス。例には、ゲートウェイ、ルーター、スイッチ、マルチプレクサ、およびその他の様々な接続デバイスが含まれる。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="events" id="dfn-event">イベント</dfn> (Event)</dt>
-  <dd>イベントの情報源を記述している対話アフォーダンスで、イベント・データを利用者に非同期でプッシュします (例えば、オーバーヒートの警報)。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="exposed things" id="dfn-exposed-thing">公開対象のモノ</dfn> (Exposed Thing)</dt>
-  <dd>リモートの利用者がネットワーク経由でアクセスできる、ローカルで提供されているモノを表すソフトウェア抽象化。この抽象化は、ネイティブなWoTランタイムが作成したり、WoTスクリプトAPIがオブジェクトとしてインスタンス化する可能性がある。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-exposing-a-thing">モノを公開する</dfn> (Exposing a Thing)</dt>
-  <dd>モノの状態を管理し、動作の実装と連動するために、ローカルなランタイム環境にある公開対象のモノのソフトウェア抽象化を作成すること。</dd>
+  <dd>イベントの情報源を記述している相互作用のアフォーダンスで、イベントデータを利用者に非同期でプッシュする (例えば、オーバーヒートの警報)。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="exposed things" id="dfn-exposed-thing">公開されたThing</dfn> (Exposed Thing)</dt>
+  <dd>リモートの利用者がネットワーク経由でアクセスできる、ローカルで提供されているThingを表すソフトウェア抽象化。この抽象化は、ネイティブなWoTランタイムが作成したり、WoTスクリプティングAPIがオブジェクトとしてインスタンス化する可能性がある。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-exposing-a-thing">Thingを公開する</dfn> (Exposing a Thing)</dt>
+  <dd>Thingの状態を管理し、動作の実装と連動するために、ローカルなランタイム環境にある公開対象のThingのソフトウェア抽象化を作成すること。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-hypermedia-control">ハイパーメディア制御</dfn> (Hypermedia Control)</dt>
-  <dd>ハイパーメディアにおけるプロトコル・バインディングのシリアル化、つまり、ナビゲーション用のウェブ・リンク [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>] や、他の操作を実行するためのウェブ・フォーム。フォームは、利用者が項目に記入して送信するための、モノが提供するリクエスト・テンプレートと考えることができる。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="interaction affordances" id="dfn-interaction-affordance">対話アフォーダンス</dfn> (Interaction Affordance)</dt>
-  <dd>可能な選択肢を利用者に提示し説明するモノのメタデータで、これにより、利用者がどのようにモノと対話を行えるかを提案する。潜在的なアフォーダンスには多くの種類があるが、<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは、プロパティー、アクション、イベントという3種類の対話アフォーダンスを定義している。4つ目の対話アフォーダンスはナビゲーションで、これは、ウェブでは既にリンク付けという方法で利用できる。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-interaction-model">対話モデル</dfn> (Interaction Model)</dt>
-  <dd>アプリケーションの意図 (application intent) から具体的なプロトコル操作へのマッピングを形式化し、限定する中間の抽象化。<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは、定義済みの対話アフォーダンスの集合が対話モデルを構成する。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="intermediaries" id="dfn-intermediary">仲介</dfn> (Intermediary)</dt>
-  <dd>モノを代理、拡張、または構成する、ConsumerとThingの間のエンティティーで、元のThingではなく仲介のWoTインターフェースを指し示すWoT Thing Descriptionを再公開できる。RESTの階層化システムの制約により、利用者には、仲介はThingと見分けがつかないかもしれない。</dd>
+  <dd>ハイパーメディアにおけるプロトコルバインディングのシリアライゼーション、つまり、ナビゲーション用のウェブリンク [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>] や、他の操作を実行するためのウェブフォーム。フォームは、利用者が項目に記入して送信するための、Thingが提供するリクエストテンプレートと考えることができる。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="interaction affordances" id="dfn-interaction-affordance">相互作用のアフォーダンス</dfn> (Interaction Affordance)</dt>
+  <dd>可能な選択肢を利用者に提示し説明するThingのメタデータで、これにより、利用者がどのようにThingと相互作用できるかを提案する。潜在的なアフォーダンスには多くの種類があるが、<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは、プロパティー、アクション、イベントという3種類の相互作用のアフォーダンスを定義している。4つ目の対話アフォーダンスはナビゲーションで、これは、ウェブでは既にリンク付けという方法で利用できる。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-interaction-model">相互作用モデル</dfn> (Interaction Model)</dt>
+  <dd>アプリケーションの意図 (application intent) から具体的なプロトコル操作へのマッピングを形式化し、限定する中間の抽象化。<abbr title="World Wide Web Consortium">W3C</abbr> WoTでは、定義済みの相互作用のアフォーダンスの集合が相互作用モデルを構成する。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="intermediaries" id="dfn-intermediary">Intermediary</dfn></dt>
+  <dd>Thingを代理、拡張、または構成する、ConsumerとThingの間のエンティティーで、元のThingではなく仲介のWoTインターフェースを指し示すWoT Thing Descriptionを再公開できる。RESTの階層化システムの制約により、利用者には、IntermediaryはThingと見分けがつかないかもしれない。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="iot platforms" id="dfn-iot-platform">IoTプラットフォーム</dfn> (IoT Platform)</dt>
-  <dd>OCF、oneM2M、Mozillaプロジェクトのモノなどの特定のIoTエコシステムで、アプリケーション向けのAPI、データ・モデル、プロトコルまたはプロトコル設定に関して独自の仕様を備えている。</dd>
+  <dd>OCF、oneM2M、MozillaプロジェクトのThingなどの特定のIoTエコシステムで、アプリケーション向けのAPI、データモデル、プロトコルまたはプロトコル設定に関して独自の仕様を備えている。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-metadata">メタデータ</dfn> (Metadata)</dt>
-  <dd>エンティティーの抽象的な特性に関する記述を提供するデータ。例えば、<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">モノの記述</a>は<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">モノ</a>のメタデータである。</dd>
-  <dt><dfn data-lt="Personally Identifiable Information|Personally Identifiable Information (PII)" data-dfn-type="dfn" id="dfn-personally-identifiable-information">個人を特定できる情報 (PII) </dfn> (Personally Identifiable Information (PII) )</dt>
+  <dd>エンティティーの抽象的な特性に関する記述を提供するデータ。例えば、<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>は<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のメタデータである。</dd>
+  <dt><dfn data-lt="Personally Identifiable Information|Personally Identifiable Information (PII)" data-dfn-type="dfn" id="dfn-personally-identifiable-information">個人識別可能情報 (PII) </dfn> (Personally Identifiable Information (PII) )</dt>
   <dd>ある情報と関係性がある自然人を特定するために使用できる情報、または自然人に直接または間接的にリンクされている、またはその可能性がある情報。 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology &#x2014; Security techniques &#x2014; Privacy framework">ISO-IEC-29100</a></cite>] と同じ定義を用いる。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-privacy">プライバシー</dfn> (Privacy)</dt>
   <dd>私生活や個人的な出来事への侵害 (その個人に関するデータを不当または違法に収集し使用した結果、侵害が生じた場合) がないこと。 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-2382" title="Information technology &#x2014; Vocabulary">ISO-IEC-2382</a></cite>] と同じ定義を用いる。<a href="#dfn-personally-identifiable-information" class="internalDFN" data-link-type="dfn">個人を特定できる情報</a>、<a href="#dfn-security" class="internalDFN" data-link-type="dfn">セキュリティ</a>、および [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology &#x2014; Security techniques &#x2014; Privacy framework">ISO-IEC-29100</a></cite>] のその他の関連定義も参照のこと。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-private-security-data">Private Security Data</dfn></dt>
-  <dd>Private Security Dataは、Thingのセキュリティ設定の構成要素であり、秘密に保たれ、他のデバイスやユーザと共有されない。ひとつの例は、PKIシステムの秘密鍵である。理想的には、そのようなデータは、アプリケーションがアクセスできない別のメモリに保存され、それを利用するアプリケーションにも秘密情報を漏らさない、署名などの抽象的な操作を介してしか用いられません。</dd>
+  <dd>Private Security Dataは、Thingのセキュリティ設定の構成要素であり、秘密に保たれ、他のデバイスやユーザと共有されない。ひとつの例は、PKIシステムの秘密鍵である。理想的には、そのようなデータは、アプリケーションがアクセスできない別のメモリに保存され、それを利用するアプリケーションにも秘密情報を漏らさない、署名などの抽象的な操作を介してしか用いられない。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="properties" id="dfn-property">プロパティー</dfn> (Property)</dt>
-  <dd>モノの状態を公開する対話アフォーダンス。この状態は、後で取得 (読み取り) し、オプションで更新 (書き込み) できる。モノは、変更後の新しい状態をプッシュすることにより、プロパティーを監視可能にすることも選択できる。</dd>
-  <dt><dfn data-lt="WoT Protocol Binding|Protocol Binding" data-dfn-type="dfn" data-plurals="protocol bindings" id="dfn-wot-protocol-binding">プロトコル・バインディング</dfn> (Protocol Binding)</dt>
-  <dd>対話アフォーダンスから特定のプロトコルの具体的なメッセージへのマッピング。これにより、利用者に対話アフォーダンスを作動させる方法を通知する。<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、プロトコルバインディングをハイパーメディア制御としてシリアライズする。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-public-security-metadata">公開セキュリティメタデータ</dfn> (Public Security Metadata)</dt>
-  <dd>公開セキュリティメタデータは、Thingにアクセスするために必要なセキュリティメのカニズムとアクセス権を記述した、Thingのセキュリティ設定の構成要素である。これには秘密情報や具体的なデータ (公開キーを含む) は含まれておらず、単独でThingへのアクセスを提供することはありない。代わりに、ユーザがどのように認証を得なければならないかを含め、承認されたユーザがアクセスを取得する方法が記述されている。</dd>
+  <dd>Thingの状態を公開する相互作用のアフォーダンス。この状態は、後で取得 (読み取り) し、オプションで更新 (書き込み) できる。Thingは、変更後の新しい状態をプッシュすることにより、プロパティーを監視可能にすることも選択できる。</dd>
+  <dt><dfn data-lt="WoT Protocol Binding|Protocol Binding" data-dfn-type="dfn" data-plurals="protocol bindings" id="dfn-wot-protocol-binding">プロトコルバインディング</dfn> (Protocol Binding)</dt>
+  <dd>相互作用のアフォーダンスから特定のプロトコルの具体的なメッセージへのマッピング。これにより、利用者に相互作用のアフォーダンスを作動させる方法を通知する。<abbr title="World Wide Web Consortium">W3C</abbr> WoTは、プロトコルバインディングをハイパーメディア制御としてシリアライズする。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-public-security-metadata">Public Security Metadata</dfn></dt>
+  <dd>Public Security Metadataは、Thingにアクセスするために必要なセキュリティメのメカニズムとアクセス権を記述した、Thingのセキュリティ設定の構成要素である。これには秘密情報や具体的なデータ (公開キーを含む) は含まれておらず、単独でThingへのアクセスを提供することはない。代わりに、ユーザがどのように認証を得なければならないかを含め、承認されたユーザがアクセスを取得する方法が記述されている。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-security">セキュリティ</dfn> (Security)</dt>
-  <dd>情報の機密性、完全性、および可用性の保持。真正性、責任追跡性、否認防止、信頼性などのプロパティーも関係する場合がある。この定義は、 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-27000" title="Information technology &#x2014; Security techniques &#x2014; Information security management systems &#x2014; Overview and vocabulary">ISO-IEC-27000</a></cite>] の<i>情報セキュリティ</i>の定義の焼き直しで、これには、言及されている個々のより具体的なプロパティーに関する追加定義も含まれている。その他の関連する定義については、この文書を参照してください。さらに、このプロパティーは、通常動作時とシステムが攻撃にさらされている時の両方の場合において保持されることが望ましいことに注意のこと。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-security-configuration">セキュリティ設定</dfn> (Security Configuration)</dt>
-  <dd>公開セキュリティ・メタデータ、非公開のセキュリティ・データ、およびモノのセキュリティ・メカニズムを運用上設定するために必要なその他の設定情報 (公開キーなど) の組み合わせ。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="servients" id="dfn-servient">サービエント</dfn> (Servient)</dt>
-  <dd>WoT構成要素を実装するソフトウェア・スタック。サービエントは、モノを提供し公開することができ、かつ (または) モノを利用する利用者の役割を務めることができる。サービエントは、様々なIoTプラットフォームと対話を行えるように、複数のプロトコル・バインディングをサポートできる。</dd>
+  <dd>情報の機密性、完全性、および可用性の保持。真正性、責任追跡性、否認防止、信頼性などのプロパティーも関係する場合がある。この定義は、 [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-27000" title="Information technology &#x2014; Security techniques &#x2014; Information security management systems &#x2014; Overview and vocabulary">ISO-IEC-27000</a></cite>] の<i>情報セキュリティ</i>の定義の焼き直しで、これには、言及されている個々のより具体的なプロパティーに関する追加定義も含まれている。その他の関連する定義については、この文書を参照いただきたい。さらに、このプロパティーは、通常動作時とシステムが攻撃にさらされている時の両方の場合において保持されることが望ましいことに注意のこと。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-security-configuration">セキュリティ構成情報</dfn> (Security Configuration)</dt>
+  <dd>Public Security Metadata、Private Security Data、およびThingのセキュリティメカニズムを運用上構成するために必要なその他の構成情報 (公開キーなど) の組み合わせ。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="servients" id="dfn-servient">Servient</dfn></dt>
+  <dd>WoT構成要素を実装するソフトウェアスタック。Servientは、Thingを提供し公開することができ、かつ (または) Thingを利用するConsumerの役割を務めることができる。Servientは、様々なIoTプラットフォームと相互作用できるように、複数のプロトコルバインディングをサポートできる。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="subprotocols" id="dfn-subprotocol">サブプロトコル</dfn> (Subprotocol)</dt>
-  <dd>うまく対話を行うために知っていなければならない転送プロトコルに対する拡張メカニズム。例は、HTTPに対するロング・ポーリング (long polling) である。</dd>
+  <dd>相互作用をうまく行うために知っていなければならない転送プロトコルに対する拡張メカニズム。例は、HTTPに対するロングポーリング (long polling) である。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="tds" id="dfn-td">TD</dfn></dt>
-  <dd>WoTモノの記述 (WoT Thing Description) の略。</dd>
+  <dd>WoT Thing Descriptionの略。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-td-vocabulary">TD語彙</dfn> (TD Vocabulary)</dt>
-  <dd>WoTバインディング・テンプレートの通信メタデータを含む、WoTモノの記述においてモノのメタデータにタグ付けを行うための<abbr title="World Wide Web Consortium">W3C</abbr> WoTによるリンクト・データの統制語彙。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="things" id="dfn-thing">モノ</dfn> (Thing) または<dfn data-dfn-type="dfn" id="dfn-web-thing">ウェブのモノ</dfn> (Web Thing)</dt>
-  <dd>WoTモノの記述でメタデータとインターフェースが記述されている物理エンティティーまたは仮想エンティティーの抽象化。それに対し、仮想エンティティーは1つ以上のモノの合成物である。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="thing directories" id="dfn-thing-directory">モノのディレクトリ</dfn> (Thing Directory)</dt>
-  <dd>([<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>] のように) TDを登録して検索する (例えば、SPARQLクエリやCoRE RDルックアップ・インターフェース [<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>] を用いて) ためのウェブ・インターフェースを提供するTDのディレクトリ・サービス。</dd>
+  <dd>WoTバインディングテンプレートの通信メタデータを含む、WoT Thing DescriptionにおいてThingのメタデータにタグ付けを行うための<abbr title="World Wide Web Consortium">W3C</abbr> WoTによるリンクトデータの統制語彙。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="things" id="dfn-thing">Thing</dfn> または<dfn data-dfn-type="dfn" id="dfn-web-thing">Web Thing</dfn></dt>
+  <dd>WoT Thing Descriptionでメタデータとインターフェースが記述されている物理エンティティーまたは仮想エンティティーの抽象化。それに対し、仮想エンティティーは1つ以上のThingの合成物である。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="thing directories" id="dfn-thing-directory">Thing Directory</dfn></dt>
+  <dd>([<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>] のように) TDを登録して検索する (例えば、SPARQLクエリやCoRE RDルックアップインターフェース [<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>] を用いて) ためのウェブインターフェースを提供する，TDのディレクトリサービス。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="transfer protocols" id="dfn-transfer-protocol">転送プロトコル</dfn> (Transfer Protocol)</dt>
-  <dd>オプションやサブプロトコル・メカニズムに対してアプリケーション固有の要件や制約のない、基礎となる標準的なアプリケーション層のプロトコル。例は、HTTP、CoAP、またはMQTTである。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-virtual-thing">仮想のモノ</dfn> (Virtual Thing)</dt>
-  <dd>別のシステム構成要素に置かれているモノを表すモノのインスタンス。</dd>
+  <dd>オプションやサブプロトコルメカニズムに対してアプリケーション固有の要件や制約のない、基礎となる標準的なアプリケーション層のプロトコル。例は、HTTP、CoAP、またはMQTTである。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-virtual-thing">ヴァーチャルThing</dfn></dt>
+  <dd>別のシステム構成要素に置かれているThingを表す、Thingのインスタンス。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-wot-interface">WoTインターフェース</dfn> (WoT Interface)</dt>
-  <dd>WoTモノの記述で記述されている、モノのネットワーク向けインターフェース。</dd>
+  <dd>WoT Thing Descriptionで記述されている、htingのネットワーク向けインターフェース。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-wot-runtime">WoTランタイム</dfn> (WoT Runtime)</dt>
-  <dd>アプリケーションの実行環境を維持し、モノを公開および (または) 利用し、WoTモノの記述を処理し、セキュリティ設定を維持し、プロトコル・バインディング実装と連動できるランタイム・システム。WoTランタイムは、特注のAPIを持つか、オプションのWoTスクリプトAPIを用いることができる。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-wot-scripting-api">WoTスクリプトAPI</dfn> (WoT Scripting API)</dt>
-  <dd>WoTランタイムで実行される動作やアプリケーションの実装を容易にするために、サービエントが提供するアプリケーション向けプログラミング・インターフェース。ウェブ・ブラウザAPIに匹敵する。WoTスクリプトAPIは、<abbr title="World Wide Web Consortium">W3C</abbr> WoTのオプションの構成要素である。</dd>
-  <dt><dfn data-dfn-type="dfn" id="dfn-wot-servient">WoTサービエント</dfn> (WoT Servient)</dt>
-  <dd>サービエントの同義語。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="wot thing descriptions" id="dfn-wot-thing-description">WoTモノの記述</dfn> (WoT Thing Description) または<dfn data-dfn-type="dfn" data-plurals="thing descriptions" id="dfn-thing-description">モノの記述</dfn> (Thing Description)</dt>
-  <dd>モノを記述した構造化データ。WoTモノの記述は、一般的なメタデータ、領域固有のメタデータ、対話アフォーダンス (サポートされるプロトコル・バインディングを含む)、および関係するモノへのリンクで構成される。WoTモノの記述の形式は、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの中心となる構成要素である。</dd>
+  <dd>アプリケーションの実行環境を維持し、Thingを公開および (または) 利用し、WoT Thing Descriptionを処理し、セキュリティ設定を維持し、プロトコルバインディング実装と連動できるランタイムシステム。WoTランタイムは、特注のAPIを持つか、オプションのWoTスクリプトAPIを用いることができる。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-wot-scripting-api">WoTスクリプティングAPI</dfn> (WoT Scripting API)</dt>
+  <dd>WoTランタイムで実行される動作やアプリケーションの実装を容易にするために、Servientが提供するアプリケーション向けプログラミングインターフェース。ウェブブラウザAPIに相当する。WoTスクリプティングAPIは、<abbr title="World Wide Web Consortium">W3C</abbr> WoTのオプションの構成要素である。</dd>
+  <dt><dfn data-dfn-type="dfn" id="dfn-wot-servient">WoT Servient</dfn></dt>
+  <dd>Servientの同義語。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="wot thing descriptions" id="dfn-wot-thing-description">WoT Thing Description</dfn>または<dfn data-dfn-type="dfn" data-plurals="thing descriptions" id="dfn-thing-description">Thing Description</dfn></dt>
+  <dd>Thingを記述した構造化データ。WoT Thing Descriptionは、一般的なメタデータ、領域固有のメタデータ、相互作用のアフォーダンス (サポートされるプロトコルバインディングを含む)、および関係するThingへのリンクで構成される。WoT Thing Descriptionは、<abbr title="World Wide Web Consortium">W3C</abbr> WoTの中心となる構成要素である。</dd>
 </dl>
 
 </section>
