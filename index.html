@@ -1870,7 +1870,7 @@
     <ol class="toc">
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-private"><bdi class="secno">10.1.1</bdi> Thing DescriptionのPrivate Security Dataに関するリスク</a></li>
       <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-pii"><bdi class="secno">10.1.2</bdi> Thing Descriptionの個人識別可能情報に関するリスク</a></li>
-      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク</a></li>
+      <li class="tocline"><a class="tocxref" href="#sec-security-consideration-td-cm"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーションメタデータに関するリスク</a></li>
     </ol>
     </li>
     <li class="tocline"><a class="tocxref" href="#sec-security-consideration-scripting-risks"><bdi class="secno">10.2</bdi> WoTスクリプトAPIのセキュリティとプライバシーに関するリスク</a>
@@ -2051,18 +2051,18 @@
 
 <p>消費者空間には、接続によって恩恵を得られる複数の資産がある。部屋の利用状況に基づいて照明とエアコンをオフにできる。気象条件と人の存在に基づいてブラインドを自動的に閉じることができる。エネルギーやその他の資源の利用は、使用パターンと予測に基づいて最適化できる。</p>
 
-<p>この項の消費者のユースケースには、スマート・ホームのユースケースが含まれる。</p>
+<p>この項の消費者のユースケースには、スマートホームのユースケースが含まれる。</p>
 
-<p><a href="#smart-home" class="fig-ref" title="スマートホーム">図<bdi class="figno">1</bdi></a>は、スマート・ホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジ・デバイスに接続されている。1つの家に複数のゲートウェイが存在可能で、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
+<p><a href="#smart-home" class="fig-ref" title="スマートホーム">図<bdi class="figno">1</bdi></a>は、スマートホームの例である。このケースでは、ゲートウェイは、対応するKNX、ECHONET、ZigBee、DECT ULE、Wi-SUNなどのローカルな通信プロトコルにより、センサー、カメラ、家電などのエッジデバイスに接続されている。1つの家に複数のゲートウェイが存在可能で、各ゲートウェイは複数のローカルなプロトコルをサポートできる。</p>
 
-<p>ゲートウェイはインターネット経由でクラウドに接続できるが、クラウドに直接接続できる機器もある。クラウドで実行されているサービスは、エッジ・デバイスからデータ収集を行い、そのデータを分析し、その後でエッジ・デバイスやその他のUXデバイスを介してユーザに価値を提供する。</p>
+<p>ゲートウェイはインターネット経由でクラウドに接続できるが、クラウドに直接接続できる機器もある。クラウドで実行されているサービスは、エッジデバイスからデータ収集を行い、そのデータを分析し、その後でエッジデバイスやその他のUXデバイスを介してユーザに価値を提供する。</p>
 
 <figure id="smart-home">
 <img src="images/smart-home.png" srcset="images/smart-home.svg" class="wot-arch-diagram" alt="スマートホームのユースケース">
 <figcaption>図<bdi class="figno">1</bdi> <span class="fig-title">スマートホーム</span></figcaption>
 </figure>
 
-<p>スマート・ホームは、リモートのアクセスと制御、音声制御、ホーム・オートメーションなどのメリットを消費者に提供する。スマート・ホームにより、デバイスの製造者がリモートでデバイスを監視しメンテナンスを行うことも可能となる。スマート・ホームは、エネルギー管理やセキュリティ監視などの付加価値サービスを実現できる。</p>
+<p>スマートホームは、リモートのアクセスと制御、音声制御、ホームオートメーションなどのメリットを消費者に提供する。スマートホームにより、デバイスの製造者がリモートでデバイスを監視しメンテナンスを行うことも可能となる。スマートホームは、エネルギー管理やセキュリティ監視などの付加価値サービスを実現できる。</p>
 
 </section>
 <section id="industrial-iot-usecases">
@@ -2070,13 +2070,13 @@
 <h4 id="x4-1-2-industrial"><bdi class="secno">4.1.2</bdi> 産業<a class="self-link" aria-label="§" href="#industrial-iot-usecases"></a></h4>
 
 <p>この項の産業に関するユースケースは、様々な産業部門に適用できる。<br>
-アプリケーション・シナリオには重複する性質があるため、異なる業種に似たようなユースケースが存在する。</p>
+アプリケーションシナリオには重複する性質があるため、異なる業種に似たようなユースケースが存在する。</p>
 
 <section id="example-smart-factory">
 
 <h5 id="x4-1-2-1-example-smart-factory"><bdi class="secno">4.1.2.1</bdi> 例: スマートファクトリー<a class="self-link" aria-label="§" href="#example-smart-factory"></a></h5>
 
-<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジ・デバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウドのバックエンドサービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
+<p><a href="#smart-factory" class="fig-ref" title="スマートファクトリー">図<bdi class="figno">2</bdi></a>は、スマートファクトリーの例である。このケースでは、現場レベル、セル、工場ラインの制御装置が、PROFINET、Modbus、OPC UA TSN、EtherCAT、CANなどの産業用通信プロトコルに基づいて、様々な工場設備をオートメーション化している。産業用のエッジデバイスは、様々な制御装置からデータを選択収集して、例えば、ダッシュボードを用いた遠隔監視などのクラウドのバックエンドサービスでデータを利用できるようにしたり、予防保全のためにデータの分析を行う。</p>
 
 <figure id="smart-factory">
 <img src="images/smart_factory_new.png" srcset="images/smart_factory_new.svg" class="wot-arch-diagram" alt="スマートファクトリーのユースケース">
@@ -2574,7 +2574,7 @@
 <p>本5.2.1項の英語原文タイトルは「Components in the Web of Things and the Web of Things Architecture」であり、日本語訳は「Web of Thingsの構成要素とWeb of Thingsアーキテクチャ」となるが、その記述内容は単に「一部のユースケースにおいてディレクトリが構成要素として用いられること」や「構成要素は一つの構成要素に接続される場合と、複数のネットワークに展開されることがある」ということであり、「構成要素とWeb of Thingsアーキテクチャ」という項タイトルには違和感があるため、文書構成を見直すべきと考えられる。
 </p>
 </div>
-<p>ユースケースは、デバイスやアプリケーションにアクセスしたり、制御したりするデバイスやアプリケーション、デバイス間にあるプロキシ (例えば、ゲートウェイやエッジ・デバイス) などの基本的な構成要素を識別するのに役立つ。一部のユースケースで有用な追加的な構成要素は、発見を支援するディレクトリである。</p>
+<p>ユースケースは、デバイスやアプリケーションにアクセスしたり、制御したりするデバイスやアプリケーション、デバイス間にあるプロキシ (例えば、ゲートウェイやエッジデバイス) などの基本的な構成要素を識別するのに役立つ。一部のユースケースで有用な追加的な構成要素は、発見を支援するディレクトリである。</p>
 
 <p>これらの構成要素は、インターネットや、オフィス、工場、その他の施設のフィールドネットワークに接続される。関係するすべての構成要素が1つのネットワークに接続されている場合もあるが、一般的に、構成要素は複数のネットワークに展開される。</p>
 
@@ -3046,7 +3046,7 @@
 
 <h3 id="x7-1-wot-thing-description"><bdi class="secno">7.1</bdi> WoT Thing Description<a class="self-link" aria-label="§" href="#sec-thing-description"></a></h3>
 
-<p><a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a> (TD) 仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、セマンティックな語彙に基づく<em>情報モデル</em>と<em>JSONに基づくシリアル化表現</em>を定義している。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、人間が読めて機械が理解できる方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に豊かなメタデータを提供する。生のJSONとしての処理に加えて、実装でJSON-LD [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>] とグラフ・データベースを使用してメタデータの強力なセマンティック処理を行えるように、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の情報モデルと表現形式は、どちらもリンクトデータ [<cite><a class="bibref" data-link-type="biblio" href="#bib-linked-data" title="Linked Data Design Issues">LINKED-DATA</a></cite>] に準じている。</p>
+<p><a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT Thing Description</a> (TD) 仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] は、セマンティックな語彙に基づく<em>情報モデル</em>と<em>JSONに基づくシリアル化表現</em>を定義している。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、人間が読めて機械が理解できる方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に豊かなメタデータを提供する。生のJSONとしての処理に加えて、実装でJSON-LD [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>] とグラフデータベースを使用してメタデータの強力なセマンティック処理を行えるように、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の情報モデルと表現形式は、どちらもリンクトデータ [<cite><a class="bibref" data-link-type="biblio" href="#bib-linked-data" title="Linked Data Design Issues">LINKED-DATA</a></cite>] に準じている。</p>
 
 <p><a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a> (TD) は、名前、ID、内容記述などの一般的なメタデータで<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のインスタンスを記述し、関係する<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>やその他の文書へのリンクを介して関連メタデータを提供することもできる。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>には、<a href="#sec-interaction-model" class="sec-ref">§&nbsp;<bdi class="secno">6.4</bdi> 相互作用モデル</a>で定義している相互作用モデルに基づく<a href="#dfn-interaction-affordance" class="internalDFN" data-link-type="dfn">相互作用のアフォーダンス</a>のメタデータ、<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">Public Security Metadata</a>と、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>を定義している通信メタデータも含まれている。<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>は、提供されているサービスと関連資源 (どちらもハイパーメディアコントロールを使用して記述される) について知るためのエントリポイントを提供するため、<em><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>のindex.html</em>と考えることができる。</p>
 
@@ -3071,7 +3071,7 @@
 
 <p><em>この節は参考情報である。</em></p>
 
-<p>すべてのコンテキストに適した単一のプロトコルはないため、IoTはデバイスへのアクセスに様々なプロトコルを用いる。したがって、Web of Thingsの中心的な課題は、多くの様々な<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a> (例えば、OCF、oneM2M、OMA LWM2M、OPC UA) と、特定の標準には準拠していないけれども適切なネットワークプロトコルを介して適格なインターフェースを提供するデバイスとの対話を可能にすることである。WoTは、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコル・バインディング</a>を通じてこの多様性に取り組んでおり、これは様々な制約を満たさなければならない (<a href="#sec-protocol-bindings" class="sec-ref">§&nbsp;<bdi class="secno">6.6</bdi> プロトコルバインディング</a>を参照)。</p>
+<p>すべてのコンテキストに適した単一のプロトコルはないため、IoTはデバイスへのアクセスに様々なプロトコルを用いる。したがって、Web of Thingsの中心的な課題は、多くの様々な<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a> (例えば、OCF、oneM2M、OMA LWM2M、OPC UA) と、特定の標準には準拠していないけれども適切なネットワークプロトコルを介して適格なインターフェースを提供するデバイスとの対話を可能にすることである。WoTは、<a href="#dfn-wot-protocol-binding" class="internalDFN" data-link-type="dfn">プロトコルバインディング</a>を通じてこの多様性に取り組んでおり、これは様々な制約を満たさなければならない (<a href="#sec-protocol-bindings" class="sec-ref">§&nbsp;<bdi class="secno">6.6</bdi> プロトコルバインディング</a>を参照)。</p>
 
 <p>非規定的な<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>仕様 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] は、様々な<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>と対話を行う方法に関するガイダンスを提供する通信メタデータの青写真のコレクションを提供する。特定のIoTデバイスやサービスを記述する場合に、対応する<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>の<a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">バインディングテンプレート</a>を用いて、そのプラットフォームをサポートするために<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">Thing Description</a>で提供しなければならない通信メタデータを検索できる。</p>
 
@@ -3126,7 +3126,7 @@
 
 <p><em>この節は参考情報である。</em></p>
 
-<p>セキュリティは分野横断的な関心事であり、システム設計のすべての側面において考慮すべきである。WoTアーキテクチャでは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">公開セキュリティ・メタデータ</a>のサポートなどの特定の明示的な機能、および<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の設計における懸念の分離によって、セキュリティがサポートされる。各構成要素の仕様には、その構成要素の特定のセキュリティとプライバシーに関する留意点の議論も含まれている。別の参考情報仕様である<em>WoTセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的なセキュリティとプライバシーに関するガイダンスを追加提供する。</p>
+<p>セキュリティは分野横断的な関心事であり、システム設計のすべての側面において考慮すべきである。WoTアーキテクチャでは、<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a>の<a href="#dfn-public-security-metadata" class="internalDFN" data-link-type="dfn">Public Security Metadata</a>のサポートなどの特定の明示的な機能、および<a href="#dfn-wot-scripting-api" class="internalDFN" data-link-type="dfn">WoTスクリプティングAPI</a>の設計における懸念の分離によって、セキュリティがサポートされる。各構成要素の仕様には、その構成要素の特定のセキュリティとプライバシーに関する留意点の議論も含まれている。別の参考情報仕様である<em>WoTセキュリティとプライバシーに関するガイドライン</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] は、分野横断的なセキュリティとプライバシーに関するガイダンスを追加提供する。</p>
 
 </section>
 </section>
@@ -3475,7 +3475,7 @@
 </section>
 <section id="sec-security-consideration-td-cm">
 
-<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーション・メタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
+<h4 id="x10-1-3-thing-description-communication-metadata-risk"><bdi class="secno">10.1.3</bdi> Thing Descriptionのコミュニケーションメタデータに関するリスク<a class="self-link" aria-label="§" href="#sec-security-consideration-td-cm"></a></h4>
 
 <p><a href="#dfn-wot-binding-templates" class="internalDFN" data-link-type="dfn">WoTバインディングテンプレート</a>は、そのプラットフォームがWoTでの使用の条件を満たしていると見なされるように、基盤となる<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>で採用されているセキュリティメカニズムを正しくサポートしなければならない。IoTを大規模に展開するために必要なネットワークの相互作用が自動化されているため、オペレーターは、セキュリティ方針に準拠した方法で<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>が公開され利用されることを保証する必要がある。</p>
 
