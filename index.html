@@ -1956,8 +1956,8 @@
   <dd>TDドキュメントを解析して処理し、それから、ローカルなランタイム環境にあるアプリケーションに対するインターフェースとして、利用されるThingのソフトウェア抽象化を作成すること。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="consumers" id="dfn-consumer">Consumer</dfn></dt>
   <dd>WoT Thing Description (JSONベースの表現形式を含む) を処理し、Thingと相互作用する (つまり、Thingを利用する) ことができるエンティティー。</dd>
-  <dt><dfn data-dfn-type="dfn" data-plurals="data schemas" id="dfn-data-schema">Data Schema</dfn></dt>
-  <dd>Data Schemaは、情報モデルおよび関連するペイロード構造と、相互作用中に<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の間で受け渡される対応するデータ項目を記述する。</dd>
+  <dt><dfn data-dfn-type="dfn" data-plurals="data schemas" id="dfn-data-schema">データスキーマ (Data Schema)</dfn></dt>
+  <dd>データスキーマは、情報モデルおよび関連するペイロード構造と、相互作用中に<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>と<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">Consumer</a>の間で受け渡される対応するデータ項目を記述する。</dd>
   <dt><dfn data-dfn-type="dfn" data-plurals="digital twins" id="dfn-digital-twin">デジタルツイン</dfn> (Digital Twin)</dt>
   <dd>デジタルツインは、クラウドやエッジノード上に存在するデバイスやデバイス群の仮想表現である。オンライン上に継続的に存在していない可能性のある実在するデバイスを表したり、実際のデバイスに展開する前に新しいアプリケーションやサービスをシミュレーションしたりするために使用できる。</dd>
   <dt><dfn data-dfn-type="dfn" id="dfn-domain-specific-vocabulary">領域固有の語彙</dfn> (Domain-specific Vocabulary)</dt>
@@ -2756,7 +2756,7 @@
 
 <p>Actionは、Thingの機能を呼び出すことができる相互作用のアフォーダンスである。<span class="rfc2119-assertion" id="arch-action-functions">Actionは、直接公開されていない状態を操作したり (Propertyを参照)、一度に複数のPropertyを操作したり、内部ロジックに基づいてPropertyを操作したりすることができる (<em class="rfc2119" title="MAY">MAY</em>) (例えば、トグル)。</span><span class="rfc2119-assertion" id="arch-action-process">Actionの呼び出しは、経時的に状態 (アクチュエータを介した物理的な状態を含む) を操作するThingのプロセスを始動させることもできる (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p><span class="rfc2119-assertion" id="arch-action-dataschema">用いるプロトコルバインディングでデータが完全に指定されていない場合 (例えば、メディアタイプにより)、Actionにはオプションの入力パラメータと出力結果の<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">data schema</a>を含めることができる (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
+<p><span class="rfc2119-assertion" id="arch-action-dataschema">用いるプロトコルバインディングでデータが完全に指定されていない場合 (例えば、メディアタイプにより)、Actionにはオプションの入力パラメータと出力結果の<a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データスキーマ</a>を含めることができる (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
 <p>Actionの例は、複数のPropertyを同時に変更すること、照明の明るさを暗くしたり (減光)、独自の制御ループアルゴリズムなどの非公開なプロセスを用いるなどして経時的にPropertyを変更すること、文書の印刷などの長時間にわたるプロセスを呼び出すことである。</p>
 
@@ -2947,7 +2947,7 @@
 
 <p>一部のメディアタイプでは、用いる表現形式を完全に指定するために追加のパラメータが必要になる場合がある。例は、<code>text/plain; charset=utf-8</code>や<code>application/ld+json; profile="http://www.w3.org/ns/json-ld#compacted"</code>である。これは、<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Thing</a>に送信されるデータを記述する際に特に考慮する必要がある。HTTPのcontent coding [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7231" title="Hypertext Transfer Protocol (HTTP/1.1) : Semantics and Content">RFC7231</a></cite>] などのデータに関する標準的な変換も存在するかもしれない。<span class="rfc2119-assertion" id="arch-media-type-extra">プロトコルバインディングは、メディアタイプのみよりも詳細に表現形式を指定する追加情報を持つことができる (<em class="rfc2119" title="MAY">MAY</em>)。</span></p>
 
-<p>多くのメディアタイプは、その要素に追加的なセマンティクスを提供しない汎用的なシリアライゼーション形式のみを識別することに注意すること (例えば、XML、JSON、CBOR)。<span class="rfc2119-assertion" id="arch-schema">したがって、対応する相互作用のアフォーダンスは、交換されるデータにより詳細な構文メタデータを提供する<em><a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">data schema</a></em>を宣言すべきである (<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></p>
+<p>多くのメディアタイプは、その要素に追加的なセマンティクスを提供しない汎用的なシリアライゼーション形式のみを識別することに注意すること (例えば、XML、JSON、CBOR)。<span class="rfc2119-assertion" id="arch-schema">したがって、対応する相互作用のアフォーダンスは、交換されるデータにより詳細な構文メタデータを提供する<em><a href="#dfn-data-schema" class="internalDFN" data-link-type="dfn">データスキーマ</a></em>を宣言すべきである (<em class="rfc2119" title="SHOULD">SHOULD</em>)。</span></p>
 
 </section>
 </section>
