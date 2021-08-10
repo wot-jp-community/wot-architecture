@@ -2835,7 +2835,7 @@
 
 <p><span class="rfc2119-assertion" id="arch-op-request-method">リクエストメソッドでは、送信ターゲットのURIスキームで識別されるプロトコルでの標準的なメソッド集合のうちの一つを特定しなければならない (<em class="rfc2119" title="MUST">MUST</em>)。</span></p>
 
-<p><span class="rfc2119-assertion" id="arch-op-expected-request">フォームフィールドはオプションであり、特定の操作に期待されるリクエストメッセージをさらに指定できる (<em class="rfc2119" title="MAY">MAY</em>)。</span>これはペイロードに限定されず、プロトコルのヘッダにも影響する可能性があることに注意すること。<span class="rfc2119-assertion" id="arch-op-form-fields-protocol">フォームフィールドは、URIスキームで指定されている送信ターゲットに用いられるプロトコルに依存することもある (<em class="rfc2119" title="MAY">MAY</em>)。</span>例えば、HTTPヘッダフィールド、CoAPオプション、リクエストペイロードのパラメータ (つまり、完全なコンテントタイプ) などのプロトコルに依存しないメディアタイプ [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>] 、または期待される応答に関する情報などである。</p>
+<p><span class="rfc2119-assertion" id="arch-op-expected-request">フォームフィールドはオプションであり、特定の操作に期待されるリクエストメッセージをさらに指定できる (<em class="rfc2119" title="MAY">MAY</em>)。</span>これはペイロードに限定されず、プロトコルのヘッダにも影響する可能性があることに注意すること。<span class="rfc2119-assertion" id="arch-op-form-fields-protocol">フォームフィールドは、URIスキームで指定されている送信ターゲットに用いられるプロトコルに依存することもある (<em class="rfc2119" title="MAY">MAY</em>)。</span>例えば、HTTPヘッダフィールド、CoAPオプション、リクエストペイロードのパラメータ (つまり、完全なコンテンツタイプ) などのプロトコルに依存しないメディアタイプ [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>] 、または期待される応答に関する情報などである。</p>
 
 <div id="table-operation-types">
 <div style="text-align: center; font-style: italic;">表1 Web of Thingsのよく知られた操作型</div>
@@ -3087,7 +3087,7 @@
 <p><a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>は、プラットフォーム固有のHTTPヘッダフィールドやCoAPオプションなど、アプリケーション層で独自の変更を導入することがよくある。フォーム (<a href="#sec-hypermedia-forms" class="sec-ref">§&nbsp;<bdi class="secno">6.5.2</bdi> フォーム</a>を参照) に必要な情報を含め、使用されるアプリケーション層プロトコル用に定義した追加のフォームフィールドにこれらの微調整を適用することができる。</p>
   </li>
   <li><b>メディアタイプ:</b>
-<p><a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>は、多くの場合、データの交換に用いられる表現形式 (別名、シリアライゼーション) が多様である。メディアタイプ [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>] は、これらのフォーマットを識別するが、メディアタイプのパラメータでそれ以上の指定が可能である。フォームには、HTTPの既知のコンテントタイプフィールドなどの追加のフォームフィールドにメディアタイプとオプションのパラメータを含めることができ、これによって、メディアタイプとその潜在的なパラメータが組み合わされる (例えば、<code>text/plain; charset=utf-8</code>)。</p>
+<p><a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">IoTプラットフォーム</a>は、多くの場合、データの交換に用いられる表現形式 (別名、シリアライゼーション) が多様である。メディアタイプ [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2046" title="Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types">RFC2046</a></cite>] は、これらのフォーマットを識別するが、メディアタイプのパラメータでそれ以上の指定が可能である。フォームには、HTTPの既知のコンテンツタイプフィールドなどの追加のフォームフィールドにメディアタイプとオプションのパラメータを含めることができ、これによって、メディアタイプとその潜在的なパラメータが組み合わされる (例えば、<code>text/plain; charset=utf-8</code>)。</p>
   </li>
   <li><b>転送プロトコル:</b>
 <p>Web of Thingsでは、アプリケーション固有のオプションや<a href="#dfn-subprotocol" class="internalDFN" data-link-type="dfn">サブプロトコル</a>のメカニズムのない、基礎となる標準的なアプリケーション層プロトコルに<a href="#dfn-transfer-protocol" class="internalDFN" data-link-type="dfn">転送プロトコル</a>という用語を用いる。フォーム送信ターゲットのURIスキームには、例えば、HTTP、CoAPS、WebSocket (それぞれ<code>http:</code>、<code>coaps:</code>、<code>ws:</code>を介する) などの<a href="#dfn-transfer-protocol" class="internalDFN" data-link-type="dfn">転送プロトコル</a>を識別するために必要な情報が含まれている。</p>
