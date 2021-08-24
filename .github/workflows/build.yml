@@ -1,0 +1,29 @@
+name: build
+on: push
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: wot-jp-community/wot-downstream
+          path: wot-downstream
+      - name: Install CJK fonts
+        run: sudo apt-get install fonts-noto-cjk
+      - name: Build
+        run: |
+          .github/scripts/do_each wot-downstream/tools/*.pl \
+            < index.html \
+            > index-with-links.html
+          git add -N index-with-links.html
+          git diff --quiet index-with-links.html \
+            || npx playwright pdf index-with-links.{html,pdf}
+      - name: Commit
+        run: |
+          git config user.name bot
+          git config user.email bot@example
+          git add index-with-links.{html,pdf}
+          if git commit -m 'bot: build index-with-links.{html,pdf}'; then
+            git push
+          fi

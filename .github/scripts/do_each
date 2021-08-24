@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+do_each() {
+  if (($# > 0)); then
+    exec "$1" | {
+      shift
+      do_each "$@"
+    }
+  else
+    cat
+  fi
+}
+do_each "$@"
