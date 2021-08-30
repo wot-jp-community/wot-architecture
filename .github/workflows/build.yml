@@ -18,7 +18,7 @@ jobs:
             > index-with-links.html
           git add -N index-with-links.html
           git diff --quiet index-with-links.html \
-            || npx playwright pdf index-with-links.{html,pdf}
+            || .github/scripts/build_pdf index-with-links.{html,pdf}
       - name: Commit
         run: |
           git config user.name bot
