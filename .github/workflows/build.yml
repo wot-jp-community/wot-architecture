@@ -13,8 +13,7 @@ jobs:
         run: sudo apt-get install fonts-noto-cjk
       - name: Build
         run: |
-          .github/scripts/do_each wot-downstream/tools/*.pl \
-            < index.html \
+          wot-downstream/tools/extract-urls.pl index.html \
             > index-with-links.html
           git add -N index-with-links.html
           git diff --quiet index-with-links.html \
