@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+const { basename, resolve } = require("path");
+const [, cmd, urlOrPath, filename] = process.argv;
+
+function usage() {
+  const command = basename(cmd);
+  console.log(`
+Usage: ${command} <url> <filename>
+
+Save page as pdf
+`);
+}
+
+function setup() {
+  const dir = resolve();
+  process.chdir(__dirname);
+  require("child_process").execSync("npm i");
+  process.chdir(dir);
+}
+
+async function main() {
+  const browser = await require("playwright").chromium.launch();
+  try {
+    const url = require("fs").existsSync(urlOrPath)
+      ? `file://${resolve(urlOrPath)}`
+      : urlOrPath.replace(/^(?!(?:https?|file|about|data):[/][/])/i, "http://");
+    const page = await browser.newPage();
+    await page.goto(url);
+    const path = resolve(filename);
+    await page.pdf({
+      printBackground: true,
+      path,
+    });
+    console.log(path);
+  } finally {
+    await browser.close();
+  }
+}
+
+if (!urlOrPath || !filename) {
+  usage();
+  process.exit();
+}
+
+setup();
+main();
