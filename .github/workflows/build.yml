@@ -15,6 +15,7 @@ jobs:
         run: sudo apt-get install fonts-noto-cjk
       - name: Build
         run: |
+          .github/scripts/build_pdf index.{html,pdf}
           wot-downstream/tools/extract-urls.pl index.html \
             > index-with-links.html
           git add -N index-with-links.html
@@ -24,7 +25,7 @@ jobs:
         run: |
           git config user.name bot
           git config user.email bot@example
-          git add index-with-links.{html,pdf}
-          if git commit -m 'bot: build index-with-links.{html,pdf}'; then
+          git add index.pdf index-with-links.{html,pdf}
+          if git commit -m 'bot: build index.pdf index-with-links.{html,pdf}'; then
             git push
           fi
